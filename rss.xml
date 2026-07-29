@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0">
+      <channel>
+        <title>刘家阳的技术博客</title>
+        <link>http://localhost:3000</link>
+        <description>React、Vue、TypeScript、AI 应用与前端工程化实践。</description>
+        <language>zh-CN</language>
+        
+        <item>
+          <title>html2Canvas截取百度地图问题整理及解决方案</title>
+          <link>http://localhost:3000/articles/136038707</link>
+          <guid>http://localhost:3000/articles/136038707</guid>
+          <pubDate>Mon, 05 Feb 2024 05:41:44 GMT</pubDate>
+          <description>2.页面图片转base64，开启foreignObjectRendering页面打点能截取但地图瓦片和页面图片出不来，开启useCORS也无效。解决办法：gif转png再转base64或者若此gif没使用则直接删掉该节点再截图。1.开启foreignObjectRendering 原因是地图打点中含有svg。这个问题是因为地图中打点中引入了gif。</description>
+        </item>
+        <item>
+          <title>React-hook</title>
+          <link>http://localhost:3000/articles/127316983</link>
+          <guid>http://localhost:3000/articles/127316983</guid>
+          <pubDate>Mon, 17 Oct 2022 05:28:53 GMT</pubDate>
+          <description>React Hook是React 16.8版本之后添加的新属性，用最简单的话来说，React Hook就是一些React提供的内置函数，这些函数可以让函数组件和类组件一样能够拥有组件状态（state）以及进行副作用（side effect）但是不要什么业务都使用hook,请在合适的时候使用hook,否则会造成性能问题.(能不用的时候就不能,当遇到性能不好优化的时候,自然会想到使用它)</description>
+        </item>
+        <item>
+          <title>React-到hook之前的过渡技术</title>
+          <link>http://localhost:3000/articles/127302893</link>
+          <guid>http://localhost:3000/articles/127302893</guid>
+          <pubDate>Fri, 14 Oct 2022 03:18:44 GMT</pubDate>
+          <description>有些组件会有自己本地的状态(state), 当它们的值由于用户的操作而发生改变时，组件就会重新渲染。对于父组件，也就是Context生产者，需要通过一个静态属性childContextTypes声明提供给子组件的Context对象的属性，并实现一个实例getChildContext方法，返回一个代表Context的纯对象。如果要Context发挥作用，需要用到两种组件，一个是Context生产者(Provider)，通常是一个父节点，另外是一个Context的消费者，通常是一个或者多个子节点。</description>
+        </item>
+        <item>
+          <title>React-class类篇</title>
+          <link>http://localhost:3000/articles/127267518</link>
+          <guid>http://localhost:3000/articles/127267518</guid>
+          <pubDate>Wed, 12 Oct 2022 09:50:10 GMT</pubDate>
+          <description>全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。</description>
+        </item>
+        <item>
+          <title>Vue3-公共数据配置&amp;&amp;插件配置&amp;&amp;网络配置&amp;&amp;路由配置&amp;&amp;数据仓库配置pinia</title>
+          <link>http://localhost:3000/articles/127013882</link>
+          <guid>http://localhost:3000/articles/127013882</guid>
+          <pubDate>Fri, 23 Sep 2022 14:01:04 GMT</pubDate>
+          <description>因为v2使用公共配置时一般绑定在原型上无论是否使用都在每一个组件的this链上,这样的设计不太友好,v3提供了专门公共数据配置的方式:  globalProperties   getCurrentInstance。参数2：配置的选项对象，即state、getters、actions，其中state的写法必须是函数，为了避免在服务端交叉请求导致的状态数据污染，而且必须是箭头函数，为了更好的TS类型推导。箭头函数的使用：(ps:虽然鼓励但是依然提供了非es6玩家的使用方式 内部可以用this代表state)</description>
+        </item>
+        <item>
+          <title>Vue3-常用的Composition API（组合API）</title>
+          <link>http://localhost:3000/articles/126898679</link>
+          <guid>http://localhost:3000/articles/126898679</guid>
+          <pubDate>Sun, 18 Sep 2022 06:06:16 GMT</pubDate>
+          <description>script setup&gt; 语法糖里面的代码会被编译成组件setup()函数的内容，不需要通过return暴露声明的变量、函数以及import引入的内容，即可在使用，并且不需要些export default{}这意味着与普通的  只在组件被首次引入的时候执行一次不同， 中的代码会在每次组件实例被创建的时候执行。setup不能是一个async函数，因为返回值不再是return的对象，而是Promise，模板看不到return对象中的属性。</description>
+        </item>
+        <item>
+          <title>Vue3-环境集成</title>
+          <link>http://localhost:3000/articles/126898068</link>
+          <guid>http://localhost:3000/articles/126898068</guid>
+          <pubDate>Fri, 16 Sep 2022 13:35:59 GMT</pubDate>
+          <description>【代码】Vue3-环境集成。</description>
+        </item>
+        <item>
+          <title>Vue-CSS样式穿透</title>
+          <link>http://localhost:3000/articles/126881679</link>
+          <guid>http://localhost:3000/articles/126881679</guid>
+          <pubDate>Thu, 15 Sep 2022 16:23:05 GMT</pubDate>
+          <description>中的scoped所致,当  标签有 scoped 属性时，它的 CSS 只作用于当前组件中的元素。}}发现颜色并没有修改此时需要样式穿透，需要用到深度选择器。}}</description>
+        </item>
+        <item>
+          <title>egg-token码的生成与验证</title>
+          <link>http://localhost:3000/articles/126879208</link>
+          <guid>http://localhost:3000/articles/126879208</guid>
+          <pubDate>Thu, 15 Sep 2022 15:22:19 GMT</pubDate>
+          <description>1、用户第一次登录，服务器通过数据库校验其UserId和Password合法，则再根据随机数字+userid+当前时间戳 再经过DES加密生成一个token串2、Token是在服务端产生的。如果前端使用用户名/密码向服务端请求认证，服务端认证成功，那么在服务端会返回Token给前端。前端可以在每次请求的时候带上 Token 证明自己的合法地位3、token的生成一般是采用uuid保证唯一性，当用户登录时为其生成唯一的token，存储一般保存在数据库中。</description>
+        </item>
+        <item>
+          <title>Vue-引入ElementUI&amp;&amp;use底层原理</title>
+          <link>http://localhost:3000/articles/126877393</link>
+          <guid>http://localhost:3000/articles/126877393</guid>
+          <pubDate>Thu, 15 Sep 2022 12:33:33 GMT</pubDate>
+          <description>还有一种是将这个插件的逻辑封装成一个对象，最后将在 install 编写业务代码暴露给 Vue 对象。这样做的好处是可以添加任意参数在这个对象上方便将 install 函数封装得更加精简，可拓展性也比较高。但是呢这种再main.js中去挂载的写法不太利于管理和维护，代码比较混乱，2.再main.js中引入并挂载到vm对象中。</description>
+        </item>
+        <item>
+          <title>Vue-管理状态仓库Vuex</title>
+          <link>http://localhost:3000/articles/126860138</link>
+          <guid>http://localhost:3000/articles/126860138</guid>
+          <pubDate>Wed, 14 Sep 2022 16:45:06 GMT</pubDate>
+          <description>Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。引入vuex；全局注册Vuex，Vue.use(Vuex)；创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；</description>
+        </item>
+        <item>
+          <title>Vue-路由详解</title>
+          <link>http://localhost:3000/articles/126805221</link>
+          <guid>http://localhost:3000/articles/126805221</guid>
+          <pubDate>Sun, 11 Sep 2022 17:11:59 GMT</pubDate>
+          <description>abstract 是vue路由中的第三种模式，本身是用来在不支持浏览器API的环境中，充当fallback，而不论是hash还是history模式都会对浏览器上的url产生作用，本文要实现的功能就是在已存在的路由页面中内嵌其他的路由页面，而保持在浏览器当中依旧显示当前页面的路由path，这就利用到了abstract这种与浏览器分离的路由模式。</description>
+        </item>
+        <item>
+          <title>Vue-动态组件、缓存组件、异步组件</title>
+          <link>http://localhost:3000/articles/126790334</link>
+          <guid>http://localhost:3000/articles/126790334</guid>
+          <pubDate>Sun, 11 Sep 2022 06:28:26 GMT</pubDate>
+          <description>当我们希望页面中的某个地方，在不同组件之间进行动态切换，这时候除了条件渲染，还可以使用动态组件。</description>
+        </item>
+        <item>
+          <title>Vue-中央事件总线（bus）</title>
+          <link>http://localhost:3000/articles/126775013</link>
+          <guid>http://localhost:3000/articles/126775013</guid>
+          <pubDate>Fri, 09 Sep 2022 14:44:29 GMT</pubDate>
+          <description>通过创建一个新的vm对象,专门统一注册事件,供所有组件共同操作,达到所有组件随意隔代传值的效果也就是：各个组件内部要传输的数据或者要执行的命令信息，靠bus来通信。我们知道子组件向父组件传值可以通过将自定义事件的方法来进行，那么如果我们把事件绑定在所有组件都能访问的地方，然后想要给某个组件通信，直接触发这个事件。//1.触发x组件的a事件: x.$emit(&quot;a事件&quot;,参数...)//2.给x组件绑定a事件 x.$on(&quot;a事件&quot;,监听器函数)</description>
+        </item>
+        <item>
+          <title>Vue-依赖注入（provide-inject）</title>
+          <link>http://localhost:3000/articles/126774381</link>
+          <guid>http://localhost:3000/articles/126774381</guid>
+          <pubDate>Thu, 08 Sep 2022 16:51:19 GMT</pubDate>
+          <description>也就是说，在父组件只要声明了provide，在其子组件，孙组件，曾孙组件等能形成上下游关系的组件中交互，无论多深都能通过inject来访问provider中的数据。在该对象中，它支持ES6中Symbol作为key，但只在原生支持等环境下可工作。注意：provide和inject绑定并不是可响应的，这是刻意为之，然而如果你传入了一个可监听的对象，那么气对象的属性还是可监听的。这对选项允许一个祖先组件向其所有子孙后代组件注入一个依赖，不论组件层次有多深，并在起上下游关系成立的时间里始终生效。</description>
+        </item>
+        <item>
+          <title>Vue-获取组件($root-$parent-$children-$refs)</title>
+          <link>http://localhost:3000/articles/126773911</link>
+          <guid>http://localhost:3000/articles/126773911</guid>
+          <pubDate>Thu, 08 Sep 2022 15:31:48 GMT</pubDate>
+          <description>如果正在尝试使用$children来进行数据绑定，考虑使用一个数组配合v-for来生成子组件，并且使用Array作为真正的来源。和$root 类似，$parent property 可以用来从一个子组件访问父组件的实例。它提供了一种机会，可以在后期随时触达父级组件，以替代将数据以 prop 的方式传入子组件的方式。原理：再入口文件main.js中对Vue的原型设置一个属性并绑定vm对象,后面的子组件都能访问这个根节点。Vue子组件可以通过$root属性访问父组件实例的属性和方法。</description>
+        </item>
+        <item>
+          <title>Vue-多层传值（$attrs&amp;&amp;$listeners）</title>
+          <link>http://localhost:3000/articles/126772863</link>
+          <guid>http://localhost:3000/articles/126772863</guid>
+          <pubDate>Thu, 08 Sep 2022 14:30:27 GMT</pubDate>
+          <description>可以理解为多级组件嵌套传值，比如父组件向孙组件传值Vue 2.4版本开始，新增了$attrs 和 $listeners方法用于隔代传值$attrs: 用于传递属性      inheritAttrs: false,(这个属性可以让传递的属性不显示在标签上)$listeners: 用于传递方法。</description>
+        </item>
+        <item>
+          <title>Vue-双向绑定==＞sync&amp;&amp;v-model</title>
+          <link>http://localhost:3000/articles/126756596</link>
+          <guid>http://localhost:3000/articles/126756596</guid>
+          <pubDate>Wed, 07 Sep 2022 18:19:01 GMT</pubDate>
+          <description>比如：当我们子组件实现购物车增减，父组件中的总价也随之改变使用属性和自定义事件来双向绑定。</description>
+        </item>
+        <item>
+          <title>Vue-加载流程&amp;&amp;DIFF算法</title>
+          <link>http://localhost:3000/articles/126754635</link>
+          <guid>http://localhost:3000/articles/126754635</guid>
+          <pubDate>Wed, 07 Sep 2022 15:24:27 GMT</pubDate>
+          <description>1.每一个组件在加载时都会调用vue内部的render函数来把这个组件的tamplate选项的模板解析为一个JS对象,这个对象跟DOM节点对象&quot;长得一模一样&quot;,就是为了后来的渲染。然后用新的树和旧的树进行比较(diff)，记录两棵树差异。然后用新的树和旧的树进行比较(diff)，记录两棵树差异。把第二棵树所记录的差异应用到第一棵树所构建的真正的DOM树上(patch)，视图就更新了。把第二棵树所记录的差异应用到第一棵树所构建的真正的DOM树上(patch)，视图就更新了。找到对应的真实dom，称为el。</description>
+        </item>
+        <item>
+          <title>Vue-代理配置&amp;&amp;axios二次封装</title>
+          <link>http://localhost:3000/articles/126736467</link>
+          <guid>http://localhost:3000/articles/126736467</guid>
+          <pubDate>Tue, 06 Sep 2022 17:09:30 GMT</pubDate>
+          <description>为了省略每次请求时都需要添加代理配置的api 例如axios(‘/server/ajax1’)因为打包时自动给我们生成了服务器，去请求我们自己的后端服务器时，会导致端口不对从而跨域。要使每个子组件都能使用axios,需要在组件的原型链上配置axios工具,并配置公共网址。在Vue框架中，我们使用相对网络路径去请求我们后端服务器时，会存在跨域，配置好了我们就可以跨域请求我们的后端服务器了。方法一：后端egg中配置跨域服务。组件中使用this.$axios进行请求。此时需要对axios进行二次封装。</description>
+        </item>
+        <item>
+          <title>Vue-组件的自定义事件</title>
+          <link>http://localhost:3000/articles/126736056</link>
+          <guid>http://localhost:3000/articles/126736056</guid>
+          <pubDate>Tue, 06 Sep 2022 15:42:50 GMT</pubDate>
+          <description>顾名思义就是自己打造的事件，包含事件名，事件回调等，定义好之后去给组件使用。也是一种组件间的通信方式，适用于子组件==&gt;父组件。因为通过属性传值是单向的,有时候我们需要子组件的data 数据交给父组件使用:通过在子组件上定义自定义事件，在子组件中通过$emit 来触发事件；子组件的事件被触发并传参，事件处理函数可以接收到子组件的数据；事件绑定的事件处理函数在父组件上，故可在事件处理函数中用到子组件的数据值来修改父组件的数据。</description>
+        </item>
+        <item>
+          <title>Vue-插槽</title>
+          <link>http://localhost:3000/articles/126733662</link>
+          <guid>http://localhost:3000/articles/126733662</guid>
+          <pubDate>Tue, 06 Sep 2022 15:02:15 GMT</pubDate>
+          <description>没有指定插槽名就是默认插入到插槽,不给插槽插入数据的话,就会使用组件的slot中的数据插槽名不用使用引号引起来,直接写变量名插入的内容必须是template标签或者组件 不能是原生的元素。</description>
+        </item>
+        <item>
+          <title>Vue-组件&amp;&amp;单文件组件&amp;&amp;组件的属性&amp;&amp;属性传值&amp;&amp;CSS局部样式</title>
+          <link>http://localhost:3000/articles/126712922</link>
+          <guid>http://localhost:3000/articles/126712922</guid>
+          <pubDate>Mon, 05 Sep 2022 15:57:28 GMT</pubDate>
+          <description># 组件是什么组件是可复用的 Vue 实例,主要用于开发中 具有相同特征不同数据的模块 把它集成为一个组件 供重复利用# 全局组件**规则：**- 组件的属性不能用大写字母- 组件的名字可以用驼峰命名法,但是使用的时候必须用连字符- 全局注册的组件使用时不能使用单标签(不会报错,但是只能使用一次  多次使用只显示第一个)- 注册的组件不要跟系统标签同名# 局部组件一个vm实例可以有多个局部组件,但是只能供当前vm实例使用# 单文件组件vue中的单文件组件是以.vue扩展名结尾的文件，在这个文件中封</description>
+        </item>
+        <item>
+          <title>Vue-vue中的window.onload=＞nextTick</title>
+          <link>http://localhost:3000/articles/126712348</link>
+          <guid>http://localhost:3000/articles/126712348</guid>
+          <pubDate>Mon, 05 Sep 2022 12:24:43 GMT</pubDate>
+          <description>都应该考虑是否是因为本需要在dom执行完再执行，然而实际却在dom没有执行完就执行了代码，如果是就考虑使用将逻辑放到nextTick中，有的时候业务操作复杂，有些操作可能需要更晚一些执行，放在nextTick中仍然没有达到预期效果，这个时候可以考虑使用setTimeout，将逻辑放到宏任务中。{Object} [context]：回调函数执行的上下文环境，不传默认是自动绑定到调用它的实例上。{Function} [callback]：回调函数，不传时提供promise调用。</description>
+        </item>
+        <item>
+          <title>Vue-生命周期函数</title>
+          <link>http://localhost:3000/articles/126711480</link>
+          <guid>http://localhost:3000/articles/126711480</guid>
+          <pubDate>Mon, 05 Sep 2022 11:44:50 GMT</pubDate>
+          <description>vue组件对象在创建到销毁的过程中,在某一种条件成立的时刻,系统会去调用vue中设定的函数 这些函数都叫做生命周期函数1.页面第一次加载时哪些调用?在页面第一次加载时，只有创建前后和挂载前后会被调用;而更新前后第一次构建不会调用,以后每次data被更新了就会调用2.网络请求应该在什么钩子中,为什么?可以放在data生成以后更新数据之前的所有钩子中具体的根据业务需求来；常见的放在created或者mounted中​因为网络请求下来的数据 常常会存在data容器中。</description>
+        </item>
+        <item>
+          <title>Vue-自定义指令&amp;&amp;自定义指令的钩子函数</title>
+          <link>http://localhost:3000/articles/126709430</link>
+          <guid>http://localhost:3000/articles/126709430</guid>
+          <pubDate>Mon, 05 Sep 2022 10:56:34 GMT</pubDate>
+          <description>除了默认设置的核心指令( v-model 和 v-show 等)，Vue 也允许注册自定义指令。在Vue里，代码复用的主要形式和抽象是组件。然而，有的情况下，仍然需要对纯 DOM 元素进行底层操作，这时候就会用到自定义指令。全局指令：Vue.directive(参数1,参数2)参数1：指令的名称。注意，在定义的时候，指令的名称前面，不需要加 v- 前缀。但是， 在调用的时候，必须 在指令名称前 加上 v- 前缀来进行调用。</description>
+        </item>
+        <item>
+          <title>Vue-计算属性和属性监听器</title>
+          <link>http://localhost:3000/articles/126687618</link>
+          <guid>http://localhost:3000/articles/126687618</guid>
+          <pubDate>Sun, 04 Sep 2022 18:26:04 GMT</pubDate>
+          <description>什么是计算属性模板内的表达式非常便利，但是设计它们的初衷是用于简单运算的。在模板中放入太多的逻辑会让模板过重且难以维护,也就是当逻辑比较复杂时，应该使用计算属性。</description>
+        </item>
+        <item>
+          <title>Vue-条件渲染和循环渲染</title>
+          <link>http://localhost:3000/articles/126614437</link>
+          <guid>http://localhost:3000/articles/126614437</guid>
+          <pubDate>Tue, 30 Aug 2022 16:21:08 GMT</pubDate>
+          <description>v-if是通过动态的创建或移除元素来实现元素的显示和隐藏。这样引起的问题是：arr 数组新增一项数据时，会对每一项再做一遍v-if 循环，然后for 循环渲染。渲染过程为：对arr每一项先做map循环判断v-if给出的条件，再做一遍for 循环渲染。1.v-for循环普通数组:v-for=“(em,index) in arr1”2.v-for循环对象数组:v-for=“(em,index) in arr2”3.v-for迭代对象:v-for=“(em, index) in arr3”...</description>
+        </item>
+        <item>
+          <title>Vue-样式绑定</title>
+          <link>http://localhost:3000/articles/126610710</link>
+          <guid>http://localhost:3000/articles/126610710</guid>
+          <pubDate>Tue, 30 Aug 2022 14:34:23 GMT</pubDate>
+          <description>2.对象型:class=“{class类名:布尔值}”//可以写多个类名,这里是用布尔值做判断,可以写表达式，值做布尔判断，如歌为true就获取到该类名，如果为false就没有该类名。3.数组型:class=“[变量名,“类名一”]” //可以写多个类名;数组里面变量直接写变量名,如果直接是类名则要加双引号。也可以使用 v-bind:style 或 :style 直接给 HTML 元素绑定样式，它也有对应的对象语法与数组语法。1.变量型:class=“变量名” //这个变量名为下面data里面写的。...</description>
+        </item>
+        <item>
+          <title>Vue-事件</title>
+          <link>http://localhost:3000/articles/126607344</link>
+          <guid>http://localhost:3000/articles/126607344</guid>
+          <pubDate>Tue, 30 Aug 2022 11:10:27 GMT</pubDate>
+          <description>Vue的按键修饰符使用v-on:event.xxx，其中event为按键事件，xxx为键码或键码别名，如v-on:keydown.13或v-on:keydown.enter就表示：当按下回车键时才触发keydown方法。事件触发方法时的参数传递：可以传递普通参数，也可以传递事件对象$event,设置参数不传参时。与按键别名不同的是，修饰键和 keyup 事件一起用时，事件引发时必须按下正常的按键。可以看见点击div2时只冒泡了它的事件,点击div3时只冒泡了div3和div2。...</description>
+        </item>
+      </channel>
+    </rss>

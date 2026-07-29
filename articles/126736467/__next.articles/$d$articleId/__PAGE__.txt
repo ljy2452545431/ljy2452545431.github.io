@@ -1,0 +1,38 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:Tb32,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#_5">代理配置</a></li><li><a href="#axios_63">axios二次封装</a></li></ul>
+</div>  <hr> 
+<h2><a id="_5"></a>代理配置</h2> 
+<p>在Vue框架中，我们使用相对网络路径去请求我们后端服务器时，会存在跨域，<br> 因为打包时自动给我们生成了服务器，去请求我们自己的后端服务器时，会导致端口不对从而跨域。<br> <strong>如何解决呢?</strong><br> 方法一：后端egg中配置跨域服务。具体参考<a href="https://blog.csdn.net/qq_56973906/article/details/126112902" target="_blank" rel="noreferrer noopener">跨域解决方案</a><br> 方法二：代理配置</p> 
+<pre><code>//vue.config.js文件中配置
+ devServer: {  port: 8080, //默认vue脚手架配置就8080  //代理配置  proxy: {  &#x27;/server&#x27;: {  target: &#x27;http://localhost:7001&#x27;,  secure: true, //如果代理的target是https接口,需要配置它  pathRewrite: {  &#x27;^/server&#x27;: &#x27;/&#x27;  },  //请求时重写pathname:  //项目组件中请求的是http://localhost:8080/server/ajax1  //8080服务器就会帮我们代理请求 http://localhost:7001/ajax1  //如果项目组件中请求的是http://localhost:8080/app/ajax1 那么proxy就检测不到 就不会做代理  },  },
+ }
+</code></pre> 
+<p>配置好了我们就可以跨域请求我们的后端服务器了</p> 
+<pre><code>//父组件App.vue文件中
+&lt;template&gt;  &lt;div v-cloak class=&quot;App&quot;&gt;  &lt;button @click=&quot;fn&quot;&gt;点击请求后端ajax1&lt;/button&gt;  &lt;h1&gt;{{data.name}}{{data.age}}&lt;/h1&gt;  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import axios from &quot;axios&quot;
+export default {  data() {  return {  data:{}  }  },  methods: {  async fn(){  let shuju=await axios(&#x27;/server/ajax1&#x27;)  this.data=shuju.data  console.log(this.data)  }  },
+}
+&lt;/script&gt;
+</code></pre> 
+<p>点击时：<br> <img src="https://i-blog.csdnimg.cn/blog_migrate/25da038778cc82ebfa99228930f807ac.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <img src="https://i-blog.csdnimg.cn/blog_migrate/c1905e44a9ab5430be1d0120cf381510.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="axios_63"></a>axios二次封装</h2> 
+<p>为了省略每次请求时都需要添加代理配置的api 例如axios(‘/server/ajax1’)<br> 此时需要对axios进行二次封装<br> 要使每个子组件都能使用axios,需要在组件的原型链上配置axios工具,并配置公共网址</p> 
+<pre><code>main.js文件中:
+ import axios from &quot;axios&quot;
+ Vue.prototype.$axios=axios
+ Vue.prototype.$axios.defaults.baseURL=&quot;http://ip:8080/api&quot; 
+</code></pre> 
+<p>组件中使用this.$axios进行请求</p> 
+<pre><code>let shuju=await this.$axios(&#x27;/ajax1&#x27;)
+</code></pre>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue-代理配置&&axios二次封装\",\"description\":\"为了省略每次请求时都需要添加代理配置的api 例如axios(‘/server/ajax1’)因为打包时自动给我们生成了服务器，去请求我们自己的后端服务器时，会导致端口不对从而跨域。要使每个子组件都能使用axios,需要在组件的原型链上配置axios工具,并配置公共网址。在Vue框架中，我们使用相对网络路径去请求我们后端服务器时，会存在跨域，配置好了我们就可以跨域请求我们的后端服务器了。方法一：后端egg中配置跨域服务。组件中使用this.$axios进行请求。此时需要对axios进行二次封装。\",\"datePublished\":\"2022-09-07T01:09:30+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"vue.js, javascript, 前端\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126736467\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}]]}],["$","h1",null,{"children":"Vue-代理配置&&axios二次封装"}],["$","p",null,{"children":"为了省略每次请求时都需要添加代理配置的api 例如axios(‘/server/ajax1’)因为打包时自动给我们生成了服务器，去请求我们自己的后端服务器时，会导致端口不对从而跨域。要使每个子组件都能使用axios,需要在组件的原型链上配置axios工具,并配置公共网址。在Vue框架中，我们使用相对网络路径去请求我们后端服务器时，会存在跨域，配置好了我们就可以跨域请求我们的后端服务器了。方法一：后端egg中配置跨域服务。组件中使用this.$axios进行请求。此时需要对axios进行二次封装。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-07T01:09:30+08:00","children":"2022.09.07"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],2," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"463"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126736467","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/126736056","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue-组件的自定义事件"}]]}],["$","$L2",null,{"href":"/articles/126754635","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"Vue-加载流程&&DIFF算法"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

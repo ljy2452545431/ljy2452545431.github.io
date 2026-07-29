@@ -1,0 +1,53 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T130c,<div>
+ <h4>目录</h4>
+ <ul><li><a href="#_4">两种的实现原理</a></li><li><a href="#sync_73">sync实现双向绑定</a></li><li><a href="#vmodel_131">v-model实现双向绑定</a></li></ul>
+</div>  <hr> 
+<h2><a id="_4"></a>两种的实现原理</h2> 
+<p><strong>两种传值都是通过属性和自定义事件来封装的</strong><br> 比如：当我们子组件实现购物车增减，父组件中的总价也随之改变<br> 使用属性和自定义事件来双向绑定</p> 
+<pre><code>//App.vue父组件中
+&lt;template&gt;  &lt;div v-cloak class=&quot;App&quot;&gt;  &lt;!-- 向子组件传递数据,并给子组件绑定自定义事件，等待子组件触发--&gt;  &lt;box1  @myadd=&quot;add&quot; @myreduce=&quot;reduce&quot; v-for=&quot;(item, i) in goods&quot; :key=&quot;item.id&quot; :pro=&quot;item&quot; :index=&quot;i&quot;&gt;&lt;/box1&gt;  &lt;p&gt;共计{{goods|fn}}元&lt;/p&gt;  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;  import box1 from &quot;./components/box1.vue&quot;
+export default {  data() {  return {  goods:[{id:1,title:&#x27;鱼香肉丝&#x27;,price:21,count:1}, { id: 2, title: &#x27;回锅肉&#x27;, price: 28 , count: 2}, { id: 3, title: &#x27;酸菜鱼&#x27;, price: 30, count: 3}],  }  },  methods: {  &lt;!-- 自定义事件处理函数--&gt;  add(index){  this.goods[index].count++  },  reduce(index){  if (this.goods[index].count&gt;0){  this.goods[index].count--  }  },  },  //使用过滤器来计算总价  filters:{  fn(arr){  let count=null  arr.forEach(el =&gt; {  count+=el.price*el.count  });  return count  }  },  components:{  box1,  }
+}
+&lt;/script&gt;
+</code></pre> 
+<pre><code>//子组件box1.vue中
+&lt;template&gt;  &lt;!-- 接受父组件的数据，并给每个商品绑定加减按钮--&gt;  &lt;p&gt;&lt;span&gt;{{pro.title}}----{{pro.price}}&lt;/span&gt;&lt;button @click=&quot;reduce&quot;&gt;-&lt;/button&gt;&lt;span&gt;{{pro.count}}&lt;/span&gt;&lt;button @click=&quot;add()&quot;&gt;+&lt;/button&gt;&lt;/p&gt;
+&lt;/template&gt;
+&lt;script&gt;  export default {  props:[&#x27;pro&#x27;,&#x27;index&#x27;],  methods: {  &lt;!-- 点击按钮触发自定义事件--&gt;  add(){  this.$emit(&quot;myadd&quot;, this.index)  },  reduce(){  this.$emit(&quot;myreduce&quot;,this.index)  }  },  }
+&lt;/script&gt;
+</code></pre> 
+<h2><a id="sync_73"></a>sync实现双向绑定</h2> 
+<p>对于 @myadd=“add” @myreduce=“reduce” vue 提供了一个语法糖，将其替换成 :mydata.sysnc=“item.count”;而且也不用再父组件中再去写触发函数了，这样是不是看起来简洁多了。</p> 
+<p>那么就变成了：</p> 
+<p>// 父组件</p> 
+<pre><code>//App.vue父组件中  &lt;div v-cloak class=&quot;App&quot;&gt;  &lt;box1  :mydata.sync=&quot;item.count&quot; v-for=&quot;(item, i) in goods&quot; :key=&quot;item.id&quot; :pro=&quot;item&quot; :index=&quot;i&quot;&gt;&lt;/box1&gt;  &lt;p&gt;共计{{goods|fn}}元&lt;/p&gt;  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;  import box1 from &quot;./components/box1.vue&quot;
+export default {  data() {  return {  goods:[{id:1,title:&#x27;鱼香肉丝&#x27;,price:21,count:1}, { id: 2, title: &#x27;回锅肉&#x27;, price: 28 , count: 2}, { id: 3, title: &#x27;酸菜鱼&#x27;, price: 30, count: 3}],  }  },  //使用过滤器来计算总价  filters:{  fn(arr){  let count=null  arr.forEach(el =&gt; {  count+=el.price*el.count  });  return count  }  },  components:{  box1,  }
+}
+&lt;/script&gt;
+</code></pre> 
+<pre><code>//子组件box1.vue中
+&lt;template&gt;  &lt;p&gt;&lt;span&gt;{{pro.title}}----{{pro.price}}&lt;/span&gt;&lt;button @click=&quot;reduce&quot;&gt;-&lt;/button&gt;&lt;span&gt;{{pro.count}}&lt;/span&gt;&lt;button @click=&quot;add()&quot;&gt;+&lt;/button&gt;&lt;/p&gt;
+&lt;/template&gt;
+&lt;script&gt;  export default {  props:[&#x27;pro&#x27;,&#x27;index&#x27;],  methods: {  add(){  this.$emit(&quot;update:mydata&quot;, this.pro.count+1)  },  reduce(){  if (this.pro.count &gt; 0){  this.$emit(&quot;update:mydata&quot;, this.pro.count-1)  }  }  },  }
+&lt;/script&gt;
+</code></pre> 
+<h2><a id="vmodel_131"></a>v-model实现双向绑定</h2> 
+<p>通过v-model指令进行双向数据绑定:<br> 1.视图发生改变→对应的数据发生改变：用户在输入框里输入的内容会被message变量接下来，改变了app.message的值。<br> 2.被改变的app.message同时也将动态更新在p标签的内容里。</p> 
+<p>此时我们只需将上面代码变更两处</p> 
+<pre><code>//父组件App.vue中
+&lt;box1  v-model=&quot;item.count&quot; v-for=&quot;(item, i) in goods&quot; :key=&quot;item.id&quot; :pro=&quot;item&quot; :index=&quot;i&quot;&gt;&lt;/box1&gt;
+</code></pre> 
+<pre><code>//子组件box1.vue中
+methods: {  add(){  this.$emit(&quot;input&quot;, this.pro.count+1)  },  reduce(){  if (this.pro.count &gt; 0){  this.$emit(&quot;input&quot;, this.pro.count-1)  } } },
+</code></pre>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue-双向绑定==＞sync&&v-model\",\"description\":\"比如：当我们子组件实现购物车增减，父组件中的总价也随之改变使用属性和自定义事件来双向绑定。\",\"datePublished\":\"2022-09-08T02:19:01+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"vue.js, javascript, 前端\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126756596\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}]]}],["$","h1",null,{"children":"Vue-双向绑定==＞sync&&v-model"}],["$","p",null,{"children":"比如：当我们子组件实现购物车增减，父组件中的总价也随之改变使用属性和自定义事件来双向绑定。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-08T02:19:01+08:00","children":"2022.09.08"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],6," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"541"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126756596","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/126754635","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue-加载流程&&DIFF算法"}]]}],["$","$L2",null,{"href":"/articles/126772863","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"Vue-多层传值（$attrs&&$listeners）"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

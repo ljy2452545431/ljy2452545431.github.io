@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="刘家阳的 Three.js 3D 地图实验 / Liu Jiayang's Three.js map experiment"
+    >
+    <title>3D 地图 / 3D Map · LJY/DEV</title>
+    <script type="module" crossorigin src="/map/assets/index-8aB9HxQj.js"></script>
+    <link rel="stylesheet" crossorigin href="/map/assets/index-CMWkCpMD.css">
+    <style>
+      .blog-return {
+        position: fixed;
+        z-index: 10000;
+        bottom: 18px;
+        left: 18px;
+        padding: 10px 14px;
+        border: 1px solid #11130f;
+        border-radius: 999px;
+        background: #c6ff3e;
+        box-shadow: 3px 3px 0 #11130f;
+        color: #11130f;
+        font: 700 12px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+        text-decoration: none;
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .blog-return:hover {
+        box-shadow: 5px 5px 0 #11130f;
+        transform: translate(-2px, -2px);
+      }
+
+      .blog-return:focus-visible {
+        outline: 3px solid #ff6b4a;
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <a class="blog-return" href="/" target="_top">← 返回博客 / Back to Blog</a>
+  </body>
+</html>

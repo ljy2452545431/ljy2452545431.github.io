@@ -1,0 +1,57 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T1050,<div>
+ <h4>文章目录</h4>
+ <ul><li><ul><li><a href="#_3">一、什么是路由</a></li><li><a href="#_6">二、封装路由</a></li></ul>
+ </li></ul>
+</div>  <hr> 
+<h3><a id="_3"></a>一、什么是路由</h3> 
+<p>路由: 指不同的网址去执行不同的分支或者程序</p> 
+<h3><a id="_6"></a>二、封装路由</h3> 
+<p>需求：前端输入网址后端返回相应的数据，首先输入网址后先去静态托管的文件夹去找；没有则去我们找数据接口，还没有则传个字符串比如“404 not found”。<br> **静态托管:**当用户输入网址时，我们可以在后端使用中间件在pathname的开头添加个文件夹来写入readFile的url中读取，就实现了，用户只能访问那个文件夹里面的文件。<br> 比如：</p> 
+<pre><code>var url=require(&quot;url&quot;)
+var http=require(&quot;http&quot;)
+var fs=require(&quot;fs&quot;)
+http.createServer((req,res)=&gt;{  let pathname=url.parse(req.url).pathname
+	fs.readFile(__dirname+&#x27;/public&#x27;+path,(err,data)=&gt;{  // &#x27;/public&#x27;就是我们要托管的文件夹  res.end(data)
+}}).listen(8080)
+</code></pre> 
+<p>设计思想：根据需求，采用MVC编程思想来设计。</p> 
+<p><strong>什么是MVC</strong></p> 
+<p>V即View视图是指用户看到并与之交互的界面。比如由html元素组成的网页界面，或者软件的客户端界面。MVC的好处之一在于它能为应用程序处理很多不同的视图。在视图中其实没有真正的处理发生，它只是作为一种输出数据并允许用户操作的方式。</p> 
+<p>M即model模型是指模型表示业务规则。在MVC的三个部件中，模型拥有最多的处理任务。被模型返回的数据是中立的，模型与数据格式无关，这样一个模型能为多个视图提供数据，由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性。</p> 
+<p>C即controller控制器是指控制器接受用户的输入并调用模型和视图去完成用户的需求，控制器本身不输出任何东西和做任何处理。它只是接收请求并决定调用哪个模型构件去处理请求，然后再确定用哪个视图来显示返回的数据。</p> 
+<p>简单来说：M是指业务模型，V是指用户界面，C则是控制器，使用MVC的目的是将M和V的实现代码分离，从而使同一个程序可以使用不同的表现形式。</p> 
+<p><strong>路由源码：</strong></p> 
+<p><strong>业务模型:</strong></p> 
+<pre><code>var obj={}
+var fs=require(&quot;fs&quot;)
+var url=require(&quot;url&quot;)
+var mime=require(&quot;mime&quot;)
+var controller=require(&quot;./controller.js&quot;)
+var router=function(req,res){  let pathname=url.parse(req.url).pathname  let type=mime.getType(pathname)  fs.readFile(router.basename+pathname,(err,data)=&gt;{  if(!err){  res.setHeader(&quot;content-Type&quot;,type)  res.end(data)  }else{  if(obj[pathname]){  obj[pathname](req,res)  }else{  res.end(&quot;404 not found&quot;)  }  }  })
+}
+router.basename=__dirname+&#x27;/src&#x27;
+router.stacte=function(path){  this.basename=path
+}
+router.get=function(path,callback){  obj[path]=callback
+}
+module.exports=router
+</code></pre> 
+<p><strong>控制器:</strong></p> 
+<pre><code>module.exports={  ajax1(req,res){  var obj={name:&#x27;ljy&#x27;,age:22}  var str=JSON.stringify(obj)  res.setHeader(&quot;content-Type&quot;,&quot;text/json;charts-utf8&quot;)  res.end(str)  }  //在这里写业务函数向前端返回的数据  }
+</code></pre> 
+<p><strong>view界面</strong></p> 
+<pre><code>var http=require(&quot;http&quot;)
+var router=require(&quot;./router.js&quot;)
+var constroller=require(&quot;./controller.js&quot;)
+http.createServer(router).listen(8081) //设置服务器，后面是设置监听的端口号
+router.get(&quot;/ajax1&quot;,constroller.ajax1)  //增加数据接口 , 需要再去配置控制器的业务函数
+router.stacte(__dirname+&#x27;/src&#x27;)  //设置静态托管文件
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e04b6b4a0ad5b0c6f54d6c629d07ac6c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"nodeJs--使用MVC思想封装路由\",\"description\":\"路由: 指不同的网址去执行不同的分支或者程序。\",\"datePublished\":\"2022-08-04T19:43:00+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"mvc, 前端, node.js, 服务器\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126164387\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","mvc",{"className":"tag tag--solid","children":"mvc"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","node.js",{"className":"tag tag--solid","children":"Node.js"}],["$","span","服务器",{"className":"tag tag--solid","children":"服务器"}]]}],["$","h1",null,{"children":"nodeJs--使用MVC思想封装路由"}],["$","p",null,{"children":"路由: 指不同的网址去执行不同的分支或者程序。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-08-04T19:43:00+08:00","children":"2022.08.04"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],4," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"325"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126164387","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/126150624","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"nodeJs--async/await"}]]}],["$","$L2",null,{"href":"/articles/126194204","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"nodeJS--axios和fetch"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

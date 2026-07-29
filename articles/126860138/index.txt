@@ -1,0 +1,160 @@
+1:"$Sreact.fragment"
+2:I[50249,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MotionShell"]
+3:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+4:I[20531,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"SiteNav"]
+5:I[27366,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"LocaleToggle"]
+6:I[22530,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ThemeToggle"]
+7:I[68420,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+8:I[81005,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+11:I[41081,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default",1]
+:HL["/_next/static/chunks/1tixk57-x0j9_.css","style"]
+0:{"P":null,"c":["","articles","126860138",""],"q":"","i":false,"f":[[["",{"children":["articles",{"children":[["articleId","126860138","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0wdfudby0quhf.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0ihnwulsr8yoy.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/1u8g946itlk0x.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/_next/static/chunks/25vmo8q6d6rem.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"data-locale":"zh","data-theme":"light","lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n(() => {\n  try {\n    const stored = localStorage.getItem(\"ljy-blog-theme\");\n    const theme = stored === \"light\" || stored === \"dark\"\n      ? stored\n      : matchMedia(\"(prefers-color-scheme: dark)\").matches\n        ? \"dark\"\n        : \"light\";\n    document.documentElement.dataset.theme = theme;\n\n    const storedLocale = localStorage.getItem(\"ljy-blog-locale\");\n    const locale = storedLocale === \"en\" ? \"en\" : \"zh\";\n    document.documentElement.dataset.locale = locale;\n    document.documentElement.lang = locale === \"en\" ? \"en\" : \"zh-CN\";\n  } catch {\n    document.documentElement.dataset.theme = \"light\";\n    document.documentElement.dataset.locale = \"zh\";\n    document.documentElement.lang = \"zh-CN\";\n  }\n})();\n"}}]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"跳到主要内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Skip to main content"}]]}],["$","$L2",null,{"children":[["$","header",null,{"className":"site-header","children":["$","div",null,{"className":"site-header__inner","children":[["$","$L3",null,{"className":"brand","href":"/","aria-label":"LJY/DEV","children":[["$","span",null,{"aria-hidden":"true","className":"brand__mark","children":"LJ"}],["$","span",null,{"className":"brand__text","children":"LJY/DEV"}]]}],["$","$L4",null,{}],["$","div",null,{"className":"site-header__actions","children":[["$","$L5",null,{}],["$","$L6",null,{}]]}]]}]}],["$","main",null,{"id":"main-content","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"not-found page-frame","children":[["$","p",null,{"className":"eyebrow","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"404"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"404"}]]}],["$","h1",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"这里还没有内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Nothing here yet"}]]}],["$","p",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"页面可能已经移动，或链接尚未发布。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"This page may have moved or has not been published."}]]}],["$","$L3",null,{"className":"button button--primary","href":"/","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"回到首页"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to home"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":18,"viewBox":"0 0 24 24","width":18,"xmlns":"http://www.w3.org/2000/svg","children":["$","path",null,{"d":"M5 12h14M13 6l6 6-6 6"}]}]]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer","children":[["$","div",null,{"className":"site-footer__top","children":[["$","div",null,{"children":[["$","p",null,{"className":"site-footer__brand","children":"LJY/DEV"}],["$","p",null,{"className":"site-footer__statement","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"设计、工程与技术写作。"}],"$L9"]}]]}],"$La"]}],"$Lb"]}]]}]]}]]}]]}],{"children":["$Lc",{"children":["$Ld",{"children":["$Le",{},null,false,null]},null,false,"$@f"]},null,false,"$@f"]},null,false,null],"$L10",false]],"m":"$undefined","G":["$11",["$L12"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SWYQZKQeSXxQ06k_n6BlL"}
+14:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+18:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ViewportBoundary"]
+1a:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MetadataBoundary"]
+9:["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Design, engineering and technical writing."}]
+a:["$","div",null,{"className":"site-footer__links","children":[["$","$L3","CSDN",{"href":"https://blog.csdn.net/qq_56973906","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"CSDN"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"CSDN"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","NPM",{"href":"https://www.npmjs.com/package/free-layout-workflow-editor","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"NPM"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"NPM"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","3D 地图",{"href":"/map/","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"3D 地图"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"3D Map"}]],null]}],["$","$L3","邮件",{"href":"mailto:liujiayang8882025@163.com","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"邮件"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Email"}]],null]}]]}]
+b:["$","div",null,{"className":"site-footer__bottom","children":[["$","span",null,{"children":["© ",2026," Liu Jiayang ·"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"保留所有权利。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"All rights reserved."}]]]}],["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"文章迁移自作者本人 CSDN 博客"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Articles migrated from my personal CSDN archive"}]]}]]}]
+c:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+e:["$","$1","c",{"children":["$L13",null,["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+17:[]
+f:"$W17"
+10:["$","$1","h",{"children":[null,["$","$L18",null,{"children":"$L19"}],["$","div",null,{"hidden":true,"children":["$","$L1a",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1b"}]}]}],null]}]
+12:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+1c:T23bf,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#vuex_4">什么是vuex</a></li><li><a href="#Vuex_7">Vuex的特点</a></li><li><a href="#Vuex_18">什么情形下适合使用Vuex？</a></li><li><a href="#Vuex_23">引入Vuex</a></li><li><a href="#State_67">State</a></li><li><a href="#Getter_79">Getter</a></li><li><a href="#Mutation_96">Mutation</a></li><li><a href="#Action_192">Action</a></li><li><a href="#Module_219">Module</a></li><li><a href="#_258">总结</a></li></ul>
+</div>  <hr> 
+<h2><a id="vuex_4"></a>什么是vuex</h2> 
+<p>Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。</p> 
+<h2><a id="Vuex_7"></a>Vuex的特点</h2> 
+<p>1.能够在vuex中集中管理共享的数据，易于开发和后期维护</p> 
+<p>2.能够高效地实现组件之间的数据共享, 提高开发效率</p> 
+<p>3.存储在 vuex中的数据都是响应式的，能够实时保持数据与页面的同步</p> 
+<p>4.一般情况下，只有组件之间共享的数据，才有必要存储到vuex中;</p> 
+<p>5.对于组件中的私有数据，依旧存储在组件自身的data中即可.</p> 
+<h2><a id="Vuex_18"></a>什么情形下适合使用Vuex？</h2> 
+<p>如果不打算开发大型单页应用，使用Vuex就会变得很冗余，就会有“牛刀杀鸡”的感觉，因为它会附带很多概念。这种情况下使用store模式就足够了。</p> 
+<p>如果正在开发一个中大型的单页应用，Vuex是更好的选择。</p> 
+<h2><a id="Vuex_23"></a>引入Vuex</h2> 
+<p>1.手动下载引入<br> 安装:</p> 
+<pre><code>npm i vuex --save
+
+导入:
+
+import Vuex from &quot;vuex&quot;
+
+Vue.use(Vuex)
+</code></pre> 
+<p>创建仓库:</p> 
+<pre><code>const store=new Vuex.Store({  state:{msg:&quot;我就是所有共享的数据&quot;}
+
+})
+</code></pre> 
+<p>把仓库挂载到vm对象:</p> 
+<pre><code>new Vue({  render(h){return h(app)},  router,  store//挂载以后  所有的组件就可以直接从store中获取全局数据
+
+}).$mount( &quot;#app&quot;)
+</code></pre> 
+<p>2.使用Vue脚手架安装</p> 
+<p>vue create app</p> 
+<p>选择配置vuex<br> 再main.js文件夹下引入store</p> 
+<pre><code>import store from &#x27;./store&#x27;
+</code></pre> 
+<p>挂载到vm对象,跟上面一样</p> 
+<h2><a id="State_67"></a>State</h2> 
+<p>创建state状态,状态就是那个存数据的对象</p> 
+<pre><code>const store=new Vuex.store({  state:{data:&quot;所有共享的数据&quot;}
+})
+</code></pre> 
+<p>2.组件中访问数据</p> 
+<pre><code>this.$store.state.msg
+</code></pre> 
+<h2><a id="Getter_79"></a>Getter</h2> 
+<p>getter就像是store的计算属性,它会传入state对象供我们操作</p> 
+<p>设计</p> 
+<pre><code>  getters: {  //当作计数属性使用  mycomput(state){  //计算总价  return state.arr.reduce((n1,n2)=&gt;{return n1+n2.price*n2.count},0)  }  },
+</code></pre> 
+<p>使用</p> 
+<pre><code>this.$store.getters.mycomput
+</code></pre> 
+<h2><a id="Mutation_96"></a>Mutation</h2> 
+<p>组件中希望更改 Vuex 的 store 中的状态(数据)的唯一方法是提交 mutation<br> 不要用赋值表达式直接在组件中给store设置新数据<br> 这样设计的原因是,只有通过mutation来更新数据,它才会去帮我们通知所有使用数据的组件更新数据 刷新UI</p> 
+<p>注意:一条重要的原则就是要记住 mutation 必须是同步处理<br> <strong>为什么必须是同步处理？</strong><br> 因为每一条mutation都会被devtools记录，devtools需要捕捉前一状态、后一状态。如果mutation函数中如果有异步函数，devtools无法得知异步函数什么时候执行，也就无法记录状态的变更。</p> 
+<p>设计：</p> 
+<pre><code>mutations: {  mychange(state,obj){  方式一：state.arr[0].price=obj  方式二：state.arr[0].price=obj.n  }  },
+</code></pre> 
+<p>使用：</p> 
+<pre><code>//直接触发并传值(提交载荷)
+方式一：this.$store.commit(&quot;mychange&quot;,10)  //可以以一个对象的形式传入
+方式二：this.$store.commit(&quot;mychange&quot;,{n:10})  方式二另一种写法：this.$store.commit({type:&quot;mychange&quot;,n:10})  //type属性值是需要触发的事件名,n则为obj下面的键值对
+</code></pre> 
+<p>案例：</p> 
+<pre><code>//vuex文件中
+export default new Vuex.Store({  state: {  msg:&quot;所有组件共享的数据&quot;,  arr:[{id:1,price:1,count:22},{id:2,price:2,count:25},{id:3,price:1,count:26}]  },  getters: {  //当作计数属性使用  mycomput(state){  //计算总价  return state.arr.reduce((n1,n2)=&gt;{return n1+n2.price*n2.count},0)  }  },  //更改状态  mutations: {  mychange(state,obj){  state.arr[0].price=obj  }  },  })
+</code></pre> 
+<pre><code>//home组件中
+&lt;template&gt;
+	&lt;div&gt;  &lt;h2&gt;home界面----{{$store.state.msg}}---总价：{{$store.getters.mycomput}}&lt;/h2&gt;  &lt;Box1&gt;&lt;/Box1&gt;  &lt;Box3&gt;&lt;/Box3&gt;
+	&lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+	export default {  components:{  Box1:()=&gt;import(&quot;./views/Box1.vue&quot;),  Box3: () =&gt; import(&quot;./views/Box3.vue&quot;)  }
+	}
+&lt;/script&gt;
+</code></pre> 
+<pre><code>//Box1组件中
+&lt;template&gt;  &lt;div id=&quot;&quot;&gt;  &lt;h2&gt;Box1界面----{{this.$store.state.msg}}&lt;/h2&gt;  &lt;button @click=&quot;fn&quot;&gt;点击修改第一个price&lt;/button&gt;  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;  export default {  methods: {  fn(){  this.$store.commit(&quot;mychange&quot;,10)  }  },  }
+&lt;/script&gt;
+</code></pre> 
+<pre><code>//Box3组件中
+&lt;template&gt;  &lt;div id=&quot;&quot;&gt;  &lt;h2&gt;Box3界面----{{this.$store.state.msg}}&lt;/h2&gt;  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/99edfb168e798c1055f1d9845643a0c2.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="Action_192"></a>Action</h2> 
+<p>actions选项的功能和mutations选项类似，但是也有不同之处：<br> Actions提交的是mutation，而不是直接变更状态；<br> Actions里面可以包含任意的异步操作；</p> 
+<p>所有的Action函数都接受一个与store实例具有相同方法和属性的context对象，这里的context对象指向当前的仓库，也就是store。因此在函数体中可以调用context.commit提交触发状态，相当于store.commit。这里注意，context对象不是store对象本身，这里相当于复制体。</p> 
+<p>设计：</p> 
+<pre><code>  actions: {  mychange2(ctx,obj){  setTimeout(()=&gt;{  //提交载荷  ctx.commit(&quot;mychange&quot;,obj)  },1000)  }  },
+</code></pre> 
+<p>使用：</p> 
+<pre><code>//直接分发
+this.$store.dispatch(&quot;mychange2&quot;, 20)
+//以对象形式
+this.$store.dispatch(&#x27;mychange2&#x27;,{n:20})
+this.$store.dispatch({type: &#x27;mychange2&#x27;,n:20})
+</code></pre> 
+<h2><a id="Module_219"></a>Module</h2> 
+<p>可用于业务分块开发:<br> 由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。<br> 为了解决以上问题，Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter</p> 
+<pre><code>//分块设计:
+const moduleA = {  namespaced: true,//局部命名空间(让state的中变量与其他模块中的同名变量不冲突)  state: { msg:1 },  mutations: { change(state,n){state.msg=n} },  actions: { change(context,n){context.commit(&quot;change&quot;,n)} },  getters: { x(state){return state.msg} }
+}
+
+const moduleB = {  namespaced: true,//局部命名空间  state: {  msg:1 },  mutations: { change(state,n){state.msg=n} },  actions: { change(context,n){context.commit(&quot;change&quot;,n)} },  getters: { x(state){return state.msg} }
+}
+
+const store = new Vuex.Store({  modules: {  a: moduleA,  b: moduleB  }
+})
+
+//组件中的使用:
+this.$store.state.a.msg // -&gt; moduleA 的状态
+this.$store.state.b.msg // -&gt; moduleB 的状态
+this.$store.commit(&quot;a/change&quot;,100)-&gt; moduleA 的mutations
+this.$store.commit(&quot;b/change&quot;,200)-&gt; moduleB 的mutations
+this.$store.getters[&quot;a/x&quot;]-&gt; moduleA 的getters
+this.$store.getters[&quot;b/x&quot;]-&gt; moduleB 的getters
+this.$store.dispatch(&quot;a/change&quot;,100)-&gt; moduleA 的actions
+this.$store.dispatch(&quot;b/change&quot;,200)-&gt; moduleB 的actions
+</code></pre> 
+<h2><a id="_258"></a>总结</h2> 
+<p><strong>使用vuex步骤：</strong></p> 
+<ul><li>引入vuex；</li><li>全局注册Vuex，Vue.use(Vuex)；</li><li>创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；</li><li>触发mutation：通过commit触发仓库中的状态更新，store.commit(“对应的mutation”)；</li><li>将仓库注入到Vue对象中，也可以挂载到Vue对象原型上；</li></ul>  </div>13:[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue-管理状态仓库Vuex\",\"description\":\"Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。引入vuex；全局注册Vuex，Vue.use(Vuex)；创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；\",\"datePublished\":\"2022-09-15T00:45:06+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"vue.js, javascript, 前端\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126860138\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L3",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}]]}],["$","h1",null,{"children":"Vue-管理状态仓库Vuex"}],["$","p",null,{"children":"Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。引入vuex；全局注册Vuex，Vue.use(Vuex)；创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-15T00:45:06+08:00","children":"2022.09.15"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],9," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"850"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L3",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126860138","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$1c"}}],"$L1d"]}]]
+1d:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L3",null,{"href":"/articles/126805221","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue-路由详解"}]]}],["$","$L3",null,{"href":"/articles/126877393","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"Vue-引入ElementUI&&use底层原理"}]]}]]}]
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#f4f1e9","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#11130f","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]
+16:null
+1b:[["$","title","0",{"children":"Vue-管理状态仓库Vuex · 刘家阳"}],["$","meta","1",{"name":"description","content":"Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。引入vuex；全局注册Vuex，Vue.use(Vuex)；创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；"}],["$","meta","2",{"name":"application-name","content":"刘家阳的技术博客"}],["$","meta","3",{"name":"author","content":"刘家阳"}],["$","meta","4",{"name":"keywords","content":"vue.js,javascript,前端"}],["$","meta","5",{"name":"creator","content":"刘家阳"}],["$","meta","6",{"property":"og:title","content":"Vue-管理状态仓库Vuex"}],["$","meta","7",{"property":"og:description","content":"Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。引入vuex；全局注册Vuex，Vue.use(Vuex)；创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"property":"article:published_time","content":"2022-09-15T00:45:06+08:00"}],["$","meta","10",{"property":"article:tag","content":"vue.js"}],["$","meta","11",{"property":"article:tag","content":"javascript"}],["$","meta","12",{"property":"article:tag","content":"前端"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"刘家阳 · Web 前端开发工程师"}],["$","meta","15",{"name":"twitter:description","content":"专注 React、Vue 与 TypeScript，长期参与企业级 AI 平台、数据中台、算力云与工作流编排产品建设。擅长从 0 到 1 搭建前端架构，也乐于把重复能力沉淀成组件、插件和工程规范。"}]]

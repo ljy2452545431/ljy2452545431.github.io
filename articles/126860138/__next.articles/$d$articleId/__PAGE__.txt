@@ -1,0 +1,138 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T23bf,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#vuex_4">什么是vuex</a></li><li><a href="#Vuex_7">Vuex的特点</a></li><li><a href="#Vuex_18">什么情形下适合使用Vuex？</a></li><li><a href="#Vuex_23">引入Vuex</a></li><li><a href="#State_67">State</a></li><li><a href="#Getter_79">Getter</a></li><li><a href="#Mutation_96">Mutation</a></li><li><a href="#Action_192">Action</a></li><li><a href="#Module_219">Module</a></li><li><a href="#_258">总结</a></li></ul>
+</div>  <hr> 
+<h2><a id="vuex_4"></a>什么是vuex</h2> 
+<p>Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。</p> 
+<h2><a id="Vuex_7"></a>Vuex的特点</h2> 
+<p>1.能够在vuex中集中管理共享的数据，易于开发和后期维护</p> 
+<p>2.能够高效地实现组件之间的数据共享, 提高开发效率</p> 
+<p>3.存储在 vuex中的数据都是响应式的，能够实时保持数据与页面的同步</p> 
+<p>4.一般情况下，只有组件之间共享的数据，才有必要存储到vuex中;</p> 
+<p>5.对于组件中的私有数据，依旧存储在组件自身的data中即可.</p> 
+<h2><a id="Vuex_18"></a>什么情形下适合使用Vuex？</h2> 
+<p>如果不打算开发大型单页应用，使用Vuex就会变得很冗余，就会有“牛刀杀鸡”的感觉，因为它会附带很多概念。这种情况下使用store模式就足够了。</p> 
+<p>如果正在开发一个中大型的单页应用，Vuex是更好的选择。</p> 
+<h2><a id="Vuex_23"></a>引入Vuex</h2> 
+<p>1.手动下载引入<br> 安装:</p> 
+<pre><code>npm i vuex --save
+
+导入:
+
+import Vuex from &quot;vuex&quot;
+
+Vue.use(Vuex)
+</code></pre> 
+<p>创建仓库:</p> 
+<pre><code>const store=new Vuex.Store({  state:{msg:&quot;我就是所有共享的数据&quot;}
+
+})
+</code></pre> 
+<p>把仓库挂载到vm对象:</p> 
+<pre><code>new Vue({  render(h){return h(app)},  router,  store//挂载以后  所有的组件就可以直接从store中获取全局数据
+
+}).$mount( &quot;#app&quot;)
+</code></pre> 
+<p>2.使用Vue脚手架安装</p> 
+<p>vue create app</p> 
+<p>选择配置vuex<br> 再main.js文件夹下引入store</p> 
+<pre><code>import store from &#x27;./store&#x27;
+</code></pre> 
+<p>挂载到vm对象,跟上面一样</p> 
+<h2><a id="State_67"></a>State</h2> 
+<p>创建state状态,状态就是那个存数据的对象</p> 
+<pre><code>const store=new Vuex.store({  state:{data:&quot;所有共享的数据&quot;}
+})
+</code></pre> 
+<p>2.组件中访问数据</p> 
+<pre><code>this.$store.state.msg
+</code></pre> 
+<h2><a id="Getter_79"></a>Getter</h2> 
+<p>getter就像是store的计算属性,它会传入state对象供我们操作</p> 
+<p>设计</p> 
+<pre><code>  getters: {  //当作计数属性使用  mycomput(state){  //计算总价  return state.arr.reduce((n1,n2)=&gt;{return n1+n2.price*n2.count},0)  }  },
+</code></pre> 
+<p>使用</p> 
+<pre><code>this.$store.getters.mycomput
+</code></pre> 
+<h2><a id="Mutation_96"></a>Mutation</h2> 
+<p>组件中希望更改 Vuex 的 store 中的状态(数据)的唯一方法是提交 mutation<br> 不要用赋值表达式直接在组件中给store设置新数据<br> 这样设计的原因是,只有通过mutation来更新数据,它才会去帮我们通知所有使用数据的组件更新数据 刷新UI</p> 
+<p>注意:一条重要的原则就是要记住 mutation 必须是同步处理<br> <strong>为什么必须是同步处理？</strong><br> 因为每一条mutation都会被devtools记录，devtools需要捕捉前一状态、后一状态。如果mutation函数中如果有异步函数，devtools无法得知异步函数什么时候执行，也就无法记录状态的变更。</p> 
+<p>设计：</p> 
+<pre><code>mutations: {  mychange(state,obj){  方式一：state.arr[0].price=obj  方式二：state.arr[0].price=obj.n  }  },
+</code></pre> 
+<p>使用：</p> 
+<pre><code>//直接触发并传值(提交载荷)
+方式一：this.$store.commit(&quot;mychange&quot;,10)  //可以以一个对象的形式传入
+方式二：this.$store.commit(&quot;mychange&quot;,{n:10})  方式二另一种写法：this.$store.commit({type:&quot;mychange&quot;,n:10})  //type属性值是需要触发的事件名,n则为obj下面的键值对
+</code></pre> 
+<p>案例：</p> 
+<pre><code>//vuex文件中
+export default new Vuex.Store({  state: {  msg:&quot;所有组件共享的数据&quot;,  arr:[{id:1,price:1,count:22},{id:2,price:2,count:25},{id:3,price:1,count:26}]  },  getters: {  //当作计数属性使用  mycomput(state){  //计算总价  return state.arr.reduce((n1,n2)=&gt;{return n1+n2.price*n2.count},0)  }  },  //更改状态  mutations: {  mychange(state,obj){  state.arr[0].price=obj  }  },  })
+</code></pre> 
+<pre><code>//home组件中
+&lt;template&gt;
+	&lt;div&gt;  &lt;h2&gt;home界面----{{$store.state.msg}}---总价：{{$store.getters.mycomput}}&lt;/h2&gt;  &lt;Box1&gt;&lt;/Box1&gt;  &lt;Box3&gt;&lt;/Box3&gt;
+	&lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+	export default {  components:{  Box1:()=&gt;import(&quot;./views/Box1.vue&quot;),  Box3: () =&gt; import(&quot;./views/Box3.vue&quot;)  }
+	}
+&lt;/script&gt;
+</code></pre> 
+<pre><code>//Box1组件中
+&lt;template&gt;  &lt;div id=&quot;&quot;&gt;  &lt;h2&gt;Box1界面----{{this.$store.state.msg}}&lt;/h2&gt;  &lt;button @click=&quot;fn&quot;&gt;点击修改第一个price&lt;/button&gt;  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;  export default {  methods: {  fn(){  this.$store.commit(&quot;mychange&quot;,10)  }  },  }
+&lt;/script&gt;
+</code></pre> 
+<pre><code>//Box3组件中
+&lt;template&gt;  &lt;div id=&quot;&quot;&gt;  &lt;h2&gt;Box3界面----{{this.$store.state.msg}}&lt;/h2&gt;  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/99edfb168e798c1055f1d9845643a0c2.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="Action_192"></a>Action</h2> 
+<p>actions选项的功能和mutations选项类似，但是也有不同之处：<br> Actions提交的是mutation，而不是直接变更状态；<br> Actions里面可以包含任意的异步操作；</p> 
+<p>所有的Action函数都接受一个与store实例具有相同方法和属性的context对象，这里的context对象指向当前的仓库，也就是store。因此在函数体中可以调用context.commit提交触发状态，相当于store.commit。这里注意，context对象不是store对象本身，这里相当于复制体。</p> 
+<p>设计：</p> 
+<pre><code>  actions: {  mychange2(ctx,obj){  setTimeout(()=&gt;{  //提交载荷  ctx.commit(&quot;mychange&quot;,obj)  },1000)  }  },
+</code></pre> 
+<p>使用：</p> 
+<pre><code>//直接分发
+this.$store.dispatch(&quot;mychange2&quot;, 20)
+//以对象形式
+this.$store.dispatch(&#x27;mychange2&#x27;,{n:20})
+this.$store.dispatch({type: &#x27;mychange2&#x27;,n:20})
+</code></pre> 
+<h2><a id="Module_219"></a>Module</h2> 
+<p>可用于业务分块开发:<br> 由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。<br> 为了解决以上问题，Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter</p> 
+<pre><code>//分块设计:
+const moduleA = {  namespaced: true,//局部命名空间(让state的中变量与其他模块中的同名变量不冲突)  state: { msg:1 },  mutations: { change(state,n){state.msg=n} },  actions: { change(context,n){context.commit(&quot;change&quot;,n)} },  getters: { x(state){return state.msg} }
+}
+
+const moduleB = {  namespaced: true,//局部命名空间  state: {  msg:1 },  mutations: { change(state,n){state.msg=n} },  actions: { change(context,n){context.commit(&quot;change&quot;,n)} },  getters: { x(state){return state.msg} }
+}
+
+const store = new Vuex.Store({  modules: {  a: moduleA,  b: moduleB  }
+})
+
+//组件中的使用:
+this.$store.state.a.msg // -&gt; moduleA 的状态
+this.$store.state.b.msg // -&gt; moduleB 的状态
+this.$store.commit(&quot;a/change&quot;,100)-&gt; moduleA 的mutations
+this.$store.commit(&quot;b/change&quot;,200)-&gt; moduleB 的mutations
+this.$store.getters[&quot;a/x&quot;]-&gt; moduleA 的getters
+this.$store.getters[&quot;b/x&quot;]-&gt; moduleB 的getters
+this.$store.dispatch(&quot;a/change&quot;,100)-&gt; moduleA 的actions
+this.$store.dispatch(&quot;b/change&quot;,200)-&gt; moduleB 的actions
+</code></pre> 
+<h2><a id="_258"></a>总结</h2> 
+<p><strong>使用vuex步骤：</strong></p> 
+<ul><li>引入vuex；</li><li>全局注册Vuex，Vue.use(Vuex)；</li><li>创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；</li><li>触发mutation：通过commit触发仓库中的状态更新，store.commit(“对应的mutation”)；</li><li>将仓库注入到Vue对象中，也可以挂载到Vue对象原型上；</li></ul>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue-管理状态仓库Vuex\",\"description\":\"Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。引入vuex；全局注册Vuex，Vue.use(Vuex)；创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；\",\"datePublished\":\"2022-09-15T00:45:06+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"vue.js, javascript, 前端\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126860138\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}]]}],["$","h1",null,{"children":"Vue-管理状态仓库Vuex"}],["$","p",null,{"children":"Vuex是一个状态管理工具，采用集中式存储管理应用的所有组件的状态，并且以相应的规则保证状态可预测的方式发生改变。本质就是把组件的共享状态和触发修改状态的函数抽离出来，这样就能获得状态或者触发行为。引入vuex；全局注册Vuex，Vue.use(Vuex)；创建一个Vuex仓库，仓库里面可以包含五个选项：state（状态）、getters(对状态的过滤)、mutations(状态修改)、actions(异步提交修-改状态信息)、modules(模块)；"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-15T00:45:06+08:00","children":"2022.09.15"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],9," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"850"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126860138","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/126805221","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue-路由详解"}]]}],["$","$L2",null,{"href":"/articles/126877393","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"Vue-引入ElementUI&&use底层原理"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

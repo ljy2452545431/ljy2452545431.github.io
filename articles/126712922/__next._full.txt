@@ -1,0 +1,194 @@
+1:"$Sreact.fragment"
+2:I[50249,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MotionShell"]
+3:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+4:I[20531,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"SiteNav"]
+5:I[27366,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"LocaleToggle"]
+6:I[22530,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ThemeToggle"]
+7:I[68420,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+8:I[81005,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+11:I[41081,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default",1]
+:HL["/_next/static/chunks/1tixk57-x0j9_.css","style"]
+0:{"P":null,"c":["","articles","126712922",""],"q":"","i":false,"f":[[["",{"children":["articles",{"children":[["articleId","126712922","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0wdfudby0quhf.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0ihnwulsr8yoy.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/1u8g946itlk0x.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/_next/static/chunks/25vmo8q6d6rem.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"data-locale":"zh","data-theme":"light","lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n(() => {\n  try {\n    const stored = localStorage.getItem(\"ljy-blog-theme\");\n    const theme = stored === \"light\" || stored === \"dark\"\n      ? stored\n      : matchMedia(\"(prefers-color-scheme: dark)\").matches\n        ? \"dark\"\n        : \"light\";\n    document.documentElement.dataset.theme = theme;\n\n    const storedLocale = localStorage.getItem(\"ljy-blog-locale\");\n    const locale = storedLocale === \"en\" ? \"en\" : \"zh\";\n    document.documentElement.dataset.locale = locale;\n    document.documentElement.lang = locale === \"en\" ? \"en\" : \"zh-CN\";\n  } catch {\n    document.documentElement.dataset.theme = \"light\";\n    document.documentElement.dataset.locale = \"zh\";\n    document.documentElement.lang = \"zh-CN\";\n  }\n})();\n"}}]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"跳到主要内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Skip to main content"}]]}],["$","$L2",null,{"children":[["$","header",null,{"className":"site-header","children":["$","div",null,{"className":"site-header__inner","children":[["$","$L3",null,{"className":"brand","href":"/","aria-label":"LJY/DEV","children":[["$","span",null,{"aria-hidden":"true","className":"brand__mark","children":"LJ"}],["$","span",null,{"className":"brand__text","children":"LJY/DEV"}]]}],["$","$L4",null,{}],["$","div",null,{"className":"site-header__actions","children":[["$","$L5",null,{}],["$","$L6",null,{}]]}]]}]}],["$","main",null,{"id":"main-content","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"not-found page-frame","children":[["$","p",null,{"className":"eyebrow","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"404"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"404"}]]}],["$","h1",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"这里还没有内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Nothing here yet"}]]}],["$","p",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"页面可能已经移动，或链接尚未发布。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"This page may have moved or has not been published."}]]}],["$","$L3",null,{"className":"button button--primary","href":"/","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"回到首页"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to home"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":18,"viewBox":"0 0 24 24","width":18,"xmlns":"http://www.w3.org/2000/svg","children":["$","path",null,{"d":"M5 12h14M13 6l6 6-6 6"}]}]]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer","children":[["$","div",null,{"className":"site-footer__top","children":[["$","div",null,{"children":[["$","p",null,{"className":"site-footer__brand","children":"LJY/DEV"}],["$","p",null,{"className":"site-footer__statement","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"设计、工程与技术写作。"}],"$L9"]}]]}],"$La"]}],"$Lb"]}]]}]]}]]}]]}],{"children":["$Lc",{"children":["$Ld",{"children":["$Le",{},null,false,null]},null,false,"$@f"]},null,false,"$@f"]},null,false,null],"$L10",false]],"m":"$undefined","G":["$11",["$L12"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SWYQZKQeSXxQ06k_n6BlL"}
+14:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+18:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ViewportBoundary"]
+1a:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MetadataBoundary"]
+9:["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Design, engineering and technical writing."}]
+a:["$","div",null,{"className":"site-footer__links","children":[["$","$L3","CSDN",{"href":"https://blog.csdn.net/qq_56973906","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"CSDN"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"CSDN"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","NPM",{"href":"https://www.npmjs.com/package/free-layout-workflow-editor","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"NPM"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"NPM"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","3D 地图",{"href":"/map/","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"3D 地图"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"3D Map"}]],null]}],["$","$L3","邮件",{"href":"mailto:liujiayang8882025@163.com","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"邮件"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Email"}]],null]}]]}]
+b:["$","div",null,{"className":"site-footer__bottom","children":[["$","span",null,{"children":["© ",2026," Liu Jiayang ·"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"保留所有权利。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"All rights reserved."}]]]}],["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"文章迁移自作者本人 CSDN 博客"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Articles migrated from my personal CSDN archive"}]]}]]}]
+c:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+e:["$","$1","c",{"children":["$L13",null,["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+17:[]
+f:"$W17"
+10:["$","$1","h",{"children":[null,["$","$L18",null,{"children":"$L19"}],["$","div",null,{"hidden":true,"children":["$","$L1a",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1b"}]}]}],null]}]
+12:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+1c:T2a67,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#_5">组件是什么</a></li><li><a href="#_8">全局组件</a></li><li><a href="#_24">局部组件</a></li><li><a href="#_61">单文件组件</a></li><li><a href="#Props_171">组件的属性Props</a></li><li><a href="#Props__204">通过属性Props 传值</a></li><li><a href="#CSSscoped_253">CSS相关技术[scoped]</a></li></ul>
+</div>  <hr> 
+<h2><a id="_5"></a>组件是什么</h2> 
+<p>组件是可复用的 Vue 实例,主要用于开发中 具有相同特征不同数据的模块 把它集成为一个组件 供重复利用</p> 
+<h2><a id="_8"></a>全局组件</h2> 
+<p><strong>规则：</strong></p> 
+<ul><li>组件的属性不能用大写字母</li><li>组件的名字可以用驼峰命名法,但是使用的时候必须用连字符</li><li>全局注册的组件使用时不能使用单标签(不会报错,但是只能使用一次 多次使用只显示第一个)</li><li>注册的组件不要跟系统标签同名</li></ul> 
+<p><strong>创建全局组件语法：</strong></p> 
+<pre><code>  //注册全局组件  Vue.component(&quot;box&quot;, {  //标签名  template: &quot;&lt;div&gt;&lt;h1&gt;box组件&lt;/h1&gt;&lt;/div&gt;&quot; //标签内容  //template里面内容只能用一个唯一的div包裹住，如果template的儿子元素中有两个元素，那么就会报错。局部组件也是  })
+</code></pre> 
+<p>全局组件完成后相对于局部组件来说不用注册在任何vue管辖的html中(也就是vue的el元素下)都可以调用。</p> 
+<h2><a id="_24"></a>局部组件</h2> 
+<p>一个vm实例可以有多个局部组件,但是只能供当前vm实例使用</p> 
+<p><strong>创建局部组件语法：</strong></p> 
+<pre><code>		&lt;div id=&quot;app&quot;&gt;  &lt;box&gt;&lt;/box&gt;  &lt;/div&gt;  &lt;script&gt;  new Vue({  el: &#x27;#app&#x27;,  data:{  name:&quot;ljy&quot;  },  components:{  box:{  template:`&lt;div&gt;&lt;h1&gt;{{name}}{{fn()}}&lt;/h1&gt;&lt;/div&gt;`,  //下面的组件只能在box里面使用  data(){  return {  name:&quot;LJY&quot;,  age:21  }  },  methods:{  fn(){  if(this.age&gt;=18){  return &quot;成年人&quot;  }else{  return &quot;未成年&quot;  }  }  }  }  }  })
+</code></pre> 
+<h2><a id="_61"></a>单文件组件</h2> 
+<p>vue中的单文件组件是以.vue扩展名结尾的文件，在这个文件中封装了html、js、css的代码，它自身是一个独立 的组件，所以成为单文件组件；</p> 
+<p>引入:1官方脚手架 2挂载vm对象 3组件引入并渲染到vm中</p> 
+<p>环境配置命令：</p> 
+<pre><code>1.  npm install  @vue/cli -g //下载官方脚手架
+2.  vue create app  //项目名称 
+3. 接下来让你选择一些默认要生成的工具,不管直接回车
+4. 进入项目文件夹: cd app //进入项目文件夹,也可以直接在项目文件夹中打开终端
+5. 启动:
+npm run serve  //生成的打包文件在内存中不会写入磁盘用于开发阶段
+或者  npm run build //生成的打包文件在dist中 用于项目上线
+</code></pre> 
+<p>单文件组件也有全局组件和局部组件<br> 只是把一个组件单独写在一个.vue文件中,供别的组件引入然后注册<br> 引入文件时:一般使用相对路径 上一下用…/ 同级使用./ 下级使用/ @ 代表src文件夹</p> 
+<p><strong>vue文件结构：</strong></p> 
+<p>由于.vue封装了html、js、css的代码，所以它由以下几部分组成；</p> 
+<pre><code>template -&gt; 组件的模板结构
+script -&gt; 组件的 JavaScript 行为
+style -&gt; 组件的样式
+</code></pre> 
+<p><strong>基于webpack的单文件组件项目基本结构</strong></p> 
+<p>index.html 基本页面<br> App.vue vue根组件<br> main.js 入口文件<br> package.json 项目配置文件<br> webpack.config.js webpack配置文件<br> .babelrc babel配置文件，babel可以将es6转成es5</p> 
+<p><strong>引入组件方法</strong></p> 
+<pre><code>//App.vue文件中
+&lt;template&gt;  &lt;div v-cloak&gt;  &lt;h1&gt;App组件中&lt;/h1&gt;  &lt;box&gt;&lt;/box&gt;  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+//引入Box.vue文件
+import box from &quot;@/components/Box.vue&quot;  //@代表了src目录的意思
+export default {  data() {  return {  msg: &quot;APP组件&quot;,  arr: [&quot;ljy&quot;, 666, 888]  }  },  components:{  //注册的组件名不能跟vue中的和原生DOM的重名,注册的名字是驼峰 使用时就用连字符  box  }
+}
+&lt;/script&gt;
+&lt;style&gt;
+&lt;/style&gt;
+
+</code></pre> 
+<pre><code>//Box.vue文件中
+&lt;template&gt;
+&lt;h1&gt;{{msg}}&lt;/h1&gt;
+&lt;/template&gt;
+&lt;script&gt;
+
+export default {  data() {  return {  msg:&quot;Box组件&quot;  }  },
+}
+//这份.vue文件 打包时 被loader解析为了一个对象
+//  {
+//	template:`&lt;h1&gt;{{msg}}&lt;/h1&gt;`,
+//	data(){
+//		return {
+//  msg:&quot;Box组件&quot;
+//		}
+//	},
+//	...所有功能
+//	}
+&lt;/script&gt;
+&lt;style&gt;
+&lt;/style&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/da3e1f721ec2d2f798df69f5a1e9612d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><strong>小结：</strong><br> 如果.vue的script注释了 在打包的时候 vue的打包环境 会帮我们把这个文件解析为一个对象 然后给这个对象添加一个template属性 值为解析的&lt;template&gt;页面模板。</p> 
+<p>每个组件中必须包含 template 模板结构，而 \script 行为和 \style 样式是可选的组成部分。vue 规定：每个组件对应的模板结构，需要定义到\ 节点中。</p> 
+<p>这里&lt;template&gt; 是 vue 提供的容器标签，只起到包裹性质的作用，它不会被渲染为真正的 DOM 元素。</p> 
+<p><strong>在 template 中定义根节点</strong><br> 在 vue 2.x 的版本中， 节点内的 DOM 结构仅支持单个根节点：<br> 但是，在 vue 3.x 的版本中， 中支持定义多个根节点：</p> 
+<h2><a id="Props_171"></a>组件的属性Props</h2> 
+<p>Vue组件通过props属性来声明一个自己的属性，然后父组件就可以往里面传递数据。<br> 同样传递父组件里面的变量时，使用v-bind绑定。</p> 
+<p>属性有两种写法:简单声明和详细描述:</p> 
+<p>简单声明<br> props:[“prop1”,“prop2”]</p> 
+<p>对属性做详细的描述</p> 
+<pre><code>props: {
+	propA: Number,		// 基础的类型检查 (`null` 匹配任何类型)
+	propB: [String, Number],	// 多个可能的类型
+	propC: {	type: String,  required: true	// 必填的字符串  },
+	propD: {	type: Number,  default: 100	// 带有默认值的数字  },
+	propE: {	type: Object,	// 带有默认值的对象或者数组填Array  default: function () {	// 不建议直接填对象(因为对象直接量会一直占用内存),一般使用工厂函数,调用时才创建对象节省资源(面试)  return { message: &#x27;hello&#x27; }  }  },
+	propF: {  validator: function (value) {// 自定义验证函数返回为true就代表数据符合我们规定  return [&#x27;success&#x27;, &#x27;warning&#x27;, &#x27;danger&#x27;].indexOf(value) !== -1  }  }  }
+</code></pre> 
+<h2><a id="Props__204"></a>通过属性Props 传值</h2> 
+<p>父组件通过属性给子组件传值: 子组件的props接受数据<br> 在页面模板中 使用变量名:属性 data 计算属性<br> 注意：属性传值是单向的</p> 
+<p><strong>案例：</strong></p> 
+<pre><code>//再父组件App.vue文件中
+
+&lt;template&gt;  &lt;div v-cloak&gt;  &lt;h1&gt;App组件中&lt;/h1&gt;  &lt;box :pro=&quot;msg&quot;&gt;&lt;/box&gt;  //属性名不能取官方定义  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import box from &quot;@/components/user.vue&quot;
+export default {  data() {  return {  msg: &quot;父组件传递的值&quot;,  }  },  components:{  box  }
+}
+&lt;/script&gt;
+&lt;style&gt;
+&lt;/style&gt;
+</code></pre> 
+<pre><code>&lt;template&gt;
+&lt;h1&gt;{{msg}}{{pro}}&lt;/h1&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {  props:[&#x27;pro&#x27;],  //接受这个属性  data() {  return {  msg:&quot;Box组件中&quot;  }  },
+}
+&lt;/script&gt;
+&lt;style&gt;
+&lt;/style&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/a51231e234b695bf4d168d87295aa45c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="CSSscoped_253"></a>CSS相关技术[scoped]</h2> 
+<p><strong>全局样式的写法:</strong><br> 在.vue文件中的style中写的样式 打包后就是全局样式<br> 写一个css文件 在项目中导入就是全局样式<br> 如果全局样式出现了相同的选择器. 就看是哪个最后打包引入项目 哪个的优先级就最高</p> 
+<pre><code>//父组件App.vue
+&lt;template&gt;  &lt;div v-cloak&gt;  &lt;h1&gt;App组件中&lt;/h1&gt;  &lt;box :pro=&quot;msg&quot;&gt;&lt;/box&gt;  &lt;user :pro2=&quot;msg2&quot;&gt;&lt;/user&gt;  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import box from &quot;@/components/box.vue&quot;  import user from &quot;@/components/user.vue&quot;  //由于user后引入，css同样式优先级高
+export default {  data() {  return {  msg: &quot;父组件传递给box的值&quot;,  msg2: &quot;父组件传递给user的值&quot;,  }  },  components:{  box,  user  }
+}
+&lt;/script&gt;
+&lt;style&gt;
+&lt;/style&gt;
+</code></pre> 
+<pre><code>//子组件box.vue
+&lt;template&gt;  &lt;h1&gt;{{msg}}{{pro2}}&lt;/h1&gt;
+&lt;/template&gt;
+&lt;script&gt;  export default {  props: [&#x27;pro2&#x27;],  data() {  return {  msg: &quot;Box组件中&quot;  }  },  }
+&lt;/script&gt;
+&lt;style&gt;  h1 {  color: red;  }
+&lt;/style&gt;
+</code></pre> 
+<pre><code>//子组件user.vue
+&lt;template&gt;
+&lt;h1&gt;{{msg}}{{pro}}&lt;/h1&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {  props:[&#x27;pro&#x27;],  data() {  return {  msg:&quot;user组件中&quot;  }  },
+}
+&lt;/script&gt;
+&lt;style&gt;  h1{  color: aqua;  }
+&lt;/style&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/1e637bfcd4beabba6b4f2ddfdcc8b8aa.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><strong>全局样式会出先组件样式污染，那么如何解决？</strong><br> 使用局部样式scoped；</p> 
+<p><strong>局部样式/CSS作用域的实现和原理</strong><br> 在style标签中添加一个scoped<br> 原理就是vue的插件webpack打包时会:<br> 把当前组件模板中的每一个元素添加一个相同的哈希值命名的属性名<br> 并且为添加了scoped的style中的样式选择器上添加一个属性选择器</p> 
+<pre><code>//修改box.vue中的style
+&lt;style scoped=&quot;scoped&quot;&gt;  h1 {  color: red;  }
+&lt;/style&gt;
+
+//修改user.vue中的style
+&lt;style scoped=&quot;scoped&quot;&gt;  h1{  color: aqua;  }
+&lt;/style&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/1bea4a91fb5926c0da67ea29053d1331.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p>  </div>13:[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue-组件&&单文件组件&&组件的属性&&属性传值&&CSS局部样式\",\"description\":\"# 组件是什么组件是可复用的 Vue 实例,主要用于开发中 具有相同特征不同数据的模块 把它集成为一个组件 供重复利用# 全局组件**规则：**- 组件的属性不能用大写字母- 组件的名字可以用驼峰命名法,但是使用的时候必须用连字符- 全局注册的组件使用时不能使用单标签(不会报错,但是只能使用一次  多次使用只显示第一个)- 注册的组件不要跟系统标签同名# 局部组件一个vm实例可以有多个局部组件,但是只能供当前vm实例使用# 单文件组件vue中的单文件组件是以.vue扩展名结尾的文件，在这个文件中封\",\"datePublished\":\"2022-09-05T23:57:28+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"vue.js, 前端, javascript\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126712922\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L3",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}]]}],["$","h1",null,{"children":"Vue-组件&&单文件组件&&组件的属性&&属性传值&&CSS局部样式"}],["$","p",null,{"children":"# 组件是什么组件是可复用的 Vue 实例,主要用于开发中 具有相同特征不同数据的模块 把它集成为一个组件 供重复利用# 全局组件**规则：**- 组件的属性不能用大写字母- 组件的名字可以用驼峰命名法,但是使用的时候必须用连字符- 全局注册的组件使用时不能使用单标签(不会报错,但是只能使用一次  多次使用只显示第一个)- 注册的组件不要跟系统标签同名# 局部组件一个vm实例可以有多个局部组件,但是只能供当前vm实例使用# 单文件组件vue中的单文件组件是以.vue扩展名结尾的文件，在这个文件中封"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-05T23:57:28+08:00","children":"2022.09.05"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],9," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"868"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L3",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126712922","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$1c"}}],"$L1d"]}]]
+1d:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L3",null,{"href":"/articles/126712348","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue-vue中的window.onload=＞nextTick"}]]}],["$","$L3",null,{"href":"/articles/126733662","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"Vue-插槽"}]]}]]}]
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#f4f1e9","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#11130f","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]
+16:null
+1b:[["$","title","0",{"children":"Vue-组件&&单文件组件&&组件的属性&&属性传值&&CSS局部样式 · 刘家阳"}],["$","meta","1",{"name":"description","content":"# 组件是什么组件是可复用的 Vue 实例,主要用于开发中 具有相同特征不同数据的模块 把它集成为一个组件 供重复利用# 全局组件**规则：**- 组件的属性不能用大写字母- 组件的名字可以用驼峰命名法,但是使用的时候必须用连字符- 全局注册的组件使用时不能使用单标签(不会报错,但是只能使用一次  多次使用只显示第一个)- 注册的组件不要跟系统标签同名# 局部组件一个vm实例可以有多个局部组件,但是只能供当前vm实例使用# 单文件组件vue中的单文件组件是以.vue扩展名结尾的文件，在这个文件中封"}],["$","meta","2",{"name":"application-name","content":"刘家阳的技术博客"}],["$","meta","3",{"name":"author","content":"刘家阳"}],["$","meta","4",{"name":"keywords","content":"vue.js,前端,javascript"}],["$","meta","5",{"name":"creator","content":"刘家阳"}],["$","meta","6",{"property":"og:title","content":"Vue-组件&&单文件组件&&组件的属性&&属性传值&&CSS局部样式"}],["$","meta","7",{"property":"og:description","content":"# 组件是什么组件是可复用的 Vue 实例,主要用于开发中 具有相同特征不同数据的模块 把它集成为一个组件 供重复利用# 全局组件**规则：**- 组件的属性不能用大写字母- 组件的名字可以用驼峰命名法,但是使用的时候必须用连字符- 全局注册的组件使用时不能使用单标签(不会报错,但是只能使用一次  多次使用只显示第一个)- 注册的组件不要跟系统标签同名# 局部组件一个vm实例可以有多个局部组件,但是只能供当前vm实例使用# 单文件组件vue中的单文件组件是以.vue扩展名结尾的文件，在这个文件中封"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"property":"article:published_time","content":"2022-09-05T23:57:28+08:00"}],["$","meta","10",{"property":"article:tag","content":"vue.js"}],["$","meta","11",{"property":"article:tag","content":"前端"}],["$","meta","12",{"property":"article:tag","content":"javascript"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"刘家阳 · Web 前端开发工程师"}],["$","meta","15",{"name":"twitter:description","content":"专注 React、Vue 与 TypeScript，长期参与企业级 AI 平台、数据中台、算力云与工作流编排产品建设。擅长从 0 到 1 搭建前端架构，也乐于把重复能力沉淀成组件、插件和工程规范。"}]]

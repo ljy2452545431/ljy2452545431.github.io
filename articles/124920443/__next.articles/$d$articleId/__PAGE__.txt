@@ -1,0 +1,107 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T26ea,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#_8">一、字符串常用的内置功能有哪些？</a></li><li><ul><li><a href="#sub_9">sub()</a></li><li><a href="#sup_23">sup()</a></li><li><a href="#toUpperCase_38">toUpperCase()</a></li><li><a href="#toLowerCase_40">toLowerCase()</a></li><li><a href="#substr_99">substr()</a></li><li><a href="#substring_109">substring()</a></li><li><a href="#slice_118">slice()</a></li><li><a href="#split_128">split()</a></li><li><a href="#indexOf_141">indexOf()</a></li><li><a href="#valueOf_157">valueOf()</a></li><li><a href="#charAt_165">charAt()</a></li></ul>
+ </li></ul>
+</div>  <hr> 
+<h2><a id="_8"></a>一、字符串常用的内置功能有哪些？</h2> 
+<h3><a id="sub_9"></a>sub()</h3> 
+<p>把字符串显示为下标。</p> 
+<pre><code>&lt;body&gt;  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;  var box=document.querySelector(&quot;.box&quot;) //获取页面元素  var str=&quot;hello&quot;  re=str.sub()  box.innerHTML=&quot;abc&quot;+re  //给页面元素添加内容
+	&lt;/script&gt;
+	&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/0966cb47ec9ffee9662e677752219470.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="sup_23"></a>sup()</h3> 
+<p>把字符串显示为上标。</p> 
+<pre><code>&lt;body&gt;  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;  var box=document.querySelector(&quot;.box&quot;) //获取页面元素  var str=&quot;hello&quot;  re=str.sup()  box.innerHTML=&quot;abc&quot;+re  //给页面元素添加内容
+	&lt;/script&gt;
+	&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/073b6398218fbd867150b47b5ab9b1c9.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="toUpperCase_38"></a>toUpperCase()</h3> 
+<p>把字符串中的小写字母转换为大写。</p> 
+<h3><a id="toLowerCase_40"></a>toLowerCase()</h3> 
+<p>把字符串中的大写字母转换为小写</p> 
+<p>案例</p> 
+<pre><code>var str=&quot;LJYliujiayang&quot;
+var toUpperCase=str.toUpperCase()
+console.log(toUpperCase)
+var Lowercase=str.toLocaleLowerCase()
+console.log(Lowercase)
+//字符串也可以访问下标,也有length属性  var re=str[1]
+var re2=str.length
+console.log(re,re2)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/1d1d7323021e2747ae3c29ecefe4eb3c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <strong>将字符串中的首字母转换成大写的方法</strong></p> 
+<pre><code>String.prototype.capUppserCase=function() {  var re=this[0].toUpperCase()  for(var i=1;i&lt;this.length;i++){  re+=this[i]  }  return re  }  var str=&quot;ljyLJYliu&quot;  var re=str.capUppserCase()  console.log(re)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e28dc9e71059d68aa1611af4b3a4a35c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 分析：利用原型的思想在字符串的原型对象中封装一个自己的方法<br> 后面的字符串都可以使用这个方法，利用字符串取下标取出首字母，用字符串的内置功能toUpperCase()将其转换成大写再通过for循环出其余字母，然后拼接成新字符串，通过闭包思想返回出这个字符串。</p> 
+<p><strong>将字符串中的中文前两个中文字符加粗</strong></p> 
+<pre><code>&lt;div class=&quot;box&quot;&gt;
+&lt;/div&gt; 
+</code></pre> 
+<pre><code>String.prototype.capUppserCase=function() {  var re=this[0].bold()  var re2=this[1].bold()  re+=re2  for(var i=2;i&lt;this.length;i++){  re+=this[i]  }  return re  }  var str=&quot;重庆三峡学院2022年5月全国计算机等级考试报名通知 一、报考5月全国计算机等级考试的考生严格按照《重庆市2022年5月全国计算机等级考试报名公告》(附件1)的要求报...学术信息 | ACADEM&quot;  var re=str.capUppserCase()  console.log(re)  var box=document.querySelector(&quot;.box&quot;)  box.innerHTML=re
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/34517725833e9a85ec269b4e36857170.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>分析：利用上面转换首字母大写思想实现加粗，也可以实现更多首字符相关的操作。</p> 
+<h3><a id="substr_99"></a>substr()</h3> 
+<p>可在字符串中抽取从start下标开始的指定数目的字符。其返回值为一个字符串，包含从 stringObject的start（包括start所指的字符）处开始的length个字符。如果没有指定 length，那么返回的字符串包含从start到stringObject的结尾的字符。另外如果start为负数，则表示从字符串尾部开始算起。<br> 如果参数为空就返回当前字符串</p> 
+<pre><code>var str=&quot;hello&quot;
+var re=str.substr(2,2) 
+console.log(re,str)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/a89d439cf0c387e5de8f4833c11da4f4.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="substring_109"></a>substring()</h3> 
+<p>它可以接收两个参数，分别是要截取的开始位置和结束位置，它将返回一个新的字符串，其内容是从start（包括start所指的字符）处到end-1处的所有字符。若结束参数(end)省略，则表示从start位置一直截取到最后。如果参数为空就返回当前字符串。注意：如果参数是负数则默认是第一个字符。</p> 
+<pre><code>var str=&quot;hello&quot;
+var re=str.substring(3,5) 
+console.log(re,str)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/93e25cb6a6f8424dec5fbee84740eeaf.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="slice_118"></a>slice()</h3> 
+<p><strong>start ：</strong> 要抽取的片断的起始下标。如果是负数，则该参数规定的是从字符串的尾部开始算起的位置。也就是说，-1 指字符串的最后一个字符，-2 指倒数第二个字符，以此类推。<br> <strong>end：</strong> 紧接着要抽取的片段的结尾的下标。若未指定此参数，则要提取的子串包括 start 到原字符串结尾的字符串。如果该参数是负数，那么它规定的是从字符串的尾部开始算起的位置。<br> <strong>返回值：</strong> 一个新的字符串。包括字符串 stringObject 从 start 开始（包括 start）到 end 结束（不包括 end）为止的所有字符。</p> 
+<pre><code>var str=&quot;hello&quot;
+re=str.slice(2,-1)
+console.log(re,str)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/aeb6b212dda52d2add7f4a3701e0b9b5.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="split_128"></a>split()</h3> 
+<p>split() 方法用于把一个字符串分割成字符串数组。<br> <img src="https://i-blog.csdnimg.cn/blog_migrate/3608d3377d7b0afffe9af3ae11a18396.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 返回值：<br> 一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。</p> 
+<p>但是，如果 separator 是包含子表达式的正则表达式，那么返回的数组中包括与这些子表达式匹配的字串（但不包括与整个正则表达式匹配的文本）。</p> 
+<pre><code>var str=&quot;ljy-LIU-LJY&quot;
+var arr=str.split(&quot;-&quot;)
+console.log(arr)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/9cc84b22bab216a0968bc40fbb426dd0.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="indexOf_141"></a>indexOf()</h3> 
+<p>返回某个指定的字符串值在字符串中首次出现的位置。</p> 
+<table><thead><tr><th>参数</th><th>描述</th></tr></thead><tbody><tr><td>searchvalue</td><td>必需。规定需检索的字符串值。</td></tr><tr><td>fromindex</td><td>可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的首字符开始检索。</td></tr></tbody></table>
+<p>该方法将从头到尾地检索字符串 stringObject，看它是否含有子串 searchvalue。开始检索的位置在字符串的 fromindex 处或字符串的开头（没有指定 fromindex 时）。如果找到一个 searchvalue，则返回 searchvalue 的第一次出现的位置。stringObject 中的字符位置是从 0 开始的。如果没找到，它的返回值为-1 。<br> 注意：如果要检索的字符串值没有出现，则该方法返回 -1。</p> 
+<pre><code>var str=&quot;abcdaefa&quot;
+var re=str.indexOf(&quot;a&quot;,2)
+console.log(re)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5a5957d411667359ce0c1d1781bf40e4.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="valueOf_157"></a>valueOf()</h3> 
+<p>返回 String 对象的原始值。</p> 
+<pre><code>var str=&quot;hello&quot;
+var re=str.valueOf()
+console.log(re,typeof re)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/d79310e3e96488bdec33467920605db9.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="charAt_165"></a>charAt()</h3> 
+<p>返回指定位置的字符<br> 它有一个参数index 必需填的。表示字符串中某个位置的数字，即字符在字符串中的下标。<br> 注意：字符串中第一个字符的下标是 0。如果参数 index 不在 0 与 string.length 之间，该方法将返回一个空字符串。</p> 
+<pre><code>var str=&quot;hello&quot;
+re=str.charAt(1)
+console.log(re,str)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/0b20d12b4991b36e24a1856a2b2a37f3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"JS基础--字符串常用的内置功能\",\"description\":\"文章目录一、字符串常用的内置功能有哪些？一、字符串常用的内置功能有哪些？toUpperCase()把字符串中的小写字母转换为大写。toLowerCase()把字符串中的大写字母转换为小写案例var str=\\\"LJYliujiayang\\\"var toUpperCase=str.toUpperCase()console.log(toUpperCase)var Lowercase=str.toLocaleLowerCase()console.log(Lowercase)//字符串也可\",\"datePublished\":\"2022-05-23T23:09:57+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"javascript, 前端, html5\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/124920443\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","html5",{"className":"tag tag--solid","children":"HTML"}]]}],["$","h1",null,{"children":"JS基础--字符串常用的内置功能"}],["$","p",null,{"children":"文章目录一、字符串常用的内置功能有哪些？一、字符串常用的内置功能有哪些？toUpperCase()把字符串中的小写字母转换为大写。toLowerCase()把字符串中的大写字母转换为小写案例var str=\"LJYliujiayang\"var toUpperCase=str.toUpperCase()console.log(toUpperCase)var Lowercase=str.toLocaleLowerCase()console.log(Lowercase)//字符串也可"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-05-23T23:09:57+08:00","children":"2022.05.23"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],7," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"496"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/124920443","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/124851305","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"JS难题--getName"}]]}],["$","$L2",null,{"href":"/articles/124798416","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"JS基础--闭包"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

@@ -1,0 +1,42 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T134d,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#_7">一、作用域是什么？</a></li><li><a href="#JavaScript__17">二、JavaScript 局部作用域</a></li><li><a href="#JavaScript__32">三、JavaScript 全局作用域</a></li><li><a href="#JavaScript__45">四、JavaScript 隐式提升</a></li><li><a href="#__87">五、函数调用 运行时的作用域</a></li></ul>
+</div>  <hr> 
+<h2><a id="_7"></a>一、作用域是什么？</h2> 
+<p>含义：在JavaScript中，作用域为可访问变量，对象，函数的集合，它分为局部作用域和全局作用域。</p> 
+<p><strong>如何理解：</strong><br> 函数和变量在哪些地方可以被访问 那些地方就是它的作用域。<br> 作用域只有函数才有 代码块和对象的大括号没有作用域<br> 函数外部称为外部作用域<br> 函数内部称为内部作用域<br> js引擎规则:函数内部的代码可以访问内部的变量和函数 也可以访问外部的变量和函数<br> 函数外部的代码 不能访问函数内部的变量和函数</p> 
+<h2><a id="JavaScript__17"></a>二、JavaScript 局部作用域</h2> 
+<p>函数和变量在函数内声明，变量为局部变量，函数为局部函数，都具有局部作用域。<br> 局部变量或局部函数：只能在函数内部访问。<br> 因为局部变量或局部函数只作用于函数内，所以不同的函数可以使用相同名称的变量和函数。<br> <strong>案例：</strong></p> 
+<pre><code>	function fn (a) {  var a=300  a=100  function a(){}  }  var a=200;  fn(300)  console.log(a)  //这里打印200,函数内部的变量a和函数a只作用于函数体内
+</code></pre> 
+<h2><a id="JavaScript__32"></a>三、JavaScript 全局作用域</h2> 
+<p>变量或函数在函数外定义，即为全局变量或全局函数。<br> 全局变量或全局函数有 全局作用域: 网页中所有脚本和函数均可使用。<br> 如果变量在函数内没有声明（没有使用 var 关键字），该变量为全局变量。<br> <strong>案例：</strong></p> 
+<pre><code>	function fn () {  a=100  }  var a=200;  fn(300)  console.log(a)  //这里打印的就是100；因为函数体内的a没有用var声明也没有形参隐式声明，所以会找到外部的全局变量a然后修改
+</code></pre> 
+<h2><a id="JavaScript__45"></a>四、JavaScript 隐式提升</h2> 
+<p><strong>什么是隐式提升：</strong><br> 一个变量可以先使用在声明,因为每一个作用域在运行代码时,<br> 会先扫描这个作用域代码中的所有var和function关键字 然后提前声明 再运行代码<br> <strong>比如：</strong></p> 
+<pre><code>console.log(a);//不会报错  因为隐式的提前声明了变量a,但是访问的值是undfined,因为变量只隐式提升声明
+var a=100;
+</code></pre> 
+<pre><code>fn()//正常调用函数 因为隐式的提前声明了函数fn  函数的提升会把代码块一起提升
+function fn(){}
+</code></pre> 
+<p><strong>隐式提升顺序是什么：</strong><br> 四个字：形实函运<br> 解释:<br> 1.先把函数内部的形参和局部变量提前声明<br> 2.再把实参赋值给形参变量<br> 3.然后再把内部的局部函数 提前声明<br> 4.再按照代码顺序执行代码(执行的过程中 这个作用域内部有已经隐式提前声明的变量和函数就不再声明了</p> 
+<p><strong>案例：</strong></p> 
+<pre><code>var a=100  function fn(a){  //在函数体内根据形实函运顺序，首先提前声明了 var a;  再实参赋值 a=100,  //然后提前声明函数 function  a () {console.log(666666)} 注意这里函数不会运行，没有调用。  //最后再按照代码顺序执行。  console.log(a)  // var a; a=100;function  a () {console.log(666666)};放到了console.log(a)前面。  //这里优先级是依靠就近原则  所以这里打印 function a(){console.log(666666)}  a=10  // var a=10  console.log(a)  // 打印10  var a=20  // var a=20  console.log(a)  // 打印20  function  a () {  console.log(666666)  }  console.log(a)  // 打印20  }  fn(a)  console.log(a)  //因为局部变量不会被函数外部访问所以，这里打印全局变量a; 打印100
+</code></pre> 
+<h2><a id="__87"></a>五、函数调用 运行时的作用域</h2> 
+<p>函数在声明和定义时就有了它的作用域 ,但是函数的调用可能发生在其他作用域,<br> 运行代码时 一定是去它声明和定义的作用域执行代码</p> 
+<p><strong>案例：</strong></p> 
+<pre><code>function fn(){  var a=10  return function fm(){console.log(a)}
+}
+var a=20
+fn()()  //fn()()解释：调用fn函数 运行后结果返回fm()函数 再次调用就是调用fm函数 打印变量a  /* 这里fm函数是fn函数的局部函数 ,虽然是在全局作用域调用运行fm函数,  但是fm函数定义的作用域在fn内部  因此执行代码的作用域在fn内部 */  //结果打印的不是全局变量a ,而是fn函数内部的a ;打印10
+</code></pre>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"JS基础--作用域\",\"description\":\"文章目录一、作用域是什么？二、作用域的执行一、作用域是什么？含义：在JavaScript中，作用域为可访问变量，对象，函数的集合，它分为局部作用域和全局作用域。如何理解：函数或者变量在哪些地方可以被访问  那些地方就是它的作用域。作用域只有函数才有  代码块和对象的大括号没有作用域函数外部称为外部作用域函数内部称为内部作用域js引擎规则:函数内部的代码可以访问内部的变量和函数  也可以访问外部的变量和函数函数外部的代码 不能访问函数内部的变量和函数二、作用域的执行...\",\"datePublished\":\"2022-05-15T16:16:09+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"javascript, 前端, html5\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/124782085\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","html5",{"className":"tag tag--solid","children":"HTML"}]]}],["$","h1",null,{"children":"JS基础--作用域"}],["$","p",null,{"children":"文章目录一、作用域是什么？二、作用域的执行一、作用域是什么？含义：在JavaScript中，作用域为可访问变量，对象，函数的集合，它分为局部作用域和全局作用域。如何理解：函数或者变量在哪些地方可以被访问  那些地方就是它的作用域。作用域只有函数才有  代码块和对象的大括号没有作用域函数外部称为外部作用域函数内部称为内部作用域js引擎规则:函数内部的代码可以访问内部的变量和函数  也可以访问外部的变量和函数函数外部的代码 不能访问函数内部的变量和函数二、作用域的执行..."}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-05-15T16:16:09+08:00","children":"2022.05.15"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],4," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"496"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/124782085","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/124781315","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"JS难题分析--原型链和this难题"}]]}],["$","$L2",null,{"href":"/articles/124851305","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"JS难题--getName"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

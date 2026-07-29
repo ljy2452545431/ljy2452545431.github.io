@@ -1,0 +1,132 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T2868,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#1dom_5">1.创捷dom元素</a></li><li><a href="#2_7">2.添加节点</a></li><li><a href="#3_64">3.删除节点</a></li><li><a href="#4_75">4.复制节点（克隆节点）</a></li><li><a href="#5_82">5.设置节点的属性</a></li><li><ul><li><a href="#1_83">1.获取节点的属性值</a></li><li><a href="#2_105">2、设置节点的属性值</a></li></ul>  </li><li><a href="#6_147">6.修改节点文本内容</a></li><li><a href="#7CSS_170">7.修改节点CSS属性</a></li></ul>
+</div>  <hr> 
+<h2><a id="1dom_5"></a>1.创捷dom元素</h2> 
+<p>使用document.createElement()方法创建元素节点</p> 
+<h2><a id="2_7"></a>2.添加节点</h2> 
+<p>1.appendChild ();给当前元素的内容之后进行追加(与运行过程有关)<br> 2.insertBefore();将元素追加到旧元素之前。<br> <img src="https://i-blog.csdnimg.cn/blog_migrate/542334023e601fef90485979208cd828.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<pre><code>&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;div id=&quot;div2&quot;&gt;&lt;/div&gt;  &lt;/div&gt;  &lt;script&gt;  var div1 = document.getElementById(&#x27;div1&#x27;)  var span = document.createElement(&#x27;span&#x27;)  var div2 = document.getElementById(&#x27;div2&#x27;)  div1.insertBefore(span,div2)  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/748f422d2b8deeb9f401a9acc2af0d3e.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 使用insertBefore()方法改变节点的顺序</p> 
+<pre><code>&lt;body&gt;
+&lt;ul id=&quot;myList&quot;&gt;&lt;li&gt;1&lt;/li&gt;&lt;li&gt;2&lt;/li&gt;&lt;li&gt;3&lt;/li&gt;&lt;li&gt;4&lt;/li&gt;&lt;/ul&gt;
+&lt;p id=&quot;demo&quot;&gt;单击该按钮改变列表项的顺序&lt;/p&gt;
+&lt;button onclick=&quot;fn()&quot;&gt;点我&lt;/button&gt;
+&lt;script&gt;
+function fn(){  var list=document.getElementById(&quot;myList&quot;);  var node=list.getElementsByTagName(&quot;li&quot;);  list.insertBefore(node[3],node[0]); 
+}
+&lt;/script&gt;
+&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/7c9db79de2449ff06bf1f022253e0e9a.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>3.inserAfter();将元素追加到旧元素之后,官方没有提供这个方法；<br> 我们自己封装一个。</p> 
+<pre><code>&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;div id=&quot;div2&quot;&gt;&lt;/div&gt;  &lt;/div&gt;  &lt;script&gt;  Object.prototype.insertAfter = function (newnode, existingnode) {  if (this.lastChild == existingnode) {  this.appendChild(newnode);  } else {  this.insertBefore(newnode, existingnode.nextSilbing);  }  }  var span = document.createElement(&#x27;span&#x27;)  var div1 = document.getElementById(&#x27;div1&#x27;)  var div2 = document.getElementById(&#x27;div2&#x27;)  div1.insertAfter(span, div2)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5a84934a55911098cda8d07b0c7658be.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="3_64"></a>3.删除节点</h2> 
+<p><strong>1.</strong> removeChild()删除子元素</p> 
+<pre><code>  var box=document.querySelector(&quot;#box&quot;)  box.parentElement.removeChild(box)
+</code></pre> 
+<p><strong>2.</strong> remove()删除自身</p> 
+<pre><code>  var box=document.getElementById(&quot;box&quot;);  box.remove();
+</code></pre> 
+<h2><a id="4_75"></a>4.复制节点（克隆节点）</h2> 
+<p>格式如下：<br> 要复制的节点.cloneNode(); //括号里不带参数和带参数false，效果是一样的。<br> 要复制的节点.cloneNode(true);<br> 括号里带不带参数，效果是不同的。解释如下：<br> 不带参数/带参数false：只复制节点本身，不复制子节点。<br> 带参数true：既复制节点本身，也复制其所有的子节点。</p> 
+<h2><a id="5_82"></a>5.设置节点的属性</h2> 
+<h3><a id="1_83"></a>1.获取节点的属性值</h3> 
+<p>方式1：<br> 元素节点.属性;<br> 元素节点[‘属性名’];</p> 
+<p>方式2：<br> 元素节点.getAttribute(“属性名称”);</p> 
+<pre><code>&lt;body&gt;
+&lt;img src=&quot;../imgs/touxiang.webp.jpg&quot; alt=&quot;图片加载失败&quot; title=&quot;touxiang&quot; id=&quot;img1&quot; class=&quot;img_1&quot;&gt;
+&lt;script&gt;
+let img=document.querySelector(&#x27;.img_1&#x27;)
+console.log(img.src,img[&#x27;src&#x27;])
+console.log(img.alt,img[&#x27;alt&#x27;])
+console.log(img.title,img[&#x27;title&#x27;])
+console.log(img.id,img[&#x27;id&#x27;])
+console.log(img.className,img[&#x27;className&#x27;])
+console.log(img.getAttribute(&#x27;src&#x27;))
+&lt;/script&gt;
+&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/768105edd059aec8b5dadb8b376ea08c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="2_105"></a>2、设置节点的属性值</h3> 
+<p>方式1：<br> 元素节点.属性=‘修改的值’;<br> 元素节点[‘属性名’]=‘修改的值’;</p> 
+<p>方式2：<br> 元素节点.setAttribute(属性名, 新的属性值);</p> 
+<pre><code>&lt;body&gt;
+&lt;img src=&quot;../imgs/touxiang.webp.jpg&quot; alt=&quot;图片加载失败&quot; title=&quot;touxiang&quot; id=&quot;img1&quot; class=&quot;img_1&quot;&gt;
+&lt;script&gt;
+let img=document.querySelector(&#x27;.img_1&#x27;)
+img.title=&#x27;mao&#x27;
+img.className=&#x27;img_2&#x27;  //修改class名使用className
+img.setAttribute(&#x27;id&#x27;,&#x27;img2&#x27;)
+console.log(img.title)
+console.log(img.className) 
+console.log(img.id)
+&lt;/script&gt;
+&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/dad1a309e7d85f95eecf26415006e00e.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> class多类名的添加和删除方法：<br> 方式一：<br> 元素节点.className=‘类名1 类名2’<br> 元素节点[‘className’]=‘类名1 类名2’<br> 元素节点.className=元素节点.className+‘空格类名2’<br> 方式二：<br> 元素节点.classList.add(“要添加的类名”)</p> 
+<pre><code>&lt;body&gt;
+&lt;img src=&quot;../imgs/touxiang.webp.jpg&quot; alt=&quot;图片加载失败&quot; title=&quot;touxiang&quot; id=&quot;img1&quot; class=&quot;img_1&quot;&gt;
+&lt;script&gt;
+let img=document.querySelector(&#x27;.img_1&#x27;)
+img.className=&#x27;img_1 img_2&#x27;
+img.className=img.className+&#x27; img_3&#x27;
+img.classList.add(&quot;img_4&quot;)
+img.classList.add(&quot;img_4&quot;)  //重复则不添加
+&lt;/script&gt;
+&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/3fe0658d9eb3e87e0f64d7c59a4d5711.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="6_147"></a>6.修改节点文本内容</h2> 
+<p>方法一:<br> 元素节点.innerHTML=“&lt;strong&gt;内容&lt;strong&gt;” 会加粗显示<br> innerHTML会识别标签<br> 方法二：<br> 元素节点.innerText=“&lt;strong&gt;内容&lt;strong&gt;” 把里面引号里面当做字符串显示<br> innerText只能解析文本且去除空格和换行</p> 
+<p>小结：两个方法都会将原有内容和子标签一起替换，若想不替换原有内容可以：<br> 元素节点.innerHTML+=“&lt;strong&gt;内容&lt;strong&gt;”<br> 元素节点.innerText+=“&lt;strong&gt;内容&lt;strong&gt;”</p> 
+<pre><code>&lt;body&gt;
+&lt;div&gt;&lt;span&gt;ljy&lt;/span&gt;&lt;/div&gt;
+&lt;script&gt;
+var div=document.querySelector(&#x27;div&#x27;)
+div.innerHTML=&#x27;&lt;strong&gt;内容&lt;strong&gt;&#x27;
+div.innerText+=&#x27;&lt;strong&gt;内容&lt;strong&gt;&#x27;
+&lt;/script&gt;
+&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/6656f9a528a782fccc9dc3599895ebaa.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="7CSS_170"></a>7.修改节点CSS属性</h2> 
+<p>方法一：<br> 元素.style.样式名 = 样式值<br> 注意：通过style属性设置和读取的都是内联样式,无法读取样式表中的样式<br> 如果CSS的样式名中含有-，<br> 这种名称在JS中是不合法的比如background-color<br> 需要将这种样式名修改为驼峰命名法，<br> 去掉-，然后将-后的字母大写</p> 
+<pre><code>&lt;style&gt;  div{  width: 200px;  height: 200px;  background-color: aqua;  }
+&lt;/style&gt;
+&lt;body&gt;
+&lt;div&gt;&lt;span&gt;ljy&lt;/span&gt;&lt;/div&gt;
+&lt;script&gt;
+var div=document.querySelector(&#x27;div&#x27;)
+console.log(div.style.width,div.style.backgroundColor) //打印空，不能获取样式表中样式
+console.log(div)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/cd198d04325d35841df3777d4c2a34ac.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>方法二：</p> 
+<p>通过js读取css属性（行内样式）<br> 获取元素的当前显示的样式：</p> 
+<p>语法：元素.currentStyle.样式名<br> 它可以用来读取当前元素正在显示的样式<br> 如果当前元素没有设置该样式，则获取它的默认值<br> currentStyle只有IE浏览器支持，其他的浏览器都不支持</p> 
+<p>在其他浏览器中可以使用<br> getComputedStyle()这个方法来获取元素当前的样式<br> 这个方法是window的方法，可以直接使用<br> 需要两个参数<br> 第一个：要获取样式的元素<br> 第二个：可以传递一个伪元素，一般都传null<br> 该方法会返回一个对象，对象中封装了当前元素对应的样式<br> 可以通过对象.样式名来读取样式<br> 如果获取的样式没有设置，则会获取到真实的值，而不是默认值<br> 比如：没有设置width，它不会获取到auto，而是一个长度<br> 但是该方法不支持IE8及以下的浏览器</p> 
+<pre><code>&lt;style&gt;  div{  width: 200px;  height: 200px;  background-color: aqua;  }
+
+&lt;/style&gt;
+&lt;body&gt;
+&lt;div&gt;&lt;span&gt;ljy&lt;/span&gt;&lt;/div&gt;
+&lt;script&gt;
+var div=document.querySelector(&#x27;div&#x27;)
+let divStyle=getComputedStyle(div)
+console.log(divStyle.width,divStyle.height,divStyle.backgroundColor)
+&lt;/script&gt;
+&lt;/body&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/b745d39692f509d1071d0da4a0b333c6.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"DOM操作--操作节点\",\"description\":\"元素节点.innerText=“内容”把里面引号里面当做字符串显示。元素节点.innerHTML=“内容”会加粗显示。元素节点.innerHTML+=“内容”元素节点.innerText+=“内容”元素节点.setAttribute(属性名,新的属性值);不带参数/带参数false只复制节点本身，不复制子节点。元素节点.classList.add(“要添加的类名”)...\",\"datePublished\":\"2022-07-24T23:31:23+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"javascript, 前端, html\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/125953695\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","html",{"className":"tag tag--solid","children":"html"}]]}],["$","h1",null,{"children":"DOM操作--操作节点"}],["$","p",null,{"children":"元素节点.innerText=“内容”把里面引号里面当做字符串显示。元素节点.innerHTML=“内容”会加粗显示。元素节点.innerHTML+=“内容”元素节点.innerText+=“内容”元素节点.setAttribute(属性名,新的属性值);不带参数/带参数false只复制节点本身，不复制子节点。元素节点.classList.add(“要添加的类名”)..."}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-07-24T23:31:23+08:00","children":"2022.07.24"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],9," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"963"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/125953695","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/125883074","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"面试题--事件循环"}]]}],["$","$L2",null,{"href":"/articles/126043438","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"nodeJs--http模块"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

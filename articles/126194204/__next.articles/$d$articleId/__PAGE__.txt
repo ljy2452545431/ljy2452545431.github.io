@@ -1,0 +1,65 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T2850,<div>
+ <h4>axios&amp;&amp;fetch</h4>
+ <ul><li><a href="#axios_2">axios</a></li><li><a href="#fetch_102">fetch</a></li></ul>
+</div>  <h2><a id="axios_2"></a>axios</h2> 
+<p><strong>什么是axios：</strong> 简单来说：axios就是将原生AJAX进行封装，使用Promise实现的，它会生成Promise对象,方便我们进行网络请求的一种工具；使用时需要导入axios.js。<br> 封装原理代码看之前写的<a href="https://t.csdn.cn/QHcqU" target="_blank" rel="noreferrer noopener">promise封装AJAX</a><br> 具有以下特征：</p> 
+<ul><li>从浏览器中创建 XMLHttpRequest</li><li>支持 Promise API</li><li>客户端支持防止CSRF</li><li>提供了一些并发请求的接口</li><li>从 node.js 创建 http 请求</li><li>拦截请求和响应</li><li>转换请求和响应数据</li><li>取消请求</li><li>自动转换JSON数据</li></ul> 
+<p><strong>如何取出数据：</strong><br> 因为生成的是Promise对象所以使用它的then方法取出数据。<br> 后端发送的数据是保存在data属性里面。</p> 
+<pre><code>//引入axios.js
+&lt;script src=&#x27;https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/axios/0.26.0/axios.js&#x27;&gt;&lt;/script&gt;
+//这是绑定的点击事件，我想点击时axios才请求
+ &lt;button onclick=&quot;fn()&quot;&gt;点击访问ajax1&lt;/button&gt;
+ &lt;script&gt;  function fn(){  //发送请求,默认是get请求；使用then方法取出数据  axios(&quot;http://localhost:8081/ajax1&quot;).then((data)=&gt;{  console.log(data)  })  }
+ &lt;/script&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/10a578d1bf46ea69fd2558ec5368b3e5.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>axios的请求配置：</p> 
+<pre><code>axaio(
+//常用的配置项
+{  // `url` 是用于请求的服务器 URL  url: &#x27;/user&#x27;,  // `method` 是创建请求时使用的方法  method: &#x27;get&#x27;,  // `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。  // 它可以通过设置一个 `baseURL` 便于为 axios 实例的方法传递相对 URL  baseURL: &#x27;https://some-domain.com/api/&#x27;,  // `headers` 是即将被发送的自定义请求头  headers: {&#x27;X-Requested-With&#x27;: &#x27;XMLHttpRequest&#x27;},  // `params` 是即将与请求一起发送的 URL 参数  // 必须是一个无格式对象(plain object)或 URLSearchParams 对象  params: {  id: 11111  },  // `data` 是作为请求主体被发送的数据  // 只适用于这些请求方法 &#x27;PUT&#x27;, &#x27;POST&#x27;, 和 &#x27;PATCH&#x27;  data: {  name: &#x27;lisi&#x27;  },
+}
+)
+</code></pre> 
+<p><strong>axios请求方法别名</strong></p> 
+<pre><code>axios.request(config)  //用做拦截器
+axios.get(url[, config])  // 一般多用于获取数据　
+axios.delete(url[, config])  // 删除请求
+axios.head(url[, config]) //
+axios.options(url[, config])
+axios.post(url[, data[, config]])  //主要提交表单数据和上传文件
+axios.put(url[, data[, config]])  //对数据全部进行更新
+axios.patch(url[, data[, config]])  //只对更改过的数据进行更新
+</code></pre> 
+<p>以 axios.post(url[, data[, config]]) 为例<br> axios.post（）的第一个参数是url，第2个参数是data参数（即post的body），第三个参数是config对象。</p> 
+<p><strong>提供处理并发请求的助手函数</strong></p> 
+<pre><code>axios.all（） 参数是可迭代对象，array，set 或者 map等
+axios.spread（） 参数是一个回调函数
+</code></pre> 
+<p>axios.all方法接受一个数组作为参数，数组中的每个元素都是一个请求，返回一个promise对象，当数组中所有请求均已完成时，执行then方法。<br> 在then方法中执行了 axios.spread 方法。该方法是接收一个函数作为参数，返回一个新的函数。接收的参数函数的参数是axios.all方法中每个请求返回的响应。</p> 
+<pre><code> &lt;button onclick=&quot;fn()&quot;&gt;点我&lt;/button&gt;
+ &lt;script&gt;  function fn(){  let arr=[  axios.get(&#x27;/ajax1&#x27;,{params:111,dataType:&#x27;JSON&#x27;}),  axios.get(&#x27;/ajax2&#x27;,{params:222,dataType:&#x27;JSON&#x27;})  ]  axios.all(arr).then(axios.spread((res1,res2)=&gt;{  console.log(res1)  console.log(res2)  }))  }
+ &lt;/script&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/3cf9b34962ecc4cd3e4a14ae05e166e3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="fetch_102"></a>fetch</h2> 
+<p><strong>什么是fetch：</strong><br> fetch()方法定义在Window对象以及WorkerGlobalScope对象上，用于发起获取资源的请求，其返回一个Promise对象，这个Promise对象会在请求响应后被resolve，并传回Response对象。</p> 
+<p>它是AJAX在ES6的替代品<br> fetch不是ajax的进一步封装，而是原生js，没有使用XMLHttpRequest对象。</p> 
+<p><strong>fetch优势：</strong><br> 语法简洁，更加语义化<br> 基于标准 Promise 实现，支持 async/await<br> 同构方便，使用 isomorphic-fetch<br> 更加底层，提供的API丰富（request, response）<br> 脱离了XHR，是ES规范里新的实现方式</p> 
+<p><strong>fetch存在问题</strong><br> fetch是一个低层次的API，你可以把它考虑成原生的XHR，所以使用起来并不是那么舒服，需要进行封装。<br> fetch只对网络请求报错，对400，500都当做成功的请求，服务器返回 400，500 错误码时并不会 reject，只有网络错误这些导致请求不能完成时，fetch 才会被 reject。<br> fetch默认不会带cookie，需要添加配置项： fetch(url, {credentials: ‘include’})<br> fetch不支持abort，不支持超时控制，使用setTimeout及Promise.reject的实现的超时控制并不能阻止请求过程继续在后台运行，造成了流量的浪费<br> fetch没有办法原生监测请求的进度，而XHR可以</p> 
+<p><strong>配置详解：</strong><br> Promise fetch(input[, init])</p> 
+<ul><li>input: 定义要获取的资源，其值可以是：</li><li>  <ul><li>一个字符串，包含要获取资源的URL，一些浏览器会接受 blob和data作为schemes。</li></ul> </li><li>  <ul><li>一个Request对象。</li></ul> </li><li>init: 一个配置项对象，包括所有对请求的设置。可选的参数有：</li><li>  <ul><li>method: 请求使用的方法，如GET、POST。</li></ul> </li><li>  <ul><li>headers: 请求的头信息，形式为Headers的对象或包含ByteString值的对象字面量。</li></ul> </li><li>  <ul><li>body: 请求的body信息：可能是一个Blob、BufferSource、FormData、URLSearchParams或者USVString对象，注意GET或HEAD方法的请求不能包含body信息。</li></ul> </li><li>  <ul><li>mode: 请求的模式，如cors、no-cors或者same-origin。</li></ul> </li><li>  <ul><li>credentials: 请求的credentials，如omit、same-origin或者include，为了在当前域名内自动发送cookie，必须提供这个选项。</li></ul> </li><li>  <ul><li>cache: 请求的cache模式: default、no-store、reload、no-cache、force-cache或者only-if-cached。</li></ul> </li><li>  <ul><li>redirect: 可用的redirect模式: follow自动重定向，error如果产生重定向将自动终止并且抛出一个错误，或者manual手动处理重定向。</li></ul> </li><li>  <ul><li>referrer: 一个USVString可以是no-referrer、client或一个URL，默认是 client。</li></ul> </li><li>  <ul><li>referrerPolicy: 指定了HTTP头部referer字段的值，可能为以下值之一： no-referrer、no-referrer-when-downgrade、origin、origin-when-cross-origin、unsafe-url。</li></ul> </li><li>  <ul><li>integrity: 包括请求的subresource integrity值，例如: sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=。</li></ul> </li></ul> 
+<p>返回值 ：一个Promise，resolve时回传Response对象。</p> 
+<p><strong>简单用法：</strong></p> 
+<pre><code> &lt;script&gt;  function fn(){  fetch(&quot;/ajax1&quot;).then((res)=&gt;{  return res.json()  }).then((res)=&gt;{  console.log(res)  })  }
+ &lt;/script&gt;
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/40a19c0ea8ad59620946fa81691da7c6.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <strong>Response对象的相关属性与方法：</strong></p> 
+<p>Response.headers: 只读，包含此Response所关联的Headers对象。<br> Response.ok: 只读，包含了一个布尔值，标示该Response成功，HTTP状态码的范围在 200-299。<br> Response.redirected: 只读，表示该Response是否来自一个重定向，如果是的话，它的URL列表将会有多个条目。<br> Response.status: 只读，包含Response的状态码。<br> Response.statusText: 只读，包含了与该Response状态码一致的状态信息。<br> Response.type: 只读，包含Response的类型，例如basic、cors。<br> Response.url: 只读，包含Response的URL。<br> Response.useFinalURL: 包含了一个布尔值，来标示这是否是该Response的最终URL。<br> Response.clone(): 创建一个Response对象的克隆。<br> Response.error(): 返回一个绑定了网络错误的新的Response对象。<br> Response.redirect(): 用另一个URL创建一个新的Response。</p> 
+<p><strong>Response实现了Body接口，相关属性与方法可以直接使用：</strong><br> Body.body: 只读，一个简单的getter，用于暴露一个ReadableStream类型的body内容。<br> Body.bodyUsed: 只读，包含了一个布尔值来标示该Response是否读取过Body。<br> Body.arrayBuffer(): 读取Response对象并且将它设置为已读，并返回一个被解析为ArrayBuffer格式的Promise对象，Responses对象被设置为了stream的方式，所以它们只能被读取一次。<br> Body.blob():<br> 读取Response对象并且将它设置为已读，并返回一个被解析为Blob格式的Promise对象。<br> Body.formData():<br> 读取Response对象并且将它设置为已读，并返回一个被解析为FormData格式的Promise对象。<br> Body.json():<br> 读取Response对象并且将它设置为已读，并返回一个被解析为JSON格式的Promise对象。<br> Body.text():<br> 读取Response对象并且将它设置为已读，并返回一个被解析为USVString格式的Promise对象。</p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"nodeJS--axios和fetch\",\"description\":\"简单来说：axios就是将原生AJAX进行封装，使用Promise实现的，它会生成Promise对象,方便我们进行网络请求的一种工具；使用时需要导入axios.js。封装原理代码看之前写的。\",\"datePublished\":\"2022-08-07T00:07:35+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"javascript, 前端, ajax\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126194204\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","ajax",{"className":"tag tag--solid","children":"ajax"}]]}],["$","h1",null,{"children":"nodeJS--axios和fetch"}],["$","p",null,{"children":"简单来说：axios就是将原生AJAX进行封装，使用Promise实现的，它会生成Promise对象,方便我们进行网络请求的一种工具；使用时需要导入axios.js。封装原理代码看之前写的。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-08-07T00:07:35+08:00","children":"2022.08.07"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],10," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"1.8千"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126194204","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/126164387","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"nodeJs--使用MVC思想封装路由"}]]}],["$","$L2",null,{"href":"/articles/126209592","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"nodeJs--egg框架介绍"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

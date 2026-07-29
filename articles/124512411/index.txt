@@ -1,0 +1,168 @@
+1:"$Sreact.fragment"
+2:I[50249,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MotionShell"]
+3:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+4:I[20531,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"SiteNav"]
+5:I[27366,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"LocaleToggle"]
+6:I[22530,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ThemeToggle"]
+7:I[68420,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+8:I[81005,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+11:I[41081,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default",1]
+:HL["/_next/static/chunks/1tixk57-x0j9_.css","style"]
+0:{"P":null,"c":["","articles","124512411",""],"q":"","i":false,"f":[[["",{"children":["articles",{"children":[["articleId","124512411","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0wdfudby0quhf.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0ihnwulsr8yoy.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/1u8g946itlk0x.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/_next/static/chunks/25vmo8q6d6rem.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"data-locale":"zh","data-theme":"light","lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n(() => {\n  try {\n    const stored = localStorage.getItem(\"ljy-blog-theme\");\n    const theme = stored === \"light\" || stored === \"dark\"\n      ? stored\n      : matchMedia(\"(prefers-color-scheme: dark)\").matches\n        ? \"dark\"\n        : \"light\";\n    document.documentElement.dataset.theme = theme;\n\n    const storedLocale = localStorage.getItem(\"ljy-blog-locale\");\n    const locale = storedLocale === \"en\" ? \"en\" : \"zh\";\n    document.documentElement.dataset.locale = locale;\n    document.documentElement.lang = locale === \"en\" ? \"en\" : \"zh-CN\";\n  } catch {\n    document.documentElement.dataset.theme = \"light\";\n    document.documentElement.dataset.locale = \"zh\";\n    document.documentElement.lang = \"zh-CN\";\n  }\n})();\n"}}]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"跳到主要内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Skip to main content"}]]}],["$","$L2",null,{"children":[["$","header",null,{"className":"site-header","children":["$","div",null,{"className":"site-header__inner","children":[["$","$L3",null,{"className":"brand","href":"/","aria-label":"LJY/DEV","children":[["$","span",null,{"aria-hidden":"true","className":"brand__mark","children":"LJ"}],["$","span",null,{"className":"brand__text","children":"LJY/DEV"}]]}],["$","$L4",null,{}],["$","div",null,{"className":"site-header__actions","children":[["$","$L5",null,{}],["$","$L6",null,{}]]}]]}]}],["$","main",null,{"id":"main-content","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"not-found page-frame","children":[["$","p",null,{"className":"eyebrow","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"404"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"404"}]]}],["$","h1",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"这里还没有内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Nothing here yet"}]]}],["$","p",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"页面可能已经移动，或链接尚未发布。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"This page may have moved or has not been published."}]]}],["$","$L3",null,{"className":"button button--primary","href":"/","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"回到首页"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to home"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":18,"viewBox":"0 0 24 24","width":18,"xmlns":"http://www.w3.org/2000/svg","children":["$","path",null,{"d":"M5 12h14M13 6l6 6-6 6"}]}]]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer","children":[["$","div",null,{"className":"site-footer__top","children":[["$","div",null,{"children":[["$","p",null,{"className":"site-footer__brand","children":"LJY/DEV"}],["$","p",null,{"className":"site-footer__statement","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"设计、工程与技术写作。"}],"$L9"]}]]}],"$La"]}],"$Lb"]}]]}]]}]]}]]}],{"children":["$Lc",{"children":["$Ld",{"children":["$Le",{},null,false,null]},null,false,"$@f"]},null,false,"$@f"]},null,false,null],"$L10",false]],"m":"$undefined","G":["$11",["$L12"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SWYQZKQeSXxQ06k_n6BlL"}
+14:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+18:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ViewportBoundary"]
+1a:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MetadataBoundary"]
+9:["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Design, engineering and technical writing."}]
+a:["$","div",null,{"className":"site-footer__links","children":[["$","$L3","CSDN",{"href":"https://blog.csdn.net/qq_56973906","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"CSDN"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"CSDN"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","NPM",{"href":"https://www.npmjs.com/package/free-layout-workflow-editor","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"NPM"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"NPM"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","3D 地图",{"href":"/map/","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"3D 地图"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"3D Map"}]],null]}],["$","$L3","邮件",{"href":"mailto:liujiayang8882025@163.com","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"邮件"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Email"}]],null]}]]}]
+b:["$","div",null,{"className":"site-footer__bottom","children":[["$","span",null,{"children":["© ",2026," Liu Jiayang ·"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"保留所有权利。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"All rights reserved."}]]]}],["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"文章迁移自作者本人 CSDN 博客"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Articles migrated from my personal CSDN archive"}]]}]]}]
+c:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+e:["$","$1","c",{"children":["$L13",null,["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+17:[]
+f:"$W17"
+10:["$","$1","h",{"children":[null,["$","$L18",null,{"children":"$L19"}],["$","div",null,{"hidden":true,"children":["$","$L1a",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1b"}]}]}],null]}]
+12:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+1c:T3bf6,<blockquote>  <p>提示：文章写完后，目录可以自动生成，如何生成可参考右边的帮助文档</p> 
+</blockquote>  <div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#_7">前言</a></li><li><a href="#HTML_9">一、HTML骨架格式</a></li><li><a href="#_24">二、标签分类</a></li><li><ul><li><a href="#1_25">1.双标签</a></li><li><a href="#2_33">2.单标签</a></li></ul>  </li><li><a href="#HTML_41">三、HTML常用的标签</a></li><li><ul><li><a href="#1_42">1.标题标签</a></li><li><a href="#2_50">2.段落标签</a></li><li><a href="#3_53">3.水平线标签</a></li><li><a href="#4_56">4.换行标签</a></li><li><a href="#5div_span_59">5.div标签 span标签</a></li><li><a href="#6_65">6.文本格式化标签</a></li><li><a href="#7_72">7.图像标签</a></li><li><a href="#8___84">8. 链接标签</a></li><li><ul><li><ul><li><a href="#_95">锚点定位</a></li></ul>  </li></ul>  </li><li><a href="#9__base_99">9. base标签</a></li><li><a href="#10__104">10. 注释标签</a></li><li><a href="#11_107">11.列表标签</a></li><li><ul><li><a href="#1ul_109">1.无序列表ul</a></li><li><a href="#2ol_124">2.有序列表ol</a></li><li><a href="#3dl_152">3.自定义列表dl</a></li></ul>  </li><li><a href="#12table_168">12.表格table标签</a></li><li><ul><li><a href="#_183">表格属性</a></li><li><a href="#_192">表头标签</a></li><li><a href="#_195">表格结构</a></li><li><a href="#_201">表格标题</a></li><li><a href="#_203">合并单元格</a></li></ul>  </li><li><a href="#12_215">12.表单标签</a></li><li><ul><li><a href="#1input_216">1.input标签</a></li><li><a href="#2label_219">2.label标签</a></li><li><a href="#3textarea_229">3.textarea控件（文本域）</a></li><li><a href="#4__237">4. 下拉菜单</a></li><li><a href="#5__250">5. 表单域</a></li></ul>  </li></ul>
+ </li></ul>
+</div>  <hr> 
+<h2><a id="_7"></a>前言</h2> 
+<p>网页的基本结构是由HTML超文本标记语言编写的，HTML标签是HTML语言中最基本的单位，是HTML(标准通用标记语言下的一个应用)最重要的组成部分。</p> 
+<h2><a id="HTML_9"></a>一、HTML骨架格式</h2> 
+<pre><code class="prism language-c"><span class="token">&lt;</span>html<span class="token">&gt;</span>  <span class="token">&lt;</span>head<span class="token">&gt;</span>  <span class="token">&lt;</span>title<span class="token">&gt;</span><span class="token">&lt;</span><span class="token">/</span>title<span class="token">&gt;</span>  <span class="token">&lt;</span><span class="token">/</span>head<span class="token">&gt;</span>  <span class="token">&lt;</span>body<span class="token">&gt;</span>  <span class="token">&lt;</span><span class="token">/</span>body<span class="token">&gt;</span>
+<span class="token">&lt;</span><span class="token">/</span>html<span class="token">&gt;</span>
+</code></pre> 
+<p>html标签：限定了文档的开始点和结束点，在它们之间是文档的头部和主体。<br> head标签：用于定义文档的头部，它是所有头部元素的容器。例如存放title、 meta、base、style、script、link等标签<br> title标签：定义页面文档的标题<br> body标签：定义页面文档的主体</p> 
+<h2><a id="_24"></a>二、标签分类</h2> 
+<h3><a id="1_25"></a>1.双标签</h3> 
+<pre><code>  语法：&lt;标签名&gt;内容&lt;/标签名&gt;  定义：成双成对的标签就是双标签  双标签中可以再嵌套其它标签，也可以嵌套内容​
+</code></pre> 
+<pre><code>常见的双标签有：&lt;html&gt;、&lt;head&gt;、&lt;title&gt;、&lt;body&gt;、&lt;table&gt;、&lt;tr&gt;、&lt;td&gt;、&lt;span&gt;、&lt;p&gt;、&lt;form&gt;、&lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt;、&lt;h4&gt;、&lt;h5&gt;、&lt;h6&gt;、&lt;style&gt;、&lt;b&gt;、&lt;u&gt;、&lt;strong&gt;、&lt;i&gt;、&lt;div&gt;、&lt;a&gt;、&lt;script&gt;
+</code></pre> 
+<h3><a id="2_33"></a>2.单标签</h3> 
+<pre><code>  语法：&lt;标签名 /&gt;  定义：只有一个标签符号的就是单标签  单标签只能有属性，不能嵌套其他标签及内容
+</code></pre> 
+<pre><code>常见的单标签有：&lt;br&gt;、&lt;hr&gt;、&lt;img&gt;、&lt;input&gt;、&lt;param&gt;、&lt;meta&gt;、&lt;link&gt;
+</code></pre> 
+<h2><a id="HTML_41"></a>三、HTML常用的标签</h2> 
+<h3><a id="1_42"></a>1.标题标签</h3> 
+<pre><code>  语法格式:&lt;h1&gt;&lt;/h1&gt;  作用：使网页更具有语义化  HTML提供了6个等级的标题标签  分别为: h1、h2、h3、h4、h5、h6  h1 定义最大的标题。h6 定义最小的标题。
+</code></pre> 
+<h3><a id="2_50"></a>2.段落标签</h3> 
+<pre><code>  语法格式:&lt;p&gt;&lt;/p&gt;  作用：将网页内容分为若干段落
+</code></pre> 
+<h3><a id="3_53"></a>3.水平线标签</h3> 
+<pre><code>  语法格式:&lt;hr /&gt;  作用：创建横跨网页水平线的标记
+</code></pre> 
+<h3><a id="4_56"></a>4.换行标签</h3> 
+<pre><code>  语法格式:&lt;br /&gt;  作用：使文本强制换行显示
+</code></pre> 
+<h3><a id="5div_span_59"></a>5.div标签 span标签</h3> 
+<pre><code>  div标签 语法格式:&lt;div&gt;&lt;/div&gt;  作用：把文档分割为独立的、不同的部分  span标签 语法格式:&lt;div&gt;&lt;/div&gt;  作用：在行内定义一个区域，也就是一行内可以被&lt;span&gt;划分成好几个区域  通俗理解&lt;div&gt;为大容器，大容器可以放一个小容器,&lt;span&gt;就是小容器。
+</code></pre> 
+<h3><a id="6_65"></a>6.文本格式化标签</h3> 
+<pre><code>  文字以斜体方式显示：&lt;i&gt;&lt;/i&gt; &lt;em&gt;&lt;/em&gt;  文字以加删除线方式显示: &lt;s&gt;&lt;/s&gt; &lt;del&gt;&lt;/del&gt;  文字以粗体方式显示: &lt;b&gt;&lt;/b&gt; &lt;strong&gt;&lt;/strong&gt;  文字以加下划线方式显示: &lt;u&gt;&lt;/u&gt; &lt;ins&gt;&lt;/ins&gt;  b i s u没有强调的意思  strong、em、del、ins语义更强烈，有强调的意思  XHTML之后推荐使用strong、em、del、ins
+</code></pre> 
+<h3><a id="7_72"></a>7.图像标签</h3> 
+<pre><code>  作用：在网页中显示图像就需要使用图像标签  语法格式:&lt;img src=&quot;图片的路径&quot;/&gt;
+</code></pre> 
+<table><thead><tr><th>属性</th><th>属性值</th></tr></thead><tbody><tr><td>src</td><td>url 图像的路径</td></tr><tr><td>ali</td><td>文本 图像不能显示时的替换文本</td></tr><tr><td>title</td><td>文本 鼠标悬停时显示的内容</td></tr><tr><td>width</td><td>像素 设置图像的宽度</td></tr><tr><td>height</td><td>像素 设置图像的高度</td></tr><tr><td>border</td><td>数字 设置图像边框的宽度</td></tr></tbody></table>
+<h3><a id="8___84"></a>8. 链接标签</h3> 
+<pre><code>  作用：跳转到指定页面或者位置  语法格式:&lt;a href=&quot;跳转目标&quot; target=&quot;目标窗口的弹出方式&quot;&gt;链接的文本或图&lt;/a&gt;  href：用于指定链接目标的url地址  target：用于指定链接页面的打开方式 取值有_self和 _blankself表示在本窗口打开链接页面，blank表示在新窗口中打开。
+</code></pre> 
+<p>链接的分类：1.外部链接 ：需要添加**http://**的域名<br> 2.内部链接：网站内部页面之间的相互链接<br> 3.空连接：将链接标签的href属性值定义为“#”，表示该链接暂时为一个空链接。<br> 4.下载链接：当href里面地址是一个压缩包或xlxs浏览器无法解析的文件，会下载这个文件<br> 5.网页元素链接：在网页中各种网页元素，如文本、图像、表格、音频、视频等都可以插入超链接</p> 
+<h5><a id="_95"></a>锚点定位</h5> 
+<pre><code>  作用：通过创建描点链接，用户能够快速定位到目标内容。  方法：1、在跳转目标的位置添加id名标注  2、使用&lt;a href=&quot;#id名&quot;&gt;链接文本&lt;/a&gt;
+</code></pre> 
+<h3><a id="9__base_99"></a>9. base标签</h3> 
+<pre><code>  作用：为页面上的所有链接规定默认地址或默认目标。  语法格式:&lt;base 属性=&quot; &quot;  /&gt;  有两种属性分别为href和target  &lt;base&gt; 标签必须位于 head 元素内部。
+</code></pre> 
+<h3><a id="10__104"></a>10. 注释标签</h3> 
+<pre><code>  作用：为html文档添加注释，不会显示在网页上，方便阅读代码时更好的理解  语法格式：&lt;!-- --&gt;
+</code></pre> 
+<h3><a id="11_107"></a>11.列表标签</h3> 
+<pre><code>  作用：把一系列的文字及数据制成表，以表显示。
+</code></pre> 
+<h4><a id="1ul_109"></a>1.无序列表ul</h4> 
+<pre><code>  列表项之间没有顺序级别之分，是并列的。  基本语法格式：&lt;ul&gt;  &lt;li&gt;列表项1&lt;li&gt;  &lt;li&gt;列表项2&lt;li&gt;  ......  &lt;/ul&gt;  注意: &lt;ul&gt;标签中不能嵌套其它标签只能嵌套&lt;li&gt;标签，而&lt;li&gt;标签可以嵌套其它标签  </code></pre> 
+<p>无序列表中type属性的常用值有三个，它们呈现的效果不同:<br> 小黑点:disc（默认值）；<br> 方块:square；<br> 空心圆:circle。</p> 
+<h4><a id="2ol_124"></a>2.有序列表ol</h4> 
+<p>各个列表项按照一定的顺序排列定义</p> 
+<pre><code>  基本语法格式:&lt;ol&gt;  &lt;li&gt;列表项1&lt;li&gt;  &lt;li&gt;列表项2&lt;li&gt;  ......  &lt;/ol&gt;
+</code></pre> 
+<p>有序列表其属性 type start</p> 
+<pre><code>语法格式:&lt;ol type=值1 start=值2&gt;  &lt;li&gt;列表项1&lt;li&gt;  &lt;li&gt;列表项2&lt;li&gt;  ......  &lt;/ol&gt;
+</code></pre> 
+<p>type=用于编号的数字,字母等的类型，如type=a，则编号用英文字母。值1表示有序列表项目符号的类型。</p> 
+<p>Type=1 表示列表项目用数字表示（1,2,3……）<br> Type=a 表示列表项目用小写字母表示(a,b,c…)<br> Type=A 表示列表项目用大写字母表示(A,B,C…)<br> Type=i 表示列表项目用小写罗马数字表示(i,ii,iii….)<br> Type=I 表示列表项目用大写罗马数字表示(I,II,III…)</p> 
+<p>start是编号开始的数字，如start=3则编号从3开始，如果从1开始可以省略。值2表示项目开始的数值。</p> 
+<p>或是在li标签中设定value＝”n”改变列表行项目的特定编号</p> 
+<h4><a id="3dl_152"></a>3.自定义列表dl</h4> 
+<p>自定义列表常用于对术语或名词进行解释和描述，定义列表的列表项没有任何项目符号。</p> 
+<p>基本格式：</p> 
+<pre><code>&lt;dl&gt;
+	&lt;dt&gt;名词1&lt;/dt&gt;
+	&lt;dd&gt;名词1解释1&lt;/dd&gt;
+	...  &lt;dt&gt;名词2&lt;/dt&gt;
+	&lt;dd&gt;名词2解释1&lt;/dd&gt;
+	&lt;dd&gt;名词2解释2&lt;/dd&gt;  ...
+&lt;/dl&gt;
+</code></pre> 
+<h3><a id="12table_168"></a>12.表格table标签</h3> 
+<p>作用：处理、显示表格式数据。<br> 基本格式：</p> 
+<pre><code>&lt;table&gt;  &lt;tr&gt;  &lt;td&gt;单元格内的文字&lt;/td&gt;  ...
+	&lt;/tr&gt;  ...
+&lt;/table&gt;
+</code></pre> 
+<p>1.table定义一个表格<br> 2.tr定义表格中的一行 必须嵌套在table标签中（行）<br> 3.td定义表格中的单元格 必须嵌套在标签中 （列）</p> 
+<h4><a id="_183"></a>表格属性</h4> 
+<table><thead><tr><th>属性名</th><th>含义</th></tr></thead><tbody><tr><td>border</td><td>设置表格边框（默认值为0无边框）</td></tr><tr><td>cellpadding</td><td>规定单元边沿与其内容之间的空白。</td></tr><tr><td>cellspacing</td><td>规定单元格之间的空白。</td></tr><tr><td>width</td><td>规定表格的宽度。</td></tr><tr><td>height</td><td>规定表格的高度。</td></tr><tr><td>align</td><td>规定表格相对周围元素的对齐方式。</td></tr></tbody></table>
+<h4><a id="_192"></a>表头标签</h4> 
+<p>表头一般位于表格的第一行或第一列，其文本加粗居中。<br> 设置方法：用&lt;th&gt;&lt;/th&gt;替代相应单元格标签的&lt;td&gt;&lt;/td&gt;</p> 
+<h4><a id="_195"></a>表格结构</h4> 
+<p>在使用表格进行布局时，可以将表格划分为头部、主体和页脚<br> &lt;thead&gt;&lt;/thead&gt; 用于定义表格的头部<br> &lt;tbody&gt;&lt;/tbody&gt; 用于定义表格的主体<br> &lt;tfoot&gt;&lt;/tfoot&gt; 用于定义表格的页脚内容</p> 
+<h4><a id="_201"></a>表格标题</h4> 
+<p>表格的标题使用**&lt;caption&gt;** 标签来定义，必须直接定义在&lt;table&gt;标签之后，并且每个表格只能定义一个标题。通常这个标题会被居中于表格之上。</p> 
+<h4><a id="_203"></a>合并单元格</h4> 
+<p>合并单元格的方式:</p> 
+<p>跨行合并（<strong>rowspan</strong> ）：rowspan=“合并单元格的个数”</p> 
+<p>跨列合并（<strong>colspan</strong>）：colspan=“合并单元格的个数”</p> 
+<p>跨行:最上侧单元格为目标单元格，写合并代码</p> 
+<p>跨列:最左侧单元格为目标单元格，写合并代码</p> 
+<h3><a id="12_215"></a>12.表单标签</h3> 
+<h4><a id="1input_216"></a>1.input标签</h4> 
+<p>&lt;input /&gt;标签为单标签，type属性是其最基本的属性，取值有很多种，用于指定不同的控件类型。<br> <img src="https://i-blog.csdnimg.cn/blog_migrate/bd2657b64e57a25103dd93c6ff97553d.png" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="2label_219"></a>2.label标签</h4> 
+<p>&lt;label&gt; 标签为 input 元素定义标注（标记）。<br> label 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可用性。在 label 元素内点击文本，就会触发此控件。<br> 使用方法：&lt;label&gt; 标签的 <strong>for 属性</strong>用于绑定表单元素，只需要指定for属性的值与被绑定表单元素的<strong>id值</strong>相同即可。</p> 
+<pre><code>&lt;label for=&quot;name&quot;&gt;名 字：&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;&lt;br&gt;
+</code></pre> 
+<p>HTML5 中的新属性：属性：form 值：formid 规定 label 字段所属的一个或多个表单。</p> 
+<h4><a id="3textarea_229"></a>3.textarea控件（文本域）</h4> 
+<p>通过textarea控件可以轻松的创建多行文本输入框</p> 
+<p>语法格式：</p> 
+<pre><code>&lt;textarea cols=&quot;每行中的字符数&quot; rows=&quot;显示的行数&quot; &gt;&lt;/textarea&gt;
+禁止textarea拉伸属性为： style=&quot;resize:none&quot;
+</code></pre> 
+<h4><a id="4__237"></a>4. 下拉菜单</h4> 
+<p>使用select控件定义下拉菜单<br> 基本语法格式：</p> 
+<pre><code>&lt;select&gt;
+	&lt;option&gt;选项1&lt;/option&gt;
+	&lt;option&gt;选项2&lt;/option&gt;
+	&lt;option&gt;选项3&lt;/option&gt;
+	...  &lt;/select&gt;
+</code></pre> 
+<p>在option标签中加入selected=&quot;selected&quot;属性时，表示当前项为默认选中项<br> multiple: 选择多个option</p> 
+<h4><a id="5__250"></a>5. 表单域</h4> 
+<p>form标签用于定义表单域，即创建一个表单，以实现用户信息的收集和传递，form中所有内容都会被提交给服务器。<br> 语法格式：</p> 
+<pre><code>&lt;form action=&quot;提交到的url地址&quot; method=&quot;提交方式&quot; name=&quot;表单名称&quot;&gt;  表单控件
+&lt;/form&gt;
+</code></pre> 
+<p>属性：<br> 1.action 用于指定接收并处理表单数据的服务器程序的url地址。<br> 2.method 用于设置表单数据的提交方式，取值为get与post。<br> 3.name 用于指定表单的名称，以区分同一个页面上的多个表单。</p>  </div>13:[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"HTML基础----标签\",\"description\":\"提示：文章写完后，目录可以自动生成，如何生成可参考右边的帮助文档文章目录前言一、HTML骨架格式二、标签分类1.双标签2.单标签三、HTML常用的标签1.标题标签2.段落标签3.水平线标签4.换行标签5.div标签 span标签6.文本格式化标签7.图像标签8.  链接标签锚点定位9.  base标签10. 注释标签11.列表标签1.无序列表ul2.有序列表ol3.自定义列表dl12.表格table标签表格属性表头标签表格结构表格标题合并单元格12.表单标签1.input标签2.label标签3.te.\",\"datePublished\":\"2022-04-30T18:51:15+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"前端, html\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/124512411\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L3",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","html",{"className":"tag tag--solid","children":"html"}]]}],["$","h1",null,{"children":"HTML基础----标签"}],["$","p",null,{"children":"提示：文章写完后，目录可以自动生成，如何生成可参考右边的帮助文档文章目录前言一、HTML骨架格式二、标签分类1.双标签2.单标签三、HTML常用的标签1.标题标签2.段落标签3.水平线标签4.换行标签5.div标签 span标签6.文本格式化标签7.图像标签8.  链接标签锚点定位9.  base标签10. 注释标签11.列表标签1.无序列表ul2.有序列表ol3.自定义列表dl12.表格table标签表格属性表头标签表格结构表格标题合并单元格12.表单标签1.input标签2.label标签3.te."}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-04-30T18:51:15+08:00","children":"2022.04.30"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],9," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"389"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L3",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/124512411","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$1c"}}],"$L1d"]}]]
+1d:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L3",null,{"href":"/articles/124511428","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"主流浏览器内核概述"}]]}],["$","$L3",null,{"href":"/articles/124526081","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"HTML5新增属性"}]]}]]}]
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#f4f1e9","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#11130f","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]
+16:null
+1b:[["$","title","0",{"children":"HTML基础----标签 · 刘家阳"}],["$","meta","1",{"name":"description","content":"提示：文章写完后，目录可以自动生成，如何生成可参考右边的帮助文档文章目录前言一、HTML骨架格式二、标签分类1.双标签2.单标签三、HTML常用的标签1.标题标签2.段落标签3.水平线标签4.换行标签5.div标签 span标签6.文本格式化标签7.图像标签8.  链接标签锚点定位9.  base标签10. 注释标签11.列表标签1.无序列表ul2.有序列表ol3.自定义列表dl12.表格table标签表格属性表头标签表格结构表格标题合并单元格12.表单标签1.input标签2.label标签3.te."}],["$","meta","2",{"name":"application-name","content":"刘家阳的技术博客"}],["$","meta","3",{"name":"author","content":"刘家阳"}],["$","meta","4",{"name":"keywords","content":"前端,html"}],["$","meta","5",{"name":"creator","content":"刘家阳"}],["$","meta","6",{"property":"og:title","content":"HTML基础----标签"}],["$","meta","7",{"property":"og:description","content":"提示：文章写完后，目录可以自动生成，如何生成可参考右边的帮助文档文章目录前言一、HTML骨架格式二、标签分类1.双标签2.单标签三、HTML常用的标签1.标题标签2.段落标签3.水平线标签4.换行标签5.div标签 span标签6.文本格式化标签7.图像标签8.  链接标签锚点定位9.  base标签10. 注释标签11.列表标签1.无序列表ul2.有序列表ol3.自定义列表dl12.表格table标签表格属性表头标签表格结构表格标题合并单元格12.表单标签1.input标签2.label标签3.te."}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"property":"article:published_time","content":"2022-04-30T18:51:15+08:00"}],["$","meta","10",{"property":"article:tag","content":"前端"}],["$","meta","11",{"property":"article:tag","content":"html"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"刘家阳 · Web 前端开发工程师"}],["$","meta","14",{"name":"twitter:description","content":"专注 React、Vue 与 TypeScript，长期参与企业级 AI 平台、数据中台、算力云与工作流编排产品建设。擅长从 0 到 1 搭建前端架构，也乐于把重复能力沉淀成组件、插件和工程规范。"}]]

@@ -1,0 +1,239 @@
+1:"$Sreact.fragment"
+2:I[50249,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MotionShell"]
+3:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+4:I[20531,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"SiteNav"]
+5:I[27366,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"LocaleToggle"]
+6:I[22530,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ThemeToggle"]
+7:I[68420,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+8:I[81005,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+11:I[41081,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default",1]
+:HL["/_next/static/chunks/1tixk57-x0j9_.css","style"]
+0:{"P":null,"c":["","articles","127316983",""],"q":"","i":false,"f":[[["",{"children":["articles",{"children":[["articleId","127316983","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0wdfudby0quhf.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0ihnwulsr8yoy.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/1u8g946itlk0x.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/_next/static/chunks/25vmo8q6d6rem.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"data-locale":"zh","data-theme":"light","lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n(() => {\n  try {\n    const stored = localStorage.getItem(\"ljy-blog-theme\");\n    const theme = stored === \"light\" || stored === \"dark\"\n      ? stored\n      : matchMedia(\"(prefers-color-scheme: dark)\").matches\n        ? \"dark\"\n        : \"light\";\n    document.documentElement.dataset.theme = theme;\n\n    const storedLocale = localStorage.getItem(\"ljy-blog-locale\");\n    const locale = storedLocale === \"en\" ? \"en\" : \"zh\";\n    document.documentElement.dataset.locale = locale;\n    document.documentElement.lang = locale === \"en\" ? \"en\" : \"zh-CN\";\n  } catch {\n    document.documentElement.dataset.theme = \"light\";\n    document.documentElement.dataset.locale = \"zh\";\n    document.documentElement.lang = \"zh-CN\";\n  }\n})();\n"}}]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"跳到主要内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Skip to main content"}]]}],["$","$L2",null,{"children":[["$","header",null,{"className":"site-header","children":["$","div",null,{"className":"site-header__inner","children":[["$","$L3",null,{"className":"brand","href":"/","aria-label":"LJY/DEV","children":[["$","span",null,{"aria-hidden":"true","className":"brand__mark","children":"LJ"}],["$","span",null,{"className":"brand__text","children":"LJY/DEV"}]]}],["$","$L4",null,{}],["$","div",null,{"className":"site-header__actions","children":[["$","$L5",null,{}],["$","$L6",null,{}]]}]]}]}],["$","main",null,{"id":"main-content","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"not-found page-frame","children":[["$","p",null,{"className":"eyebrow","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"404"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"404"}]]}],["$","h1",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"这里还没有内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Nothing here yet"}]]}],["$","p",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"页面可能已经移动，或链接尚未发布。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"This page may have moved or has not been published."}]]}],["$","$L3",null,{"className":"button button--primary","href":"/","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"回到首页"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to home"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":18,"viewBox":"0 0 24 24","width":18,"xmlns":"http://www.w3.org/2000/svg","children":["$","path",null,{"d":"M5 12h14M13 6l6 6-6 6"}]}]]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer","children":[["$","div",null,{"className":"site-footer__top","children":[["$","div",null,{"children":[["$","p",null,{"className":"site-footer__brand","children":"LJY/DEV"}],["$","p",null,{"className":"site-footer__statement","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"设计、工程与技术写作。"}],"$L9"]}]]}],"$La"]}],"$Lb"]}]]}]]}]]}]]}],{"children":["$Lc",{"children":["$Ld",{"children":["$Le",{},null,false,null]},null,false,"$@f"]},null,false,"$@f"]},null,false,null],"$L10",false]],"m":"$undefined","G":["$11",["$L12"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SWYQZKQeSXxQ06k_n6BlL"}
+14:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+18:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ViewportBoundary"]
+1a:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MetadataBoundary"]
+9:["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Design, engineering and technical writing."}]
+a:["$","div",null,{"className":"site-footer__links","children":[["$","$L3","CSDN",{"href":"https://blog.csdn.net/qq_56973906","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"CSDN"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"CSDN"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","NPM",{"href":"https://www.npmjs.com/package/free-layout-workflow-editor","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"NPM"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"NPM"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","3D 地图",{"href":"/map/","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"3D 地图"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"3D Map"}]],null]}],["$","$L3","邮件",{"href":"mailto:liujiayang8882025@163.com","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"邮件"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Email"}]],null]}]]}]
+b:["$","div",null,{"className":"site-footer__bottom","children":[["$","span",null,{"children":["© ",2026," Liu Jiayang ·"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"保留所有权利。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"All rights reserved."}]]]}],["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"文章迁移自作者本人 CSDN 博客"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Articles migrated from my personal CSDN archive"}]]}]]}]
+c:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+e:["$","$1","c",{"children":["$L13",null,["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+17:[]
+f:"$W17"
+10:["$","$1","h",{"children":[null,["$","$L18",null,{"children":"$L19"}],["$","div",null,{"hidden":true,"children":["$","$L1a",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1b"}]}]}],null]}]
+12:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+1c:T4a35,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#hook_4">什么是hook</a></li><li><a href="#useState_9">useState</a></li><li><a href="#useEffect_39">useEffect</a></li><li><a href="#useRef_90">useRef</a></li><li><a href="#useCallback_124">useCallback</a></li><li><a href="#useMemo_155">useMemo</a></li><li><a href="#useContext_185">useContext</a></li><li><ul><li><a href="#_232">使用时避免无用渲染</a></li></ul>  </li><li><a href="#useReducer_346">useReducer</a></li><li><ul><li><a href="#useReducer_useContextredux_388">useReducer +useContext实现redux</a></li></ul>
+ </li></ul>
+</div>  <hr> 
+<h2><a id="hook_4"></a>什么是hook</h2> 
+<p>React Hook是React 16.8版本之后添加的新属性，用最简单的话来说，React Hook就是一些React提供的内置函数，这些函数可以让函数组件和类组件一样能够拥有组件状态（state）以及进行副作用（side effect）</p> 
+<p>但是不要什么业务都使用hook,请在合适的时候使用hook,否则会造成性能问题.(能不用的时候就不能,当遇到性能不好优化的时候,自然会想到使用它)</p> 
+<h2><a id="useState_9"></a>useState</h2> 
+<p>它允许函数组件<strong>将自己的状态持久化到React运行时的某个地方</strong>，这样在组件每次重新渲染的时候都可以从这个地方拿到该状态，而且当该状态被更新的时候，组件也会重渲染。</p> 
+<pre><code>//语法:
+import {useState} from &quot;react&quot;
+const [state, setState] = useState(initialState)//数组解构赋值
+
+//useState接收一个initialState变量作为状态的初始值，返回值是一个数组。返回数组的第一个元素代表当前state的最新值，第二个元素是一个用来更新state的函数。state和setState这两个变量的命名是你自己取的
+//state用于组件内部使用的数据
+//setState函数用于修改state,当修改后会触发所有使用过state的地方重新取值(调用render)
+//可以用多个useState
+</code></pre> 
+<p>案例：</p> 
+<pre><code>import React, { Component,useState } from &#x27;react&#x27;
+export default function Box3() {  const [first, setfirst] = useState(0)  return (  &lt;div&gt;  &lt;h1&gt;{first}&lt;/h1&gt;  &lt;button onClick={()=&gt;{setfirst(first+1)}}&gt;点击first+1&lt;/button&gt;  &lt;/div&gt;  )
+}
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ad95ca0c93e88c075d675849e7c174aa.gif" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>可以看到数据修改了并刷新了模板</p> 
+<h2><a id="useEffect_39"></a>useEffect</h2> 
+<p>useEffect是用来使函数组件也可以进行副作用操作的。那么什么是副作用呢？</p> 
+<p>函数的副作用就是函数除了返回值外对外界环境造成的其它影响假如我们每次执行一个函数，该函数都会操作全局的一个变量，那么对全局变量的操作就是这个函数的副作用。而在React的世界里，我们的副作用大体可以分为两类，<strong>一类是调用浏览器的API</strong>，例如使用addEventListener来添加事件监听函数等，<strong>另外一类是发起获取服务器数据的请求</strong>，例如当用户组件挂载的时候去异步获取用户的信息等。</p> 
+<pre><code>import {useEffect} from &quot;react&quot;
+useEffect(effect?=&gt;clean, dependencies?)  //useEffect的第一个参数effect是要执行的副作用函数，它可以是任意的用户自定义函数，用户可以在这个函数里面  操作一些浏览器的API或者和外部环境进行交互,网络请求等，这个函数会在每次组件渲染完成之后被调用
+//useEffect可以有一个返回值,返回一个函数,系统在组件重新渲染之前调用它  //第二个参数dependencies来限制该副作用的执行条件  </code></pre> 
+<p>案例：组件销毁时清除计算器</p> 
+<pre><code>import React,{useEffect,useState} from &#x27;react&#x27;
+export default function Box1(props) {  let [i,seti]=useState(0)  useEffect(()=&gt;{  console.log(i)  let timer=setInterval(() =&gt; {  seti(i+1)  },1000);  return ()=&gt;{  clearInterval(timer)  }  })  return (  &lt;div&gt;  &lt;h1&gt;{i}&lt;/h1&gt;  &lt;/div&gt;  )
+}
+
+</code></pre> 
+<pre><code>//父组件
+
+import React,{useState} from &#x27;react&#x27;
+import Box1 from &#x27;./Box1&#x27;
+export default function Box2() {  let [flag,setflag]=useState(true)  return (  &lt;div&gt;  &lt;button onClick={()=&gt;{setflag(!flag)}}&gt;点击销毁/创建Box1&lt;/button&gt;  {flag&amp;&amp;&lt;Box1&gt;&lt;/Box1&gt;}  &lt;/div&gt;  )
+}
+</code></pre> 
+<h2><a id="useRef_90"></a>useRef</h2> 
+<p>useRef是用来在组件不同渲染之间共用一些数据的，它的作用和我们在类组件里面为this赋值是一样的。</p> 
+<p>语法</p> 
+<pre><code>react
+import {useRef} from &quot;react&quot;
+const refObject = useRef(initialValue)
+//useRef接收initialValue作为初始值，它的返回值是一个ref对象，这个对象的.current属性就是该数据的最新值。使用useRef的一个最简单的情况就是在函数组件里面获取DOM对象的引用
+</code></pre> 
+<p>案例：</p> 
+<pre><code>import { useRef, useEffect } from &#x27;react&#x27;
+import ReactDOM from &#x27;react-dom&#x27;
+
+const AutoFocusInput = () =&gt; {  const inputRef = useRef(null)  useEffect(() =&gt; {  // 组件挂载后自动聚焦  inputRef.current.focus()  }, [])  return (  &lt;input ref={inputRef} type=&#x27;text&#x27; /&gt;  )
+}
+
+ReactDOM.render(&lt;AutoFocusInput /&gt;, document.getElementById(&#x27;root&#x27;))
+//在上面代码中inputRef其实就是一个{current: input节点}对象，只不过它可以保证在组件每次渲染的时候拿到的都是同一个对象。
+</code></pre> 
+<h2><a id="useCallback_124"></a>useCallback</h2> 
+<p>useCallback就是把我们在函数组件内部定义的函数保存起来,当组件重新渲染时还是使用之前的,就不会被重新定义一次</p> 
+<p>语法：</p> 
+<pre><code>import {useCallback} from &quot;react&quot;
+const memoizedCallback = useCallback(callback, dependencies)  //useCallback接收两个参数，第一个参数是需要被记住的函数，第二个参数是这个函数的dependencies，只有dependencies数组里面的元素的值发生变化时useCallback才会返回新定义的函数，否则useCallback都会返回之前定义的函数。
+</code></pre> 
+<p>案例：</p> 
+<pre><code>import React,{useCallback,useEffect,useState} from &#x27;react&#x27;
+
+export default function Box7() {  let [arr,setarr]=useState([{id:1,name:&#x27;ljy&#x27;},{id:2,name:&#x27;jack&#x27;},{id:3,name:&#x27;marry&#x27;}])  let fn=useCallback((index)=&gt;{  console.log(index)  },[])  useEffect(()=&gt;{  console.log(&#x27;fn变化了&#x27;)  },[fn])  return (  &lt;div&gt;  &lt;&gt;{arr.map(el=&gt;&lt;p key={el.id}&gt;&lt;span&gt;{el.id}---{el.name}&lt;/span&gt;&lt;/p&gt;)}&lt;/&gt;  &lt;button onClick={()=&gt;{setarr([...arr])}}&gt;点击修改数据&lt;/button&gt;  &lt;/div&gt;  )
+}
+</code></pre> 
+<h2><a id="useMemo_155"></a>useMemo</h2> 
+<p>useMemo和useCallback的作用十分类似，只不过它允许你记住任何类型的变量（不只是函数）</p> 
+<pre><code>import {useMemo} from &quot;react&quot;
+const memoizedValue = useMemo(() =&gt; valueNeededToBeMemoized, dependencies)
+//useMemo接收一个函数，该函数的返回值就是需要被记住的变量，当useMemo的第二个参数dependencies数组里面的元素的值没有发生变化的时候，memoizedValue使用的就是上一次的值。
+</code></pre> 
+<p>案例：</p> 
+<pre><code>import React, { useMemo } from &#x27;react&#x27;
+import ReactDOM from &#x27;react-dom&#x27;
+
+const RenderPrimes = ({ iterations, multiplier }) =&gt; {  const primes = React.useMemo(() =&gt; calculatePrimes(iterations, multiplier), [  iterations,  multiplier  ])  return (  &lt;div&gt;  Primes! {primes}  &lt;/div&gt;  )
+}
+
+ReactDOM.render(&lt;RenderPrimes /&gt;, document.getElementById(&#x27;root&#x27;))
+//例子中calculatePrimes是用来计算素数的，因此每次调用它都需要消耗大量的计算资源。
+为了提高组件渲染的性能，我们可以使用useMemo来记住计算的结果，
+当iterations和multiplier保持不变的时候，我们就不需要重新执行calculatePrimes函数来重新计算了，直接使用上一次的结果即可。
+</code></pre> 
+<h2><a id="useContext_185"></a>useContext</h2> 
+<p>我们知道React中组件之间传递参数的方式是props，假如我们在父级组件中定义了某些状态，而这些状态需要在该组件深层次嵌套的子组件中被使用的话就需要将这些状态以props的形式层层传递，这就造成了props drilling的问题。为了解决这个问题，React允许我们使用Context来在父级组件和底下任意层次的子组件之间传递状态。在函数组件中我们可以使用useContext Hook来使用Context。</p> 
+<p>语法：</p> 
+<pre><code>const value = useContext(MyContext)
+//useContext接收一个context对象为参数，该context对象是由React.createContext函数生成的。
+useContext的返回值是当前context的值，这个值是由最邻近的&lt;MyContext.Provider&gt;来决定的。
+一旦在某个组件里面使用了useContext这就相当于该组件订阅了这个context的变化，
+当最近的&lt;MyContext.Provider&gt;的context值发生变化时，使用到该context的子组件就会被触发重渲染，且它们会拿到context的最新值。
+</code></pre> 
+<p>案例：</p> 
+<pre><code>import React, { useContext, useState } from &#x27;react&#x27;
+import ReactDOM from &#x27;react-dom&#x27;
+
+//定义context
+const NumberContext = React.createContext()
+
+const NumberDisplay = () =&gt; {  const [currentNumber, setCurrentNumber] = useContext(NumberContext)  const handleCurrentNumberChange = () =&gt; {  setCurrentNumber(Math.floor(Math.random() * 100))  }  return (  &lt;&gt;  &lt;div&gt;Current number is: {currentNumber}&lt;/div&gt;  &lt;button onClick={handleCurrentNumberChange}&gt;Change current number&lt;/button&gt;  &lt;/&gt;  )
+}
+
+const ParentComponent = () =&gt; {  const [currentNumber, setCurrentNumber] = useState(100)  return (  &lt;NumberContext.Provider value={[currentNumber, setCurrentNumber]}&gt;  &lt;NumberDisplay /&gt;  //这里填儿子组件，后面孙子组件就可以直接使用爷爷组件传递的值  &lt;/NumberContext.Provider&gt;  )
+}
+
+ReactDOM.render(&lt;ParentComponent /&gt;, document.getElementById(&#x27;root&#x27;))
+</code></pre> 
+<h3><a id="_232"></a>使用时避免无用渲染</h3> 
+<p>如果一个函数组件使用了useContext(SomeContext)的话它就订阅了这个SomeContext的变化，这样当SomeContext.Provider的value发生变化的时候，这个组件就会被重新渲染。</p> 
+<p>这里有一个问题就是，我们可能会把很多不同的数据放在同一个context里面，而不同的子组件可能只关心这个context的某一部分数据，当context里面的任意值发生变化的时候，无论这些组件用不用到这些数据它们都会被重新渲染，这可能会造成一些性能问题.</p> 
+<p>解决方法：<br> 1.拆分Context<br> 这个方法是最被推荐的做法，和useState一样，我们可以将不需要同时改变的context拆分成不同的context，让它们的职责更加分明，这样子组件只会订阅那些它们需要订阅的context从而避免无用的重渲染。</p> 
+<pre><code>import React, { useContext, useState } from &#x27;react&#x27;
+import ExpensiveTree from &#x27;somewhere/ExpensiveTree&#x27;
+import ReactDOM from &#x27;react-dom&#x27;
+
+const ThemeContext = React.createContext()
+const ConfigurationContext = React.createContext()
+
+const ChildrenComponent = () =&gt; {  const [themeContext] = useContext(ThemeContext)  return (  &lt;div&gt;  &lt;ExpensiveTree theme={themeContext} /&gt;  &lt;/div&gt;  )
+}
+
+const App = () =&gt; {  const [themeContext, setThemeContext] = useState({ color: &#x27;red&#x27; })  const [configurationContext, setConfigurationContext] = useState({ showTips: false })  return (  &lt;ThemeContext.Provider value={[themeContext, setThemeContext]}&gt;  &lt;ConfigurationContext.Provider value={[configurationContext, setConfigurationContext]}&gt;  &lt;ChildrenComponent /&gt;  &lt;/ConfigurationContext.Provider&gt;  &lt;/ThemeContext.Provider&gt;  )
+}
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&#x27;root&#x27;))
+</code></pre> 
+<p>2.拆分组件，使用memo来优化消耗性能的组件<br> 如果出于某些原因你不能拆分context，仍然可以通过将消耗性能的组件和父组件的其他部分分离开来，并且使用memo函数来优化消耗性能的组件</p> 
+<pre><code>import React, { useContext, useState } from &#x27;react&#x27;
+import ExpensiveTree from &#x27;somewhere/ExpensiveTree&#x27;
+import ReactDOM from &#x27;react-dom&#x27;
+
+const AppContext = React.createContext()
+
+const ExpensiveComponentWrapper = React.memo(({ theme }) =&gt; {  return (  &lt;ExpensiveTree theme={theme} /&gt;  )
+})
+
+const ChildrenComponent = () =&gt; {  const [appContext] = useContext(AppContext)  const theme = appContext.theme  return (  &lt;div&gt;  &lt;ExpensiveComponentWrapper theme={theme} /&gt;  &lt;/div&gt;  )
+}
+
+const App = () =&gt; {  const [appContext, setAppContext] = useState({ theme: { color: &#x27;red&#x27; }, configuration: { showTips: false }})  return (  &lt;AppContext.Provider value={[appContext, setAppContext]}&gt;  &lt;ChildrenComponent /&gt;  &lt;/AppContext.Provider&gt;  )
+}
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&#x27;root&#x27;))
+</code></pre> 
+<p>3.不拆分组件，也可以使用useMemo来优化</p> 
+<pre><code>import React, { useContext, useState, useMemo } from &#x27;react&#x27;
+import ExpensiveTree from &#x27;somewhere/ExpensiveTree&#x27;
+import ReactDOM from &#x27;react-dom&#x27;
+
+const AppContext = React.createContext()
+
+const ChildrenComponent = () =&gt; {  const [appContext] = useContext(AppContext)  const theme = appContext.theme  return useMemo(() =&gt; (  &lt;div&gt;  &lt;ExpensiveTree theme={theme} /&gt;  &lt;/div&gt;  ),  [theme]  )
+}
+
+const App = () =&gt; {  const [appContext, setAppContext] = useState({ theme: { color: &#x27;red&#x27; }, configuration: { showTips: false }})  return (  &lt;AppContext.Provider value={[appContext, setAppContext]}&gt;  &lt;ChildrenComponent /&gt;  &lt;/AppContext.Provider&gt;  )
+}
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&#x27;root&#x27;))
+</code></pre> 
+<h2><a id="useReducer_346"></a>useReducer</h2> 
+<p>.useReducer用最简单的话来说就是允许我们在函数组件里面像使用redux一样通过reducer和action来管理我们组件状态的变换<br> 语法:</p> 
+<pre><code>const [state, dispatch] = useReducer(reducer, initialArg, init?)  //useReducer和useState类似，都是用来管理组件状态的，只不过和useState的setState不一样的是，useReducer返回的dispatch函数是用来触发某些改变state的action而不是直接设置state的值，至于不同的action如何产生新的state的值则在reducer里面定义。
+
+//useReducer接收的三个参数分别是：  //reducer: 这是一个函数，它的签名是(currentState, action) =&gt; newState，从它的函数签名可以看出它会接收当前的state和当前dispatch的action为参数，然后返回下一个state,也就是说它负责状态转换的工作。  //initialArg：如果调用者没有提供第三个init参数，这个参数代表的是这个reducer的初始状态，如果init参数有被指定的话，initialArg会被作为参数传进init函数来生成初始状态。  //init: 这是一个用来生成初始状态的函数，它的函数签名是(initialArg) =&gt; initialState，从它的函数签名可以看出它会接收useReducer的第二个参数initialArg作为参数，并生成一个初始状态initialState
+</code></pre> 
+<p>案例：</p> 
+<pre><code>import React,{useReducer} from &#x27;react&#x27;
+
+export default function Box3() {  let redux=(initState,action)=&gt;{  if(action.type==&#x27;NAME&#x27;){  //这里进行判断type是什么，然后修改对应的值  initState.name=action.value  }  initState=JSON.parse(JSON.stringify(initState))  //这一步是状态转换,返回一个新的initState,没有这一步则修改之后不会刷新  return initState  }  let [state,dispatch]=useReducer(redux,{name:&#x27;hello&#x27;},(arg)=&gt;{  arg.name=&quot;ljy&quot;  return arg  //return返回的就是初始值  })  return (  &lt;&gt;  &lt;h1&gt;{state.name}&lt;/h1&gt;  &lt;button onClick={()=&gt;{dispatch({type:&#x27;NAME&#x27;,value:&#x27;修改了name&#x27;})}}&gt;点击修改&lt;/button&gt;  &lt;/&gt;  )
+}
+
+</code></pre> 
+<h3><a id="useReducer_useContextredux_388"></a>useReducer +useContext实现redux</h3> 
+<p>第一步：外部创建上下文对象</p> 
+<pre><code>/ctx.ctx.js
+import React from &#x27;react&#x27;
+let ctx=React.createContext()
+export default ctx
+</code></pre> 
+<p>第二步：定义生产者，并在其调用useReducer，将值通过value传给后代</p> 
+<pre><code>import React,{useReducer} from &#x27;react&#x27;
+import ctx from &#x27;./ctx/ctx&#x27;
+export default function App(props) {  let redux=(initState,action)=&gt;{  if(action.type==&#x27;NAME&#x27;){  initState.name=action.value  }  initState=JSON.parse(JSON.stringify(initState))  return initState  }  let [state,dispatch]=useReducer(redux,{name:&#x27;hello&#x27;},(arg)=&gt;{  arg.name=&quot;ljy&quot;  return arg  })  return (  &lt;ctx.Provider value={[state,dispatch]}&gt;  {/* 传给后代组件state,和修改的方法dispatch */}  {props.children}  {/* 相当于Vue中的插槽的用法 */}  &lt;/ctx.Provider&gt;  )
+}
+
+第三步：index.js文件中挂载
+</code></pre> 
+<p>import React from ‘react’;<br> import ReactDOM from ‘react-dom/client’;<br> import App from ‘./App’<br> import Box1 from ‘./Box1’<br> const root = ReactDOM.createRoot(document.getElementById(‘root’));<br> root.render();</p> 
+<pre><code>
+</code></pre> 
+<p>第四步:子组件或孙组件使用</p> 
+<pre><code>import React,{useContext} from &#x27;react&#x27;
+import ctx from &#x27;./ctx/ctx&#x27;
+import Box2 from &#x27;./Box2&#x27;
+export default function Box1() {  let [state,dispatch]=useContext(ctx)  console.log(state)  return (  &lt;&gt;  &lt;h1&gt;Box1中---{state.name}&lt;/h1&gt;  &lt;button onClick={()=&gt;{dispatch({type:&quot;NAME&quot;,value:&#x27;ljy666&#x27;})}}&gt;修改state&lt;/button&gt;  &lt;Box2&gt;&lt;/Box2&gt;  &lt;/&gt;  )
+}  import { type } from &#x27;@testing-library/user-event/dist/type&#x27;
+import React,{useContext} from &#x27;react&#x27;
+import ctx from &#x27;./ctx/ctx&#x27;
+export default function Box2() {  let [state,dispatch]=useContext(ctx)  return (  &lt;&gt;  &lt;h1&gt;Box2中---{state.name}&lt;/h1&gt;  &lt;button onClick={()=&gt;{dispatch({type:&#x27;NAME&#x27;,value:&#x27;孙组件修改了&#x27;})}}&gt;点击修改&lt;/button&gt;  &lt;/&gt;  )
+}  </code></pre>  </div>13:[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"React-hook\",\"description\":\"React Hook是React 16.8版本之后添加的新属性，用最简单的话来说，React Hook就是一些React提供的内置函数，这些函数可以让函数组件和类组件一样能够拥有组件状态（state）以及进行副作用（side effect）但是不要什么业务都使用hook,请在合适的时候使用hook,否则会造成性能问题.(能不用的时候就不能,当遇到性能不好优化的时候,自然会想到使用它)\",\"datePublished\":\"2022-10-17T13:28:53+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"react.js, javascript, 前端\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/127316983\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L3",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","react.js",{"className":"tag tag--solid","children":"React"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}]]}],["$","h1",null,{"children":"React-hook"}],["$","p",null,{"children":"React Hook是React 16.8版本之后添加的新属性，用最简单的话来说，React Hook就是一些React提供的内置函数，这些函数可以让函数组件和类组件一样能够拥有组件状态（state）以及进行副作用（side effect）但是不要什么业务都使用hook,请在合适的时候使用hook,否则会造成性能问题.(能不用的时候就不能,当遇到性能不好优化的时候,自然会想到使用它)"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-10-17T13:28:53+08:00","children":"2022.10.17"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],22," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"731"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L3",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/127316983","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$1c"}}],"$L1d"]}]]
+1d:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L3",null,{"href":"/articles/127302893","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"React-到hook之前的过渡技术"}]]}],["$","$L3",null,{"href":"/articles/136038707","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"html2Canvas截取百度地图问题整理及解决方案"}]]}]]}]
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#f4f1e9","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#11130f","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]
+16:null
+1b:[["$","title","0",{"children":"React-hook · 刘家阳"}],["$","meta","1",{"name":"description","content":"React Hook是React 16.8版本之后添加的新属性，用最简单的话来说，React Hook就是一些React提供的内置函数，这些函数可以让函数组件和类组件一样能够拥有组件状态（state）以及进行副作用（side effect）但是不要什么业务都使用hook,请在合适的时候使用hook,否则会造成性能问题.(能不用的时候就不能,当遇到性能不好优化的时候,自然会想到使用它)"}],["$","meta","2",{"name":"application-name","content":"刘家阳的技术博客"}],["$","meta","3",{"name":"author","content":"刘家阳"}],["$","meta","4",{"name":"keywords","content":"react.js,javascript,前端"}],["$","meta","5",{"name":"creator","content":"刘家阳"}],["$","meta","6",{"property":"og:title","content":"React-hook"}],["$","meta","7",{"property":"og:description","content":"React Hook是React 16.8版本之后添加的新属性，用最简单的话来说，React Hook就是一些React提供的内置函数，这些函数可以让函数组件和类组件一样能够拥有组件状态（state）以及进行副作用（side effect）但是不要什么业务都使用hook,请在合适的时候使用hook,否则会造成性能问题.(能不用的时候就不能,当遇到性能不好优化的时候,自然会想到使用它)"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"property":"article:published_time","content":"2022-10-17T13:28:53+08:00"}],["$","meta","10",{"property":"article:tag","content":"react.js"}],["$","meta","11",{"property":"article:tag","content":"javascript"}],["$","meta","12",{"property":"article:tag","content":"前端"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"刘家阳 · Web 前端开发工程师"}],["$","meta","15",{"name":"twitter:description","content":"专注 React、Vue 与 TypeScript，长期参与企业级 AI 平台、数据中台、算力云与工作流编排产品建设。擅长从 0 到 1 搭建前端架构，也乐于把重复能力沉淀成组件、插件和工程规范。"}]]

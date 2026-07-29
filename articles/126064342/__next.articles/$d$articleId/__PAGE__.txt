@@ -1,0 +1,126 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T3065,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#fs_5">一、fs模块是什么</a></li><li><a href="#_7">二、常用方法</a></li><li><ul><li><a href="#fsreadfsreadFile_29">fs.read和fs.readFile方法的比较</a></li><li><a href="#fswriteFile_92">fs.writeFile</a></li><li><a href="#fsstat_111">fs.stat</a></li><li><a href="#fsmkdir_126">fs.mkdir</a></li><li><a href="#fsappendFile_141">fs.appendFile</a></li><li><a href="#fsreaddir_157">fs.readdir</a></li><li><a href="#fsrename_170">fs.rename</a></li><li><a href="#fsrmdir_190">fs.rmdir</a></li><li><a href="#fsunlink_203">fs.unlink</a></li><li><a href="#fscopyFile_216">fs.copyFile</a></li></ul>
+ </li></ul>
+</div>  <hr> 
+<h2><a id="fs_5"></a>一、fs模块是什么</h2> 
+<p>跟http模块一样，fs模块也是node的核心模块之一，主要用于对系统文件及目录进行读写操作。</p> 
+<h2><a id="_7"></a>二、常用方法</h2> 
+<table><thead><tr><th>操作</th><th>方法</th></tr></thead><tbody><tr><td>打开文件</td><td>fs.open(path, flags[, mode], callback)</td></tr><tr><td>文件信息</td><td>fs.stat(path[, options], callback)</td></tr><tr><td>新建文件</td><td>fs.appendFile(path, data[, options], callback)</td></tr><tr><td>写入文件</td><td>fs.writeFile(file, data[, options], callback)</td></tr><tr><td>读取文件</td><td>fs.read(fd, buffer, offset, length, position, callback)</td></tr><tr><td>读取文件</td><td>fs.readFile(path[, options], callback)</td></tr><tr><td>重命名文件</td><td>fs.rename(oldPath, newPath, callback)</td></tr><tr><td>关闭文件</td><td>fs.close(fd, callback)</td></tr><tr><td>截取文件</td><td>fs.ftruncate(fd[, len], callback)</td></tr><tr><td>删除文件</td><td>fs.unlink(path, callback)</td></tr><tr><td>文件存在</td><td>fs.stat() / fs.access()</td></tr><tr><td>监听文件</td><td>fs.watchFile(filename[, options], listener)</td></tr><tr><td>停止监听</td><td>fs.unwatchFile(filename[, listener])</td></tr><tr><td>打开大文件</td><td>fs.createReadStream(path[, options])</td></tr><tr><td>写入大文件</td><td>fs.createWriteStream(path[, options])</td></tr><tr><td>创建目录</td><td>fs.mkdir(path[, options], callback)</td></tr><tr><td>读取目录</td><td>fs.readdir(path[, options], callback)</td></tr><tr><td>删除目录</td><td>fs.rmdir(path, callback)</td></tr></tbody></table>
+<h3><a id="fsreadfsreadFile_29"></a>fs.read和fs.readFile方法的比较</h3> 
+<p><strong>fs.read()读取文件数据</strong><br> 语法格式：<br> fs.read(fd, buffer, offset, length, position, callback)<br> 从文件描述符fd中读取文件数据。<br> fd - 通过 fs.open() 方法返回的文件描述符。<br> buffer - 数据写入的缓冲区。<br> offset - 缓冲区写入的写入偏移量。<br> length - 要从文件中读取的字节数。<br> position - 文件读取的起始位置，如果 position 的值为 null，则会从当前文件指针的位置读取。<br> callback - 回调函数，有三个参数err, bytesRead, buffer，err 为错误信息， bytesRead 表示读取的字节数，buffer 为缓冲区对象。</p> 
+<p>使用fs.read()方法读取文件内容时，首先需要一个文件描述符fd,fs.read()方法可以实现部分文件内容的读取。通过length和position参数可以指定读取文件内容的长度和读取内容的起始位置。</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+var buf = new Buffer.alloc(1024);
+
+console.log(&quot;准备打开已存在的文件！&quot;);
+fs.open(&#x27;./2.html&#x27;, &#x27;r+&#x27;, function(err, fd) {  if (err) {  return console.error(err);  }  console.log(&quot;文件打开成功！&quot;);  console.log(&quot;准备读取文件：&quot;);  fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){  if (err){  console.log(err);  }  console.log(bytes + &quot;  字节被读取&quot;);  // 仅输出读取的字节  if(bytes &gt; 0){  console.log(buf.slice(0, bytes).toString());  }  });
+});
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/13b4584ab1b22dea9d5c976f77b864be.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><strong>fs.readFile()读取文件内容</strong><br> fs.readFile(filename[, options], callback)<br> 读取文件的全部内容<br> filename表示要读取的文件<br> callback回调函数有2个参数 (err, data)，参数 data 是文件的内容。如果没有指定参数encoding, 则返回值为Buffer。注意:res.end()方法接受 字符串或者buffer<br> fs.readFile()方法能且只能读取文件的全部内容，通过设置编码方式可以以字符串或Buffer的形式返回读结果。</p> 
+<pre><code>var http=require(&quot;http&quot;)
+var fs=require(&quot;fs&quot;)
+http.createServer((req,res)=&gt;{
+	fs.readFile(&quot;./1.html&quot;,(err,data)=&gt;{  if(!err){  console.log(data)  }else{  console.log(err)  }
+	})
+}).listen(8081)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/2f6d3d9101f50cff9ecb7823a02e1d38.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>小结：fs.readFile()方法是对fs.read()方法的进一步封装，fs.readFile()方法可以方便的读取文件的全部内容。相比fs.readFile()方法，使用fs.read()方法读取文件的全部内容可操作性要强很多。首先要用fs.stat判断文件的大小，然后使用fs.open()创建文件描述符，最后再使用fs.read()方法读取文件内容。</p> 
+<h3><a id="fswriteFile_92"></a>fs.writeFile</h3> 
+<p>格式：fs.writeFile(path ,data,callback(err))<br> 如果文件存在，该方法写入的内容会覆盖旧的文件内容,不存在就创建一个新的文件<br> path - 文件路径<br> data - 要写入文件的数据，可以是 String(字符串)<br> callback - 回调函数，回调函数只包含错误信息参数(err)，在写入失败时返回。</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+fs.writeFile(&quot;./test.txt&quot;,&quot;ljy666&quot;,(err)=&gt;{ //没有这个文件就创建
+	if(err){  console.log(err)
+	}else{  console.log(&quot;执行成功&quot;)
+	}
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ff19ad488819fbb85b081ff73e725038.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <img src="https://i-blog.csdnimg.cn/blog_migrate/fa870e83ca323a395bc7fe1972dc4130.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <img src="https://i-blog.csdnimg.cn/blog_migrate/8d37180097a43e7fee1ecf9a0a2e4fd6.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="fsstat_111"></a>fs.stat</h3> 
+<p>fs.stat可以用来判断是文件还是目录：stats.isFile()用于检测是否是文件，stats.isDirectory()用于检测是否是目录，两个都返回布尔值。</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+fs.stat(&quot;./test.txt&quot;,(err,stats)=&gt;{
+	if(err){  console.log(err)
+	}else if(stats.isFile()){  console.log(&quot;test.txt是文件&quot;)
+	}else if(stats.isDirectory()){  console.log(&quot;test.txt是目录&quot;)
+	}
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/7ce7163d8a114148fe2fd7e75222222b.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="fsmkdir_126"></a>fs.mkdir</h3> 
+<p>fs.mkdir可以用来创建目录，该方法能接受sane参数：path(将创建的目录路径)，mode(读写权限，默认0777)，callback(异常回调)</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+fs.mkdir(&quot;img&quot;,(err)=&gt;{
+	if(err){  console.log(err)
+	}else {  console.log(&#x27;创建成功&#x27;)
+	}
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/543fdee10829847d79ec9154466ebbdd.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ddcb175ece98ddd52cf40fdd2ec38e3a.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="fsappendFile_141"></a>fs.appendFile</h3> 
+<p>fs.appendFile用于向文件内追加内容。<br> 在进行内容追加的时候，如果目标文件不存在，会先创建文件，然后添加内容。</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+fs.writeFile(&quot;test1&quot;,&quot;666666&quot;,(err)=&gt;{
+	if(err){  console.log(err)
+	}else {  console.log(&#x27;创建成功&#x27;)
+	}
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/972b0d6a6c50fadd7893053e4ea1ed22.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <img src="https://i-blog.csdnimg.cn/blog_migrate/5cae85ae558777118ddfcdf6bd29e712.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <img src="https://i-blog.csdnimg.cn/blog_migrate/56dc2745e27815bce3fed3aee2e99f89.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="fsreaddir_157"></a>fs.readdir</h3> 
+<p>fs.readdir用于读取目录，能够同时获取目录下的文件和文件夹，返回一个包含文件名和文件夹名称的数组。</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+fs.readdir(&quot;../练习&quot;,(err,files)=&gt;{
+	if(err){  console.log(err)
+	}else {  console.log(files)
+	}
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/8de85c7f6f9d3cddae0b60cf8f63c2c1.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="fsrename_170"></a>fs.rename</h3> 
+<p>移动/重命名文件或目录:整个功能相当于重命名一个文件/文件夹路径<br> 语法格式：<br> fs.rename(oldPath, newPath, callback);<br> oldPath, 原目录/文件的完整路径及名；<br> newPath, 新目录/文件的完整路径及名；如果新路径与原路径相同，而只文件名不同，则是重命名<br> callback(err), 操作完成回调函数；err操作失败对象<br> 移动文件有一个bug:新路径和旧路径必须是同一个根盘</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+fs.rename(&quot;1.html&quot;,&quot;img/3.html&quot;,(err)=&gt;{
+	if(err){  console.log(err)
+	}else{  console.log(&quot;移动成功&quot;)
+	}
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/490d3a07127ded14835545e98a60fdf0.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <img src="https://i-blog.csdnimg.cn/blog_migrate/ad35ef68f99103928c5f4fda06e9f6a3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="fsrmdir_190"></a>fs.rmdir</h3> 
+<p>fs.rmdir用于删除文件夹。用该方法来删除文件或者不存在的文件夹的时候会报错。如果文件夹下面有文件或文件夹则也会报错。</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+fs.rmdir(&quot;img&quot;,(err)=&gt;{
+	if(err){  console.log(err)
+	}else{  console.log(&quot;文件夹删除成功&quot;)
+	}
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/8e08d942fc38c3b358f226508adb4f1c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="fsunlink_203"></a>fs.unlink</h3> 
+<p>fs.unlink用于删除文件。如果使用该方法删除文件夹或者不存在的文件的时候，也会报错。</p> 
+<pre><code>var fs = require(&quot;fs&quot;);
+fs.unlink(&quot;test1&quot;,(err)=&gt;{
+	if(err){  console.log(err)
+	}else{  console.log(&quot;文件夹删除成功&quot;)
+	}
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/cc36f9313921cedac6f9631e470f09fd.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="fscopyFile_216"></a>fs.copyFile</h3> 
+<p>用来拷贝文件<br> 语法：<br> fs.copyFile(oldPath, newPath, callback);<br> oldPath, 原文件的完整路径；<br> newPath, 新文件的完整路径；<br> callback(err), 操作完成回调函数；err操作失败对象<br> 拷贝文件以后两个文件都会存在磁盘中</p> 
+<pre><code>var fs=require(&quot;fs&quot;)
+fs.copyFile(&quot;test.txt&quot;,&quot;img/test.txt&quot;,(err)=&gt;{  if(err){  console.log(err)  }else{  console.log(&#x27;复制成功&#x27;)  }
+})
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/3c1d362471426e69b2a5b168ea85620c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <img src="https://i-blog.csdnimg.cn/blog_migrate/45afb37bb6b9a1ce855a4e76984afc0f.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"nodeJs--fs模块\",\"description\":\"小结fs.readFile()方法是对fs.read()方法的进一步封装，fs.readFile()方法可以方便的读取文件的全部内容。相比fs.readFile()方法，使用fs.read()方法读取文件的全部内容可操作性要强很多。首先要用fs.stat判断文件的大小，然后使用fs.open()创建文件描述符，最后再使用fs.read()方法读取文件内容。使用fs.read()方法读取文件内容时，首先需要一个文件描述符fd,fs.read()方法可以实现部分文件内容的读取。...\",\"datePublished\":\"2022-07-29T23:43:13+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"前端, javascript, node.js\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126064342\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","node.js",{"className":"tag tag--solid","children":"Node.js"}]]}],["$","h1",null,{"children":"nodeJs--fs模块"}],["$","p",null,{"children":"小结fs.readFile()方法是对fs.read()方法的进一步封装，fs.readFile()方法可以方便的读取文件的全部内容。相比fs.readFile()方法，使用fs.read()方法读取文件的全部内容可操作性要强很多。首先要用fs.stat判断文件的大小，然后使用fs.open()创建文件描述符，最后再使用fs.read()方法读取文件内容。使用fs.read()方法读取文件内容时，首先需要一个文件描述符fd,fs.read()方法可以实现部分文件内容的读取。..."}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-07-29T23:43:13+08:00","children":"2022.07.29"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],9," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"751"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126064342","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/126043438","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"nodeJs--http模块"}]]}],["$","$L2",null,{"href":"/articles/126075537","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"nodeJs--url模块"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

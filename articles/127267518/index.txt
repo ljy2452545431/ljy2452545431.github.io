@@ -1,0 +1,249 @@
+1:"$Sreact.fragment"
+2:I[50249,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MotionShell"]
+3:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+4:I[20531,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"SiteNav"]
+5:I[27366,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"LocaleToggle"]
+6:I[22530,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ThemeToggle"]
+7:I[68420,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+8:I[81005,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default"]
+11:I[41081,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"default",1]
+:HL["/_next/static/chunks/1tixk57-x0j9_.css","style"]
+0:{"P":null,"c":["","articles","127267518",""],"q":"","i":false,"f":[[["",{"children":["articles",{"children":[["articleId","127267518","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0wdfudby0quhf.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0ihnwulsr8yoy.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/1u8g946itlk0x.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/_next/static/chunks/25vmo8q6d6rem.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"data-locale":"zh","data-theme":"light","lang":"zh-CN","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n(() => {\n  try {\n    const stored = localStorage.getItem(\"ljy-blog-theme\");\n    const theme = stored === \"light\" || stored === \"dark\"\n      ? stored\n      : matchMedia(\"(prefers-color-scheme: dark)\").matches\n        ? \"dark\"\n        : \"light\";\n    document.documentElement.dataset.theme = theme;\n\n    const storedLocale = localStorage.getItem(\"ljy-blog-locale\");\n    const locale = storedLocale === \"en\" ? \"en\" : \"zh\";\n    document.documentElement.dataset.locale = locale;\n    document.documentElement.lang = locale === \"en\" ? \"en\" : \"zh-CN\";\n  } catch {\n    document.documentElement.dataset.theme = \"light\";\n    document.documentElement.dataset.locale = \"zh\";\n    document.documentElement.lang = \"zh-CN\";\n  }\n})();\n"}}]}],["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main-content","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"跳到主要内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Skip to main content"}]]}],["$","$L2",null,{"children":[["$","header",null,{"className":"site-header","children":["$","div",null,{"className":"site-header__inner","children":[["$","$L3",null,{"className":"brand","href":"/","aria-label":"LJY/DEV","children":[["$","span",null,{"aria-hidden":"true","className":"brand__mark","children":"LJ"}],["$","span",null,{"className":"brand__text","children":"LJY/DEV"}]]}],["$","$L4",null,{}],["$","div",null,{"className":"site-header__actions","children":[["$","$L5",null,{}],["$","$L6",null,{}]]}]]}]}],["$","main",null,{"id":"main-content","children":["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"not-found page-frame","children":[["$","p",null,{"className":"eyebrow","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"404"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"404"}]]}],["$","h1",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"这里还没有内容"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Nothing here yet"}]]}],["$","p",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"页面可能已经移动，或链接尚未发布。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"This page may have moved or has not been published."}]]}],["$","$L3",null,{"className":"button button--primary","href":"/","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"回到首页"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to home"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":18,"viewBox":"0 0 24 24","width":18,"xmlns":"http://www.w3.org/2000/svg","children":["$","path",null,{"d":"M5 12h14M13 6l6 6-6 6"}]}]]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"site-footer","children":[["$","div",null,{"className":"site-footer__top","children":[["$","div",null,{"children":[["$","p",null,{"className":"site-footer__brand","children":"LJY/DEV"}],["$","p",null,{"className":"site-footer__statement","children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"设计、工程与技术写作。"}],"$L9"]}]]}],"$La"]}],"$Lb"]}]]}]]}]]}]]}],{"children":["$Lc",{"children":["$Ld",{"children":["$Le",{},null,false,null]},null,false,"$@f"]},null,false,"$@f"]},null,false,null],"$L10",false]],"m":"$undefined","G":["$11",["$L12"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SWYQZKQeSXxQ06k_n6BlL"}
+14:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+18:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"ViewportBoundary"]
+1a:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"MetadataBoundary"]
+9:["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Design, engineering and technical writing."}]
+a:["$","div",null,{"className":"site-footer__links","children":[["$","$L3","CSDN",{"href":"https://blog.csdn.net/qq_56973906","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"CSDN"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"CSDN"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","NPM",{"href":"https://www.npmjs.com/package/free-layout-workflow-editor","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"NPM"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"NPM"}]],["$","svg",null,{"aria-hidden":true,"fill":"none","height":13,"viewBox":"0 0 24 24","width":13,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}],["$","$L3","3D 地图",{"href":"/map/","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"3D 地图"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"3D Map"}]],null]}],["$","$L3","邮件",{"href":"mailto:liujiayang8882025@163.com","rel":"$undefined","target":"$undefined","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"邮件"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Email"}]],null]}]]}]
+b:["$","div",null,{"className":"site-footer__bottom","children":[["$","span",null,{"children":["© ",2026," Liu Jiayang ·"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"保留所有权利。"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"All rights reserved."}]]]}],["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"文章迁移自作者本人 CSDN 博客"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Articles migrated from my personal CSDN archive"}]]}]]}]
+c:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+d:["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+e:["$","$1","c",{"children":["$L13",null,["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+17:[]
+f:"$W17"
+10:["$","$1","h",{"children":[null,["$","$L18",null,{"children":"$L19"}],["$","div",null,{"hidden":true,"children":["$","$L1a",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1b"}]}]}],null]}]
+12:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1tixk57-x0j9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+1c:T5d84,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#react_3">react特点</a></li><li><ul><li><a href="#_4">优势</a></li><li><a href="#_40">劣势</a></li></ul>  </li><li><a href="#jsx_46">jsx</a></li><li><ul><li><a href="#_47">介绍</a></li><li><a href="#indexjs_73">入口文件index.js的理解</a></li><li><a href="#_87">使用样式</a></li><li><a href="#_98">注释</a></li><li><a href="#_106">条件渲染</a></li><li><a href="#_139">数组</a></li><li><a href="#_152">列表渲染</a></li></ul>  </li><li><a href="#_167">组件</a></li><li><ul><li><a href="#_172">定义单个组件</a></li><li><a href="#_204">使用组件</a></li><li><a href="#_213">定义复合组件</a></li></ul>  </li><li><a href="#Props_232">传值Props</a></li><li><ul><li><a href="#props__234">定义和使用props 传值</a></li><li><a href="#_293">多属性传值</a></li></ul>  </li><li><a href="#State_324">State</a></li><li><ul><li><a href="#State_327">如何定义State</a></li><li><a href="#setState_381">setState设置状态</a></li><li><a href="#State__Props__405">State 与 Props 区别</a></li><li><a href="#stateprops__421">state/props 实现父子组件通信</a></li></ul>  </li><li><a href="#Redux_493">Redux</a></li><li><ul><li><a href="#store_521">store的创建和使用</a></li><li><a href="#_564">数据的修改和订阅</a></li></ul>
+ </li></ul>
+</div>  <hr> 
+<h2><a id="react_3"></a>react特点</h2> 
+<h3><a id="_4"></a>优势</h3> 
+<ul><li> <p><strong>声明式设计</strong> −React采用声明范式，可以轻松描述应用。</p> <pre><code class="prism language-react">//命令式编程：命令“机器”如何去做事情(how)，这样不管你想要的是什么(what)，它都会按照你的命令实现。类似jquery 操作DOM,创建一个页面，一点点的告诉DOM 怎么去挂载，你要怎么去做；JQ\原生 都是命令式编程，都是在做DOM 操作。
+
+//声明式编程：告诉“机器”你想要的是什么(what)，让机器想出如何去做(how)。
+</code></pre> </li><li> <p><strong>高效</strong> −React通过对DOM的模拟，最大限度地减少与DOM的交互。</p> <pre><code class="prism language-react">  //1.虚拟DOM（Virtual  DOM）  用js 对象来模拟页面上的DOM 和DOM嵌套**实现DOM 元素的高效更新  //2.Diff 算法  tree diff  component diff  element diff
+</code></pre> <p>​</p> </li><li> <p><strong>灵活</strong> −React可以与已知的库或框架很好地配合。</p> </li><li> <p><strong>JSX</strong> − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</p> </li><li> <p><strong>组件</strong> − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。模块化</p> <p>vue的组件是通过.vue 文件（template/script/style）实现的</p> <p>react中没有像vue中那样的模板文件，在react里一切都是以js来实现的</p> </li><li> <p><strong>单向响应的数据流</strong> − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</p> </li></ul> 
+<h3><a id="_40"></a>劣势</h3> 
+<ul><li>学习成本很高，学习曲线很陡</li><li>react本身能做的事并不多，想做大东西必须得用react插件（全家桶）</li></ul> 
+<h2><a id="jsx_46"></a>jsx</h2> 
+<h3><a id="_47"></a>介绍</h3> 
+<p>全称: <strong>JavaScript XML</strong>， React 使用 JSX 来替代常规的 JavaScript。</p> 
+<p>JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。</p> 
+<p>我们不需要一定使用 JSX，但它有以下优点：</p> 
+<ul><li> <p>JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。</p> </li><li> <p>它是类型安全的，在编译过程中就能发现错误。</p> </li><li> <p>使用 JSX 编写模板更加简单快速。</p> </li><li> <p>作用: 用来创建react虚拟DOM(元素)对象</p>  <ul><li>var ele = &lt;h1&gt;Hello JSX!&lt;/h1&gt;;</li><li>注意1: 它不是字符串, 也不是HTML/XML标签</li><li>注意2: 它最终产生的就是一个JS对象</li></ul> </li><li> <p>标签名任意: HTML标签或其它标签</p> </li><li> <p>标签属性任意: HTML标签属性或其它</p> </li><li> <p>基本语法规则</p>  <ul><li>遇到 &lt;开头的代码, 以标签的语法解析: html同名标签转换为html同名元素, 其它标签需要特别解析</li><li>遇到以 { 开头的代码，以JS的语法解析: 标签中的js代码必须用{ }包含</li></ul> </li><li> <p>babel.js的作用</p>  <ul><li>浏览器的js引擎是不能直接解析JSX语法代码的, 需要babel转译为纯JS的代码才能运行</li><li>只要用了JSX，都要加上type=“text/babel”, 声明需要babel来处理</li></ul> </li></ul> 
+<h3><a id="indexjs_73"></a>入口文件index.js的理解</h3> 
+<pre><code>//在index.js文件中App变量中保存的数据渲染到root关联的根元素中了
+//但是js文件中应该写js语法,js语法变量中只能保存:6种基本数据 和2种引用数据
+//let App=&lt;div&gt;666&lt;/div&gt;  保存的是一个标签  这种语法就是JSX语法
+//JSX语法就是一种插值语法  它经过打包工具编译后本质上还是JS语法  //JSX:
+// 1.遇到了&lt;&gt;就会解析为标签:
+// 1.1如果是html语法标准的标签就会直接解析为同名元素  &lt;nav/&gt;  &lt;div/&gt;  &lt;article/&gt; 
+// 1.2如果是其它标签需要特别解析--组件&lt;App&gt;
+// 1.3 &lt;App/&gt; 这个代码的意义决定了能不能真正入门react框架: 可以理解为：&lt;App titel=&quot;200&quot;/&gt; ===&gt; new App(200)  (这里只是方便理解，不是等价的)
+</code></pre> 
+<h3><a id="_87"></a>使用样式</h3> 
+<p>React 推荐使用内联样式。React 会在指定元素数字后自动添加 <strong>px</strong> 。</p> 
+<pre><code>render() {  let mystyle={color:&#x27;red&#x27;,fontSize:33}  return (  &lt;div style={mystyle}&gt;我的样式&lt;/div&gt;  )  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/80ce3abbfec222403a8f6d45d29df4c3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_98"></a>注释</h3> 
+<p>注释需要写在花括号中，需要注意的是：</p> 
+<ul><li>在标签内部的注释需要花括号</li><li>在标签外的的注释不能使用花括号</li></ul> 
+<h3><a id="_106"></a>条件渲染</h3> 
+<p>在 JSX 内部不能使用 <strong>if else</strong> 语句，但可以使用 <strong>三元运算</strong> 表达式来替代。</p> 
+<pre><code>render() {  let i=0  return (  &lt;div&gt;  {i==1? &lt;h1&gt;正确&lt;/h1&gt;:&lt;h1&gt;错误&lt;/h1&gt;}  &lt;/div&gt;  )  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/da73bbd548c7e16fb3ae6fdf4c3c532e.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 可以在JSX外部使用if语句</p> 
+<pre><code>render() {  let islogin=true  let Box=&#x27;&#x27;  if(islogin){  Box=&lt;h1&gt;已登录&lt;/h1&gt;  }else{  Box=&lt;h1&gt;未登录&lt;/h1&gt;  }  return (  &lt;div&gt;  {Box}  &lt;/div&gt;  )  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ae3a11455176414c7320c42c45d87c3d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_139"></a>数组</h3> 
+<p>JSX 允许在模板中插入数组，数组会自动展开所有成员</p> 
+<pre><code>render() {  let arr=[1111,2222,3333,4444,5555]  return (  &lt;div&gt;  {arr}  &lt;/div&gt;  )  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5b7f1041a1ee87bacb4c2ed9998dbb41.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_152"></a>列表渲染</h3> 
+<p>通过数组的map函数<br> map函数的返回值是一个数组，数组里面的值为处理后的值</p> 
+<pre><code>render() {  let arr=[{title:&#x27;ljy&#x27;,age:22},{title:&#x27;jack&#x27;,age:30},{title:&#x27;marry&#x27;,age:25}]  return (  &lt;div&gt;  {arr.map(el=&gt;&lt;p&gt;{el.title}--{el.age}&lt;/p&gt;)}  &lt;/div&gt;  )  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/d9311cf3630fabb775a9d57eae57dd05.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="_167"></a>组件</h2> 
+<p>React.js 中一切皆组件，用 React.js 写的其实就是 React.js 组件。</p> 
+<p>我们在编写 React.js 组件的时候，一般都需要继承 React.js 的 <strong>Component</strong>（类定义）。一个组件类必须要实现一个 <strong>render 方法</strong>，这个 <strong>render 方法必须要返回一个 JSX 元素</strong>。但这里要注意的是，必须要用一个外层的 JSX 元素把所有内容包裹起来。返回并列多个 JSX 元素是不合法的。</p> 
+<h3><a id="_172"></a>定义单个组件</h3> 
+<p>方式1：通过React自定义组件（DOM元素）：<strong>类定义</strong></p> 
+<pre><code>import React, { Component } from &#x27;react&#x27;
+
+export default class Box4 extends Component {  render() {  return (  &lt;div&gt;Box4&lt;/div&gt;  )  }
+}
+</code></pre> 
+<p>方式2：通过React自定义组件（DOM元素）：<strong>函数定义</strong></p> 
+<pre><code>import React from &#x27;react&#x27;
+
+export default function Box4(props) {  return (  &lt;div&gt;Box4&lt;/div&gt;  )
+}
+
+</code></pre> 
+<p>方式3：<strong>不建议使用</strong>，React.createClass创建组件的方式在react 16版本中去除。</p> 
+<pre><code>var MyApp = React.createClass({  render: function() {  return &lt;h1&gt;Hello World！&lt;/h1&gt;;  }
+});
+</code></pre> 
+<h3><a id="_204"></a>使用组件</h3> 
+<pre><code>import React from &#x27;react&#x27;;
+import ReactDOM from &#x27;react-dom/client&#x27;;
+import Box4 from &#x27;./Box4.jsx&#x27;;  导入自定义组件
+const root = ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;));  //关联页面根元素
+root.render(&lt;Box4 /&gt;);  //给根元素内部渲染组件模板
+</code></pre> 
+<h3><a id="_213"></a>定义复合组件</h3> 
+<p>我们可以通过创建多个组件来合成一个组件，即把组件的不同功能点进行分离</p> 
+<pre><code>import Box5 from &#x27;./Box5&#x27;
+import React, { Component } from &#x27;react&#x27;
+export default class Box4 extends Component {  render() {  return (  &lt;div&gt;  &lt;h1&gt;Box4组件中&lt;/h1&gt;  &lt;Box5&gt;&lt;/Box5&gt;  &lt;/div&gt;  )  }
+}
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/7a97aeb43df4ab1b94bcaed85d78cff4.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="Props_232"></a>传值Props</h2> 
+<h3><a id="props__234"></a>定义和使用props 传值</h3> 
+<p>通过React<strong>类定义</strong>组件时：</p> 
+<ul><li>在父组件render 方法中调用组件时使用<strong>key/value</strong> 的形式来指定属性。</li><li>在自定义子组件中通过<strong>this.props.key</strong> 来获得组件属性的值，需要使用{}括起来。</li></ul> 
+<pre><code>//父组件Box4中
+render() {  let a=&#x27;父组件Box4传递的数据&#x27;  return (  &lt;div&gt;  &lt;h1&gt;Box4组件中&lt;/h1&gt;  &lt;Box5 mypro={a}&gt;&lt;/Box5&gt;  //定义属性名绑定数据传递给子组件  &lt;/div&gt;  )  }  //子组件Box5中
+ render() {  return (  &lt;div&gt;  &lt;h2&gt;Box5中-{this.props.mypro}&lt;/h2&gt;  //通过this.props.父组件传递的属性名 来接收  &lt;/div&gt;  )  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/54bec938d3925184a131eaacc65cae23.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>通过React<strong>函数定义</strong> 组件时：</p> 
+<ul><li>在父组件render 方法中调用组件时使用<strong>key/value</strong> 的形式来指定属性。</li><li>在自定义子组件中通过函数接收参数<strong>props</strong>，<strong>props.key</strong>来获得组件属性的值，需要使用{}括起来</li></ul> 
+<pre><code>// 函数定义组件时，在组件内部使用属性值：props.属性名称
+function Welcome(props) { // 函数需要传递一个参数props  return(&lt;h2&gt;{props.title}&lt;/h2&gt;)
+}
+
+ReactDOM.render(
+	&lt;Welcome title=&quot;张三&quot; /&gt;,  document.getElementById(&#x27;root&#x27;)
+);
+</code></pre> 
+<p><strong>定义默认props：</strong></p> 
+<pre><code>export default class Box5 extends Component {  render() {  return (  &lt;div&gt;  &lt;h2&gt;Box5中-{this.props.name}&lt;/h2&gt;  &lt;/div&gt;  )  }
+}
+//由于是用ES6 class语法创建组件，其内部只允许定义方法，而不能定义属性，class的属性只能定义在class之外。所以defaultProps要写在组件外部。
+Box5.defaultProps = {
+	name: &#x27;Box5&#x27;
+};
+</code></pre> 
+<h3><a id="_293"></a>多属性传值</h3> 
+<p>（1）定义一个this.props对象，在对象中声明多个<strong>键值对</strong>，用于表示组件的属性<br> （2）在组件中使用**{…this.props}**的方式传递属性。“…”表示JSX的延展操作符，这种方式可以很方便的为组件指定多个属性，并且为属性的值指定数据类型。</p> 
+<pre><code>//父组件ox4中
+render() {  let a=&quot;父组件传递的值&quot;  let b=1111111111  let c=[111,222,333]  let props={  a,b,c  }  return (  &lt;div&gt;  &lt;h1&gt;Box4组件中&lt;/h1&gt;  &lt;Box5 {...props}&gt;&lt;/Box5&gt;  &lt;/div&gt;  )  }  //子组件Box5中  render() {  return (  &lt;div&gt;  &lt;h2&gt;Box5中-{this.props.a}--{this.props.b}--{this.props.c}&lt;/h2&gt;  &lt;/div&gt;  )  }
+</code></pre> 
+<h2><a id="State_324"></a>State</h2> 
+<p>React 的核心思想是组件化的思想，应用由组件搭建而成，而组件中最重要的概念是State（状态），State是一个组件的UI数据模型，是组件渲染时的数据依据。</p> 
+<h3><a id="State_327"></a>如何定义State</h3> 
+<p>组件中用到的一个变量是不是应该作为组件State，可以通过下面的4条依据进行判断：</p> 
+<ol><li>这个变量是否是通过Props从父组件中获取？如果是，那么它不是一个状态。</li><li>这个变量是否在组件的整个生命周期中都保持不变？如果是，那么它不是一个状态。</li><li>这个变量是否可以通过其他状态（State）或者属性(Props)计算得到？如果是，那么它不是一个状态。</li><li>这个变量是否在组件的render方法中使用？如果<strong>不是</strong>，那么它不是一个状态。这种情况下，这个变量更适合定义为组件的一个普通属性。</li></ol> 
+<p>注意：并不是组件中用到的所有变量都是组件的状态！</p> 
+<pre><code>import Box5 from &#x27;./Box5&#x27;
+import React, { Component } from &#x27;react&#x27;
+export default class Box4 extends Component {  constructor(arg){  super(arg)  this.state={  msg:0  }  //写法一  this.change1=()=&gt;{  this.setState({msg:this.state.msg+1})  //使用setState函数更改状态  }  //写法二  this.change2=()=&gt;{  this.state.msg++  this.setState(this.state)  //修改变量之后，调用setState刷新render  从而页面重新取到已经修改后的值  }  }  render() {  return (  &lt;div&gt;  &lt;h1&gt;Box4组件中&lt;/h1&gt;  &lt;h2&gt;{this.state.msg}&lt;/h2&gt;  &lt;button onClick={this.change1}&gt;change1&lt;/button&gt;&lt;button onClick={this.change2}&gt;change2&lt;/button&gt;  &lt;/div&gt;  )  }
+}
+
+</code></pre> 
+<p>注意：<strong>React在ES6的实现中，规定state在constructor中实现</strong></p> 
+<p><em><strong>正确定义State</strong></em>的方式如下：</p> 
+<p>（1）在constructor中实现state</p> 
+<p>（2）在constructor中通过bind绑定事件函数（事件函数是用来改变状态）</p> 
+<p>（3）在事件函数内部使用setState函数更改状态</p> 
+<p>（4）在组件中的render函数中使用该状态</p> 
+<p>（5）在组件上需要设置监听事件，去触发事件函数的执行</p> 
+<h3><a id="setState_381"></a>setState设置状态</h3> 
+<p>（1）语法：</p> 
+<p><strong>setState(object nextState[, function callback])</strong></p> 
+<p>（2）说明：</p> 
+<ul><li>setState是React事件处理函数中和回调函数中触发UI更新的主要方法。</li><li>不能在组件内部通过this.state修改状态，因为该状态会在调用setState()后被替换。</li><li>setState()不一定是同步的，为了性能提升，React会批量执行state和DOM渲染。</li><li>setState()总是会触发一次组件重绘，但可在shouldComponentUpdate()中实现一些条件渲染逻辑来解决。</li></ul> 
+<p>同步设置多个状态时(不常用)，可以在setState函数的<strong>第二个参数可以传递一个function回调函数</strong>，如下：</p> 
+<pre><code>this.change1=()=&gt;{  this.setState({msg:this.state.msg+1},()=&gt;{  this.state.num+= this.state.msg  })  }
+</code></pre> 
+<p>**状态上移：**当存在多个组件共同依赖一个状态，或是当子组件的props 数据需要被修改时，将这个状态放到对应组件的父组件中：</p> 
+<h3><a id="State__Props__405"></a>State 与 Props 区别</h3> 
+<p>除了State, 组件的Props也是和组件的UI有关的。他们之间的主要区别是：</p> 
+<ul><li>props 中的数据都是外界传递过来的</li><li>state 中的数据都是组件私有的；（通过Ajax 获取回来的数据，一般都是私有数据）</li><li>props 中的数据都是只读的，不能重新赋值</li><li>state 中的数据都是可读可写的</li><li>State定义在constructor内部，在super(props)代码后面；Props默认值定义在类（组件）的外部</li></ul> 
+<p>当子组件的属性值是可变值时，采用状态上移：</p> 
+<p><strong>状态上移</strong>通过属性将父组件的状态传递到子组件，那么父组件的状态发生变化时，子组件的属性也会改变</p> 
+<h3><a id="stateprops__421"></a>state/props 实现父子组件通信</h3> 
+<ul><li>子组件获取父组件整个组件进行传参  <ul><li>父组件在调用子组件时，传入一整个组件给子组件**&lt;Children parent={ this } /&gt;**</li><li>父组件中定义一个方法getChildrenMsg(resulet, msg)，用来获取子组件传来的值以及执行其他操作</li><li>子组件在通过this.props来获取到一整个组件this.props.parent 或者this.props[parent]</li><li>子组件调用父组件步骤2里定义的方法进行传值this.props.parent.getChildrenMsg(this,val)</li></ul> </li></ul> 
+<p>Parent:</p> 
+<pre><code>import Box5 from &#x27;./Box5&#x27;
+import React, { Component } from &#x27;react&#x27;
+export default class Box4 extends Component {  constructor(arg){  super(arg)  this.state={  msg:0,  num:0  }  //写法一  this.change1=()=&gt;{  this.setState({msg:this.state.msg+1},()=&gt;{  this.state.num+= this.state.msg  })  }  //写法二  this.change2=()=&gt;{  this.state.msg++  this.setState(this.state)  }  this.change3=(arg,arg2)=&gt;{  this.state.msg=arg  this.state.num=arg2  this.setState(this.state)  }  }  render() {  let props={  msg:this.state.msg,  num:this.state.num,  change3:this.change3  }  return (  &lt;div&gt;  &lt;h1&gt;Box4组件中&lt;/h1&gt;  &lt;h2&gt;msg--{this.state.msg}&lt;/h2&gt;  &lt;h2&gt;num--{this.state.num}&lt;/h2&gt;  &lt;Box5 {...props}&gt;&lt;/Box5&gt;  &lt;button onClick={this.change1}&gt;change1&lt;/button&gt;&lt;button onClick={this.change2}&gt;change2&lt;/button&gt;  &lt;/div&gt;  )  }
+}
+Children:
+</code></pre> 
+<pre><code>import React, { Component } from &#x27;react&#x27;
+
+export default class Box5 extends Component {  render() {  return (  &lt;div&gt;  &lt;h2&gt;Box5中---msg:{this.props.msg}----num:{this.props.num}&lt;/h2&gt;  &lt;button onClick={()=&gt;{this.props.change3(&#x27;子组件修改了msg&#x27;,&#x27;子组件修改了num&#x27;)}}&gt;点击更改父组件传递的数据&lt;/button&gt;  &lt;/div&gt;  )  }
+}
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e3bc785951623d19b669dd78567dacf0.gif" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="Redux_493"></a>Redux</h2> 
+<p>我们为什么需要状态管理器Redux？为了方便的组织和管理组件之间的数据。</p> 
+<p>Redux是什么？<br> Redux是一个流行的JavaScript框架，为应用程序提供一个可预测的状态容器。Redux基于简化版本的Flux框架，Flux是Facebook开发的一个框架。在标准的MVC框架中，数据可以在UI组件和存储之间双向流动，而Redux严格限制了数据只能在一个方向上流动。</p> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/58baa99db0f15ccb2be353b5f8641ff8.png" alt="请添加图片描述" loading="lazy" decoding="async"><br> Store：存储数据的公告区域；eg–图书管理员；</p> 
+<p>React Component：页面组件；eg–借书的用户；</p> 
+<p>Reducer：数据存放位置；eg–图书记录本；</p> 
+<p>Action Creators：动作；eg–结束的时候，跟图书管理员说的话；</p> 
+<ul><li> <p>Redux基本原则</p>  <ul><li>单一数据源；</li><li>state是只读的；</li><li>使用纯函数来执行修改；</li></ul> </li><li> <p>Redux核心API</p>  <ul><li>createStore(reducer)：创建数据仓库: import {createStore} from “redux”；</li><li>store.getState()：用于获取store里面的数据；</li><li>store.dispatch(action)：用于派发action，触发reducer,执行修改动作；</li><li>store.subscribe(componentMethods)：订阅store的修改，只要store发生改变，组件中的回调函数就会被执行；</li></ul> </li></ul> 
+<h3><a id="store_521"></a>store的创建和使用</h3> 
+<p>使用Redux需要安装该模块</p> 
+<pre><code>npm i redux –save
+</code></pre> 
+<p>创建reducer（store/reducer.js），<strong>提供数据源</strong>，是一个纯函数</p> 
+<pre><code>// src/store/reducer.js
+const defaultState = {  username: &quot;ljy&quot;,  stulist: [1, 2, 3]
+}
+</code></pre> 
+<p>//1、state用于提供为仓库提供数据源，需要给定一个初始值<br> //2、action用于对state 进行更新处理，表示要执行的动作，通过dispatch(action)触发；action被传递到reducer内部来处理，action中必须有一个type字段</p> 
+<p>const reducer = (state=defaultState) =&gt; {<br> //action……<br> return state;//必须返回处理后的state<br> }</p> 
+<p>export default reducer;</p> 
+<pre><code>
+- 创建数据仓库（store/index.js）：createStore()  ```react  // src/store/index.js  import {createStore} from &quot;redux&quot;;  import reducer from &quot;./reducer&quot;;  const store = createStore(reducer);  export default store;
+</code></pre> 
+<p>组件内部使用数据：getState()</p> 
+<pre><code>//组件内部引入仓库
+import store from &quot;./store/index&quot;;
+
+//获取数据
+&lt;h2&gt;{store.getState().username}&lt;/h2&gt;
+</code></pre> 
+<h3><a id="_564"></a>数据的修改和订阅</h3> 
+<p>在组件内部定义要执行的动作action，并触发该动作dispatch。action中<strong>type字段是必须</strong>的，值通常大写：</p> 
+<pre><code>addValue() {
+	const action = {  type: &quot;ADD&quot;,  data: &quot;测试数据&quot;  }  store.dispatch(action);
+}
+</code></pre> 
+<p><strong>接收动作并修改数据</strong>：通过dispatch触发动作后，会将action传递到reducer函数的第二个参数中</p> 
+<pre><code>const reducer = (state=defaultState, action) =&gt; {  switch(action.type) {  case &quot;ADD&quot;:  state.stulist.push(action.data);  break;  default:  break;  }  return state;
+}
+</code></pre> 
+<p>组件中及时响应更新的数据：<strong>订阅</strong></p> 
+<pre><code>componentDidMount() {  // 订阅store改变事件
+	store.subscribe(this.changeValue.bind(this));
+}
+changeValue() {  this.setState(store.getState())
+}
+</code></pre> 
+<p>subscribe函数可以<strong>监听Redux中state的变化</strong>，一旦Redux中的state发生了变化，render函数就会被调用，页面就会被重新渲染</p>  </div>13:[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"React-class类篇\",\"description\":\"全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。\",\"datePublished\":\"2022-10-12T17:50:10+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"react.js, javascript, vue.js\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/127267518\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L3",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","react.js",{"className":"tag tag--solid","children":"React"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}]]}],["$","h1",null,{"children":"React-class类篇"}],["$","p",null,{"children":"全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-10-12T17:50:10+08:00","children":"2022.10.12"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],20," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"605"," ",[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L3",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/127267518","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$1c"}}],"$L1d"]}]]
+1d:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L3",null,{"href":"/articles/127013882","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue3-公共数据配置&&插件配置&&网络配置&&路由配置&&数据仓库配置pinia"}]]}],["$","$L3",null,{"href":"/articles/127302893","children":[["$","span",null,{"children":[["$","span",null,{"className":"$undefined","data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"className":"$undefined","data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"React-到hook之前的过渡技术"}]]}]]}]
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#f4f1e9","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#11130f","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]
+16:null
+1b:[["$","title","0",{"children":"React-class类篇 · 刘家阳"}],["$","meta","1",{"name":"description","content":"全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。"}],["$","meta","2",{"name":"application-name","content":"刘家阳的技术博客"}],["$","meta","3",{"name":"author","content":"刘家阳"}],["$","meta","4",{"name":"keywords","content":"react.js,javascript,vue.js"}],["$","meta","5",{"name":"creator","content":"刘家阳"}],["$","meta","6",{"property":"og:title","content":"React-class类篇"}],["$","meta","7",{"property":"og:description","content":"全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"property":"article:published_time","content":"2022-10-12T17:50:10+08:00"}],["$","meta","10",{"property":"article:tag","content":"react.js"}],["$","meta","11",{"property":"article:tag","content":"javascript"}],["$","meta","12",{"property":"article:tag","content":"vue.js"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"刘家阳 · Web 前端开发工程师"}],["$","meta","15",{"name":"twitter:description","content":"专注 React、Vue 与 TypeScript，长期参与企业级 AI 平台、数据中台、算力云与工作流编排产品建设。擅长从 0 到 1 搭建前端架构，也乐于把重复能力沉淀成组件、插件和工程规范。"}]]

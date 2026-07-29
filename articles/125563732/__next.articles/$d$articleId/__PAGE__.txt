@@ -1,0 +1,346 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T9016,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#let_7">一、let</a></li><li><a href="#const_79">二、const</a></li><li><a href="#_87">三、解构赋值</a></li><li><ul><li><a href="#_89">解构对象</a></li><li><ul><li><a href="#_97">无声明赋值</a></li><li><a href="#_107">给新的变量名赋值</a></li><li><a href="#_115">默认值</a></li></ul>  </li><li><a href="#_131">解构数组</a></li><li><ul><li><a href="#_132">变量声明并赋值时的解构</a></li><li><a href="#_138">变量先声明后赋值时的解构</a></li><li><a href="#_146">默认值</a></li><li><a href="#_153">交换变量</a></li><li><a href="#_163">解析一个从函数返回的数组</a></li><li><a href="#_174">忽略某些返回值</a></li><li><a href="#_185">将剩余数组赋值给一个变量</a></li></ul>  </li></ul>  </li><li><a href="#_symbol_192">四、新增基本数据类型 symbol</a></li><li><a href="#_MapSet_201">五、新增引用数据类型 Map和Set</a></li><li><ul><li><a href="#JSMapSet_202">JS中Map和Set的区别：</a></li><li><a href="#Map_210">Map</a></li><li><a href="#Set_289">Set</a></li><li><a href="#_333">字符串数字新出功能</a></li><li><ul><li><a href="#includes_334">includes()</a></li><li><a href="#startsWith_343">startsWith()</a></li><li><a href="#endsWith_353">endsWith()</a></li><li><a href="#repeat_363">repeat()</a></li><li><a href="#padStart_371">padStart()</a></li><li><a href="#padEnd_380">padEnd()</a></li><li><a href="#_388">模板字符串(\``)</a></li><li><a href="#isNaNx_406">isNaN(x)</a></li></ul>  </li><li><a href="#_421">对象数组的新功能</a></li><li><ul><li><a href="#_422">...扩展运算符</a></li><li><a href="#Arrayof_434">Array.of()</a></li><li><a href="#Arrayfrom_448">Array.from()</a></li><li><a href="#Arrayfind_457">Array.find()</a></li><li><a href="#findIndex_468">findIndex()</a></li><li><a href="#fill_480">fill</a></li><li><a href="#flat_498">flat</a></li></ul>  </li><li><a href="#_513">箭头函数</a></li><li><a href="#_class_539">类 class</a></li><li><ul><li><a href="#_557">类的继承</a></li><li><a href="#static_589">static</a></li><li><a href="#super_613">super</a></li></ul>  </li><li><a href="#_642">模块化</a></li><li><ul><li><a href="#1__export_645">1. 导出 export</a></li><li><ul><li><a href="#1__646">(1) 单变量函数导出：</a></li><li><a href="#2__651">(2) 批量导出：</a></li><li><a href="#3__657">(3) 默认导出：</a></li></ul>  </li><li><a href="#2_import_668">2.导入 import</a></li></ul>  </li><li><a href="#_701">全局方法</a></li><li><ul><li><a href="#alert_702">alert()</a></li><li><a href="#confirm_709">confirm()</a></li><li><a href="#setinterval_716">setinterval()</a></li><li><a href="#setTimeout_727">setTimeout()</a></li></ul>  </li><li><a href="#Promise_736">Promise</a></li></ul>
+ </li></ul>
+</div>  <hr> 
+<h2><a id="let_7"></a>一、let</h2> 
+<p>let跟var一样都是用来声明变量的，它跟var的区别在于作用域：<br> var的作用域被规定为一个函数作用域，而let则被规定为块作用域，块作用域要比函数作用域小一些，但是如果两者既没在函数中，也没在块作用域中定义，那么两者都属于全局作用域。</p> 
+<p><strong>let与var区别如下：</strong></p> 
+<p><strong>在全局作用域下：</strong></p> 
+<pre><code>  var a=&#x27;ljy&#x27;  let b=&#x27;jjj&#x27;  console.log(window.a,window.b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/47e41109744f6bb0d5357a6d2b8cae33.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 被let声明的变量不会作为全局对象window的属性，而被var声明的变量却可以</p> 
+<p><strong>在函数作用域下：</strong></p> 
+<pre><code>  function fn(){  var a=&#x27;ljy&#x27;  let b=&#x27;jjj&#x27;  }
+</code></pre> 
+<p>var 和 let 在函数作用域中声明一个变量，两个变量的意义是相同的。</p> 
+<p><strong>在块作用域下</strong><br> let只在块作用域内部可用，而 var则在块作用域外部也能用。<br> 块作用域：大括号括起来的就表示一个块作用域，比如：if,for,或者直接写的大括号等等。</p> 
+<pre><code>  {  var a=&#x27;ljy&#x27;  let b=&#x27;jjj&#x27;  console.log(a, b)  }  console.log(a,b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/37e6b34cd33968d9bbf35878f5463c7b.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> for循环中</p> 
+<pre><code>  for(var i=0;i&lt;5;i++){  setTimeout(()=&gt;{console.log(i)},1000)  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/821198590d75edf6a3cfb6c80f0b2b6e.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> Var的时候，Settimeout本身是同步的， 但它里面的函数是异步的， for每次循环的时候setTimeout也会执行 ，但是setTimeout里面的函数不会执行， 会被放入到异步队列中 ，等待主任务for循环结束后,再从异步队列打印出东西，此时循环完i的值变为了5，所以打印了5次5。</p> 
+<p>而使用let就实现了依次打印0到4</p> 
+<pre><code>  for(let i=0;i&lt;5;i++){  setTimeout(console.log(i),1000)  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e6758d6c5b56eb11f470cb3b4c767972.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>使用 let 声明迭代变量时，JavaScript 引擎在后台会为每个迭代循环声明一个新的迭代变量。每个 setTimeout 引用的都是不同的变量。所以打印的是0,1,2,3,4</p> 
+<p><strong>let 和var 重新声明</strong><br> var允许在同一作用域中声明同名的变量，而let不可以</p> 
+<pre><code>  let a=1  let a=2  console.log(a)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5d7db909f55bc6f7a47cc9a8de542416.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> let相对来说严格些，在同一块级作用域下不能有重复的变量名。</p> 
+<p><strong>变量提升</strong><br> let不存在变量提升，var存在变量提升</p> 
+<pre><code>  console.log(a)  let a=1
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/455665783f99b197bef53b85e9142593.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="const_79"></a>二、const</h2> 
+<p>const跟let相类似，不同的是定义的变量不可以修改，而且必须初始化。</p> 
+<pre><code>  const a=2  a=3  console.log(a)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/a210381746c3fb410d5cbdcf5b8d4d31.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="_87"></a>三、解构赋值</h2> 
+<p>什么是解构赋值：声明标识符，按照某种数据模型，解析并赋值给声明的标识符</p> 
+<h3><a id="_89"></a>解构对象</h3> 
+<p>基本赋值：</p> 
+<pre><code>  var obj={a:10,b:&#x27;ljy&#x27;}  var {a,b}=obj  console.log(a,b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/321560575e1088c69f3e8d2086aeeaa5.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_97"></a>无声明赋值</h4> 
+<p>一个变量可以独立于其声明进行解构赋值。</p> 
+<pre><code>  var obj={a:10,b:&#x27;ljy&#x27;}  var a,b;  ({a,b}=obj)  console.log(a,b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/461bf8ac597c9655295a953f54de7b55.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 注意：赋值语句周围的圆括号 ( … ) 在使用对象字面量无声明解构赋值时是必须的。</p> 
+<h4><a id="_107"></a>给新的变量名赋值</h4> 
+<p>可以从一个对象中提取变量并赋值给和对象属性名不同的新的变量名。</p> 
+<pre><code>  var obj={a:22,b:&#x27;ljy&#x27;}  var {a:age,b:name}=obj  console.log(age,name)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/76ce5c376d17a0f32ca9c02d1a945012.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_115"></a>默认值</h4> 
+<p>变量可以先赋予默认值。</p> 
+<pre><code>  var obj={a:22,b:&#x27;ljy&#x27;}  var {a=10,b=1,c=11}=obj  console.log(a,b,c)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/54ef6513beb54cb24893b48323779563.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 如果赋值的是undefined则不会覆盖默认值。</p> 
+<pre><code>  var obj={a:undefined,b:&#x27;ljy&#x27;}  var {a=10,b=1,c=11}=obj  console.log(a,b,c)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/456042ff8501ff5c319d1db9965e1554.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_131"></a>解构数组</h3> 
+<h4><a id="_132"></a>变量声明并赋值时的解构</h4> 
+<pre><code>  var [a,b,c]=[1,2,3]  console.log(a,b,c)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/04be16bf0019253831d944ea9d2dda79.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_138"></a>变量先声明后赋值时的解构</h4> 
+<p>通过解构分离变量的声明，可以为一个变量赋值。</p> 
+<pre><code>  var a,b,c  [a,b,c]=[1,2,3]  console.log(a,b,c)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/2d2e40d8b07bdc09e31d27b2659bb986.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_146"></a>默认值</h4> 
+<p>为了防止从数组中取出一个值为undefined的对象，可以在表达式左边的数组中为任意对象预设默认值。</p> 
+<pre><code>  var [a=5,b=0,c=3]=[1,2]  console.log(a,b,c)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/8d09ee24a21fc865b048f10d45c8c1b6.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_153"></a>交换变量</h4> 
+<p>在一个解构表达式中可以交换两个变量的值。<br> 没有解构赋值的情况下，交换两个变量需要一个临时变量</p> 
+<pre><code>  var a=1;  var b=2;  [a,b]=[b,a];  console.log(a,b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/9ae118bffd31d746cfe8bb42a086ca7d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_163"></a>解析一个从函数返回的数组</h4> 
+<p>从一个函数返回一个数组是十分常见的情况。解构使得处理返回值为数组时更加方便。</p> 
+<pre><code>  function fn(){  return [1,2];  }  var a,b;  [a,b]=fn();  console.log(a,b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/4782f660bccba4fd8573ff55a94fc49f.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_174"></a>忽略某些返回值</h4> 
+<p>你也可以忽略你不感兴趣的返回值：</p> 
+<pre><code>  function fn(){  return [1,2,3];  }  var a,b;  [a,,b]=fn();  console.log(a,b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/aa55c34124bf1e46f2691349c580d897.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_185"></a>将剩余数组赋值给一个变量</h4> 
+<p>当解构一个数组时，可以使用剩余模式，将数组剩余部分赋值给一个变量。</p> 
+<pre><code>  var [a,...b]=[1,2,3,4]  console.log(a,b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ade0777c2a9b83333ef7f8e7f8dc61a3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="_symbol_192"></a>四、新增基本数据类型 symbol</h2> 
+<p>Symbol (符号)是 ECMAScript 6 新增的一种基本数据类型。符号是原始值，且符号实例是唯一、不可变的。符号的用途是确保对象属性使用唯一的标识符，不会发生属性冲突的危险，符号就是用来创建唯一记号，进而用作非字符串形式的对象属性。<br> <strong>简单来说：</strong> 独一无二的数据，解决我们业务中使用字符串冲突的问题。比如：标识符命名不希望发生冲突的问题。</p> 
+<pre><code>  var a=Symbol(&#x27;hello&#x27;)  var b=Symbol(&#x27;hello&#x27;)  console.log(a,b,a==b)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/c98804ebeb69deca0afbfae9aab6c2f0.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h2><a id="_MapSet_201"></a>五、新增引用数据类型 Map和Set</h2> 
+<h3><a id="JSMapSet_202"></a>JS中Map和Set的区别：</h3> 
+<table><thead><tr><th>Map</th><th>Set</th></tr></thead><tbody><tr><td>所有元素都是键+值存在</td><td>所得元素只有key没有value，value就是key</td></tr><tr><td>不允许键重复</td><td>不允许出现键值重复</td></tr><tr><td>所有元素通过键进行自动排序的</td><td>所有元素都会被自动排序</td></tr><tr><td>map的键是不能修改的，但是其键对应的值是可以修改的</td><td>不能通过迭代器来改变set的值，因为set的值就是键</td></tr></tbody></table>
+<h3><a id="Map_210"></a>Map</h3> 
+<p>Map是一组键值对的结构，具有极快的查找速度。<br> 它由set方法存入数据，get方法取出数据。<br> 跟object的区别：键名可以为任意数据，没有语法糖。<br> 引用数据作为键名key时，取值也必须是同一个引用。<br> <strong>取出一个学生的成绩：</strong></p> 
+<pre><code>  var map1=new Map([[&#x27;张三&#x27;,90],[&#x27;李四&#x27;,80],[&#x27;王五&#x27;,70]])  //当需要取出张三成绩  console.log(map1.get(&#x27;张三&#x27;))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/2f7ff39eb1ce4787fb5850d2f9ed24c4.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><strong>当key为引用数据时:</strong></p> 
+<pre><code>  var arr=[1,2,3]  var map1=new Map()  map1.set(arr,200)  arr.push(100)  console.log(map1.get(arr))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/9331ee3804ec4ede84982b3b22003124.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><strong>如何遍历Map数据：</strong><br> 利用Map对象的forEach方法，仿照的数组的forEach</p> 
+<pre><code>  var map1=new Map([[1,2],[3,4],[5,6]])  map1.forEach(function(a,b){  console.log(b,a);  })
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/b8f08a3cb10b1d4d3100b57bff92f73f.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 使用for of循环出Map,key代表键名，value代表键值</p> 
+<pre><code>  var map1=new Map([[1,2],[3,4],[5,6]])  for(var [key,value] of map1){  console.log(key+&#x27;==&gt;&#x27;+value)  }
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5068ee6d5ea5c644a735462d7ca5f015.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><strong>数组和Map之间的转换：</strong></p> 
+<p><strong>二维数组转Map，直接作为Map参数传入</strong></p> 
+<pre><code>  var arr=[[1,2],[3,4],[5,6]]  var map1=new Map(arr)  console.log(map1)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5bf8d502ec4b756a77e71e2abffe8f8b.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><strong>一维数组转Map，将其用[ ]，括起来传入</strong></p> 
+<pre><code>  var arr=[1,2]  var arr1=[3,4]  var arr2=[5,6]  var map1=new Map([arr,arr1,arr2])  console.log(map1)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/2dd5520016478de32608f2faa89ba453.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> Map转数组，利用数组的静态方法==&gt;Array.from()</p> 
+<pre><code>  var map1=new Map([[1,2],[3,4],[5,6]])  var arr=Array.from(map1)  console.log(arr)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/f5e6511f444e40147d2d81f51b730e8b.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>Map的合并：利用…来合并</p> 
+<pre><code>  var map1=new Map([[1,2],[3,4]])  var map2=new Map([[5,6]])  var map3=new Map([...map1,...map2])  console.log(map3)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/4a84c65f06df5112de4398c07f085e7e.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="Set_289"></a>Set</h3> 
+<p>Set和Map类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在Set中，没有重复的key。<br> 添加元素通过add(key)方法，删除元素通过delete(key)方法。</p> 
+<p><strong>可用于数组去重：</strong></p> 
+<pre><code>  var arr=[100,100,200,200,300]  var set1=new Set(arr)  arr1=Array.from(set1)  console.log(arr1)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e5f42eabc9cff5c1a3d8d55731b41441.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <strong>补充：</strong> 数组去重的几个方法<br> <strong>方法一，利用对象的键名来实现：</strong></p> 
+<pre><code>  var arr=[100,100,200,200,300]  var obj={}  for(var i=0;i&lt;arr.length;i++){  obj[arr[i]]=0;  }  var arr1=Object.keys(obj)  console.log(arr1)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/45239668aeff736e6b5b602b7fccdfbc.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> <strong>方法二，for循环实现：</strong></p> 
+<pre><code>  var arr=[100,100,200,200,300]  var arr2=[]  for(var i=0;i&lt;arr.length;i++){  arr2[i]=arr[i]  for(var j=i+1;j&lt;arr.length;j++){  if(arr[i]==arr[j]){  arr2.splice(i,1)  }  }  }  arr2=arr2.filter(function(a){  //去除splice删除后的空白元素  if(a!==&#x27;&#x27;){  return true  }  })  console.log(arr2)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/6b9971129d466088a4b0868387898bd6.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_333"></a>字符串数字新出功能</h3> 
+<h4><a id="includes_334"></a>includes()</h4> 
+<p>includes() 方法用于判断字符串是否包含指定的子字符串。<br> 如果找到匹配的字符串则返回 true，否则返回 false。</p> 
+<pre><code>  var str=&quot;ljy6 66&quot;  console.log(str.includes(&quot; &quot;))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/6979856893e4424f42157b2b624fc58a.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="startsWith_343"></a>startsWith()</h4> 
+<p>startsWith() 方法用于检测字符串是否以指定的子字符串开始。<br> 如果是以指定的子字符串开头返回 true，否则 false。<br> startsWith() 方法对大小写敏感。</p> 
+<pre><code>  var str=&quot;ljy6 66&quot;  console.log(str.startsWith(&quot;ljy&quot;))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/9567e01bd9def1aba801d9122473e06d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="endsWith_353"></a>endsWith()</h4> 
+<p>endsWith() 方法用来判断当前字符串是否是以指定的子字符串结尾的（区分大小写）。<br> 如果传入的子字符串在搜索字符串的末尾则返回 true，否则将返回 false。</p> 
+<pre><code>  var str=&quot;ljy6 66&quot;  console.log(str.endsWith(&quot;66&quot;))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/2f1c716c118f67f2c102e778a78ba338.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="repeat_363"></a>repeat()</h4> 
+<p>repeat() 方法字符串复制指定次数。</p> 
+<pre><code>  var str=&quot;ljy666&quot;  console.log(str.repeat(5))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5d2390efde475d96263c266890c201a1.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="padStart_371"></a>padStart()</h4> 
+<p>padStart() 方法用另一个字符串填充当前字符串 (如果需要的话，会重复多次)，以便产生的字符串达到给定的长度。从当前字符串的左侧开始填充。</p> 
+<pre><code>  var str=&quot;ljy666&quot;  console.log(str.padStart(9,&#x27;LJY&#x27;))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/663c972ffd37ef0c482d621ca2ef1980.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="padEnd_380"></a>padEnd()</h4> 
+<p>padEnd() 方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。</p> 
+<pre><code>  var str=&quot;ljy666&quot;  console.log(str.padEnd(9,&#x27;LJY&#x27;))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/8386680bc3727418bd98b75807ceefe9.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_388"></a>模板字符串(``)</h4> 
+<p>模板字符串使用反引号 (` `) 来代替普通字符串中的用双引号和单引号。模板字符串可以包含特定语法（${expression}）的占位符。在模版字符串内使用反引号（`）时，需要在它前面加转义符（\）。</p> 
+<p>换行显示使用转义字符 /n</p> 
+<pre><code>  var a=123  var str=`hello${a}\nh5`  console.log(str)
+</code></pre> 
+<p>也可直接换行</p> 
+<pre><code>  var a=123  var str=`hello${a}
+h5`  console.log(str)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/4b6057daf983e73968d134d1a9119c14.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="isNaNx_406"></a>isNaN(x)</h4> 
+<p>全局函数isNaN()用于判断是不是数字，不是数字就返回true(有隐式转换)<br> Number的isNaN()方法用于判断是不是NaN,如果给定值为 NaN则返回值为true；否则为false。</p> 
+<pre><code>  var x=&#x27;123456&#x27;  console.log(isNaN(x))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5a91d8a3e0f705953782a24a61813735.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<pre><code>  var x=NaN  console.log(Number.isNaN(x))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/bdbcbca0ddbc96b05a8614300021687d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_421"></a>对象数组的新功能</h3> 
+<h4><a id="_422"></a>…扩展运算符</h4> 
+<p>可将对象，数组，map成员遍历出来</p> 
+<p>合并对象：</p> 
+<pre><code>  var x={name:&#x27;ljy&#x27;,age:22}  var y={ID:1}  var z={...x,...y}  console.log(z)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/177823b7d29643b392d6274feaa2e669.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="Arrayof_434"></a>Array.of()</h4> 
+<p>Array.of() 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。</p> 
+<pre><code>  var re=Array.of(10,203,40)  console.log(re)  var re1=Array.of(5)  console.log(re1)  var re2=Array(5)  console.log(re2)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/2df9975ecd117f6915fdd74d7970c297.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="Arrayfrom_448"></a>Array.from()</h4> 
+<p>Array.from() 方法对一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例。</p> 
+<pre><code>  var arr=Array.from([10,20,30],function(el){  return el*2  })  console.log(arr)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/919e910c75b12b67de65b07d198e2951.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="Arrayfind_457"></a>Array.find()</h4> 
+<p>find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。</p> 
+<pre><code>  var arr=[1,2,3,19,20]  console.log(arr.find(function(el) {  if (el &gt; 18) {  return true  }  }))
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/81480a5d38364cb2f006b859c2c96e7d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="findIndex_468"></a>findIndex()</h4> 
+<p>findIndex()返回数组中通过测试的第一个元素的索引。</p> 
+<pre><code>  var re=[9,20,18]  var re2=re.findIndex(function(el) {  if (el &gt; 18) {  return true  }  })  console.log(re,re2)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/c52e58fde7cedc36b6493fb7291026d0.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="fill_480"></a>fill</h4> 
+<p>fill()方法用静态值填充数组中的指定元素<br> 可以指定开始和结束填充的位置。如果未指定，则将填充所有元素。<br> 返回值：数组，改变后的数组。<br> 注意：fill() 会覆盖原始数组。</p> 
+<table><thead><tr><th>参数</th><th>描述</th></tr></thead><tbody><tr><td>value</td><td>必需。用于填充数组的值</td></tr><tr><td>start</td><td>可选。开始填充数组的索引（默认为 0）。（包括start）</td></tr><tr><td>end</td><td>可选。停止填充数组的索引（默认为 array.length）。(不包括end)</td></tr></tbody></table>
+<pre><code>  var arr=[10,203,30,,,,10]  var re=arr.fill(&quot;hello&quot;,2,4)  console.log(re,arr)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/6437cd81abd7af76ab036ff74f598911.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="flat_498"></a>flat</h4> 
+<p>flat() 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。</p> 
+<p><strong>参数：</strong><br> depth 可选<br> 指定要提取嵌套数组的结构深度，默认值为 1。</p> 
+<p><strong>返回值</strong><br> 一个包含将数组与子数组中所有元素的新数组。</p> 
+<pre><code>		var arr=[1,2,3,[[[[1]]]]]  var arr2=arr.flat(9)  console.log(arr,arr2)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/a02e8cf00ba3d92da31695b5948278c1.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_513"></a>箭头函数</h3> 
+<p>ES6 中引入了箭头函数。<br> 箭头函数允许我们编写更短的函数<br> 对于箭头函数，this 关键字始终表示定义箭头函数的对象。</p> 
+<pre><code>  var fn = () =&gt; {  return &quot;Hello World!&quot;;  }  console.log(fn())
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ca9d6baf76f84c816f57a1020af6f5f2.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>如果函数只有一个语句，并且该语句返回一个值，则可以去掉括号和 return 关键字：</p> 
+<pre><code>hello = () =&gt; &quot;Hello World!&quot;;
+</code></pre> 
+<p>如果有参数，则将它们传递到括号内：<br> 带参数的箭头函数：</p> 
+<pre><code>hello = (val) =&gt; &quot;Hello &quot; + val;
+</code></pre> 
+<p>如果只有一个参数，也可以略过括号：</p> 
+<pre><code>hello = val =&gt; &quot;Hello &quot; + val;
+</code></pre> 
+<h3><a id="_class_539"></a>类 class</h3> 
+<p>类是用于创建对象的模板。<br> 我们使用 class 关键字来创建一个类，类体在一对大括号 {} 中，我们可以在大括号 {} 中定义类成员的位置，如方法或构造函数。<br> 每个类中包含了一个特殊的方法 constructor()，它是类的构造函数，这种方法用于创建和初始化一个由 class 创建的对象。</p> 
+<pre><code>  class Person{  constructor(arg,arg2){  this.arg=arg  this.arg2=arg2  this.life=1  }  }  // constructor官方提供的 必须写这个单词, 可以不写这个 ,系统会默认内置一个空的constructor  var p1=new Person(&quot;100&quot;,200)  console.log(p1)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/f1fae3157c6384d97d4bc98514be4980.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="_557"></a>类的继承</h4> 
+<p>Class 可以通过extends关键字实现继承，子类继承父类（除static定义的静态方法和属性外）的所有属性和方法。</p> 
+<p><strong>Object.getPrototypeOf</strong> 方法可以用来从子类上获取父类。<br> 可以使用这个方法判断，一个类是否继承了另一个类。</p> 
+<pre><code>  class grade {  constructor() {  this.grade=&#x27;19级&#x27;  }  say(){  console.log(this.name)  }  }  class student extends grade{  constructor(id,name,age) {  super();  this.id=id  this.name=name  this.age=age  super.say()  }  }  let a=new student(1,&#x27;ljy&#x27;,22)  console.log(a)  a.say()  console.log(Object.getPrototypeOf(student)===grade)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/944e564218ac7ac9232d701681903946.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="static_589"></a>static</h4> 
+<p>类相当于实例的原型，所有在类中定义的方法，都会被实例继承。如果在一个方法前，加上static关键字，就表示该方法不会被实例继承，而是直接通过类来调用，这就称为“静态方法”。</p> 
+<pre><code>  class Teacher{  constructor(name){  this.name=name  this.say2=function(){}  }  static a=20//静态属性  static say3(){}//静态方法  //对象的属性  b=100  //原型对象的方法  say(){  console.log(this.name)  }  }  var t1=new Teacher(&quot;karen&quot;)  console.log(t1)  t1.say()  console.log(Teacher.say3,Teacher.a)  console.log(typeof Teacher)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/a7f0dbbb1104b401e8c3e1568ea9546c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="super_613"></a>super</h4> 
+<p>super作为函数调用时，代表父类的构造函数。ES6 要求，子类的构造函数必须执行一次super函数。super内部的this指向使用super的实例</p> 
+<p>super()作为对象时，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。</p> 
+<pre><code>		class grade {  constructor() {  this.grade=&#x27;19级&#x27;  }  say(){  console.log(this.name)  }  }  class student extends grade{  constructor(id,name,age) {  super();  this.id=id  this.name=name  this.age=age  super.say()  }  }  let a=new student(1,&#x27;ljy&#x27;,22)  console.log(a)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ea2f74a2c26b4f3521fa584b21eea882.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_642"></a>模块化</h3> 
+<p>模块化主要是用于管理代码，解决解耦与复用问题<br> 官方的标准模块化规范, 通过 import 和 export 导入导出模块内的成员, 未被导出的成员, 无法导入使用</p> 
+<h4><a id="1__export_645"></a>1. 导出 export</h4> 
+<h5><a id="1__646"></a>(1) 单变量函数导出：</h5> 
+<pre><code>	export let name=&#x27;ljy&#x27;
+	export let fn=()=&gt;{console.log(111)};
+</code></pre> 
+<h5><a id="2__651"></a>(2) 批量导出：</h5> 
+<pre><code>		let a=10;  let name=&#x27;ljy&#x27;;  export {a,name};
+</code></pre> 
+<h5><a id="3__657"></a>(3) 默认导出：</h5> 
+<p>默认导出是在 export 关键词后面再跟上一个 default 表示导出的该变量或函数是匿名的，一个模块只能默认导出一次</p> 
+<pre><code>	export default {  name:&#x27;ljy&#x27;,  say(){  console.log(666)  }
+	};
+</code></pre> 
+<h4><a id="2_import_668"></a>2.导入 import</h4> 
+<p>大括号中的变量或函数名必须与导出时的名称一模一样：<br> 与<strong>from</strong>关联使用，此时script标签的<strong>type必须设置为module</strong></p> 
+<pre><code>  import {name,fn} from &quot;./1.js&quot;  console.log(name,fn) 
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/03feb55bacd9d04101a17e1a32511547.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>如果我们想修改导入的变量或函数的名称，可以通过 as 关键词来命名：</p> 
+<pre><code>  import {name as a,fn as b} from &quot;./1.js&quot;  console.log(a,b) 
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/0f7024a425fbcf7c6dd2862a2b888b96.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>如果我们要想将所有的变量或函数都导入，可以通过 * 来整体导入： as后面是用来保存所有变量或函数的对象名，可通过对象访问成员的法访问变量或函数。</p> 
+<pre><code>  import * as a from &quot;./1.js&quot;  console.log(a,a.name)  a.fn()
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/6d12d8ee0abf1e1cd58ee94b8d906f0a.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p>去掉 {} ，接收的就是默认导出的变量，导出的变量是匿名的，可以随意地起个变量名用于接收：</p> 
+<pre><code>  import obj from &quot;./1.js&quot;  console.log(obj)  obj.say()
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/739af2d7d76efa067b81edbf53c8d8a6.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="_701"></a>全局方法</h3> 
+<h4><a id="alert_702"></a>alert()</h4> 
+<p>alert() 方法用于显示带有一条指定消息和一个 OK 按钮的警告框。</p> 
+<pre><code>  var x=&#x27;hello&#x27;  alert(x)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/9318e386c019aac2d2b2b00d24c7e909.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="confirm_709"></a>confirm()</h4> 
+<p>confirm() 方法用于显示一个带有指定消息和 OK 及取消按钮的对话框</p> 
+<pre><code>  confirm(&quot;你确定支付吗?&quot;)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5909148d1cefaff366328cf947159463.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="setinterval_716"></a>setinterval()</h4> 
+<p>setinterval()是定时调用的函数，可按照指定的周期（以毫秒计）来调用函数或计算表达式。setinterval()的作用是在播放动画的时，每隔一定时间就调用函数，方法或对象。setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。</p> 
+<pre><code>  var i=0;  var re=setInterval(()=&gt;{  console.log(i++,111111111)  },1000)  //打印了7次后关闭它  clearInterval(re)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/692e9c3087b06a8a3bef49a6f428b56d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h4><a id="setTimeout_727"></a>setTimeout()</h4> 
+<p>用于在指定的毫秒数后调用函数或计算表达式。设定一个指定等候时间 (单位是千分之一秒, millisecond), 时间到了, 浏览器就会执行一个指定的代码。只调用一次。</p> 
+<pre><code>  var re=setTimeout(()=&gt;{  console.log(666)  },1000)  console.log(re)
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e5476d5b9451fb79367cfbe83dc74e53.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<h3><a id="Promise_736"></a>Promise</h3> 
+<p>用于表示一个异步操作的最终完成（或失败）及其结果值。<br> <strong>参数：</strong></p> 
+<ul><li><strong>resolve</strong>：异步操作执行成功后的回调函数</li><li><strong>reject</strong>：异步操作执行失败后的回调函数</li></ul> 
+<p>Promise 类有 .then() .catch() 和 .finally() 三个方法，这三个方法的参数都是一个函数，.then() 可以将参数中的函数添加到当前 Promise 的正常执行序列，也可以传入第二个函数用于接收错误数据； .catch() 则是设定 Promise 的异常处理序列，.finally() 是在 Promise 执行的最后一定会执行的序列。 .then() 传入的函数会按顺序依次执行，有任何异常都会直接跳到 catch 序列,内部产生了错误数据或者抛出(throw)了错误信息 catch方法传入的回调函数就会运行。</p> 
+<p><strong>难点:</strong> then函数的返回值一定是一个Promise对象<br> then的返回看 then的传入的回调函数参数 传入的回调函数的返回值是Promise对象那么then的返回值就是它 反之就把返回值创建一个Promise对象 返回值<br> 在链式调用的过程中只要有一个捕获 把错误处理了 就不会报错</p> 
+<pre><code>  var p1=new Promise(function (resolve, reject) {  console.log(1111);  resolve(2222);  })  p1.then(function (value) {  console.log(value);  return 3333;  }).then(function (value) {  console.log(value);  throw &quot;An error&quot;;  }).catch(function (err) {  console.log(err);  });
+</code></pre> 
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/b042a4696c046041c20b714b3e3ccfd1.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"ES6新增重点\",\"description\":\"let跟var一样都是用来声明变量的，它跟var的区别在于作用域：var的作用域被规定为一个函数作用域，而let则被规定为块作用域，块作用域要比函数作用域小一些，但是如果两者既没在函数中，也没在块作用域中定义，那么两者都属于全局作用域。let与var区别如下：在全局作用域下：被let声明的变量不会作为全局对象window的属性，而被var声明的变量却可以在函数作用域下：var 和 let 在函数作用域中声明一个变量，两个变量的意义是相同的。在块作用域下let只在块作用域内部可用，而 var则在块作\",\"datePublished\":\"2022-07-08T17:26:19+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"es6, 前端, javascript\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/125563732\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","es6",{"className":"tag tag--solid","children":"es6"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}]]}],["$","h1",null,{"children":"ES6新增重点"}],["$","p",null,{"children":"let跟var一样都是用来声明变量的，它跟var的区别在于作用域：var的作用域被规定为一个函数作用域，而let则被规定为块作用域，块作用域要比函数作用域小一些，但是如果两者既没在函数中，也没在块作用域中定义，那么两者都属于全局作用域。let与var区别如下：在全局作用域下：被let声明的变量不会作为全局对象window的属性，而被var声明的变量却可以在函数作用域下：var 和 let 在函数作用域中声明一个变量，两个变量的意义是相同的。在块作用域下let只在块作用域内部可用，而 var则在块作"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-07-08T17:26:19+08:00","children":"2022.07.08"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],22," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"1.4千"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/125563732","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/125674872","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"JS面试题--ES5和ES6有什么区别？"}]]}],["$","$L2",null,{"href":"/articles/125726879","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"JS笔试题--实现数组的flat函数"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

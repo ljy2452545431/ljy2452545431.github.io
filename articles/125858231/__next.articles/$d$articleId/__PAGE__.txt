@@ -1,0 +1,98 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/1u8g946itlk0x.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T1bec,<div>
+ <h4>文章目录</h4>
+ <ul><li><a href="#12_5">一、水平垂直居中的12种方法</a></li><li><ul><li><a href="#1absolute__margin_7">1.absolute + 负margin</a></li><li><a href="#2_absolute__marginauto_35">2. absolute + margin:auto</a></li><li><a href="#3absolute__calc_64">3.absolute + calc</a></li><li><a href="#4absolute__translate_90">4.absolute + translate</a></li><li><a href="#5_flex__justifycontent__alignitems_118">5. flex + justify-content + align-items</a></li><li><a href="#6flex__margin_auto_143">6.flex + margin auto</a></li><li><a href="#7_grid_167">7. 网格布局：grid</a></li><li><a href="#8__lineheight_192">8.行内块元素 + line-height</a></li><li><a href="#9__after__219">9.行内块元素 + ::after 伪元素选择器</a></li><li><a href="#10__csstable_257">10.行内块元素 + css-table</a></li><li><a href="#11___table_287">11. 行内块元素 + table</a></li><li><a href="#12__writingmode_322">12.行内块元素 + writing-mode</a></li></ul>
+ </li></ul>
+</div>  <hr> 
+<h2><a id="12_5"></a>一、水平垂直居中的12种方法</h2> 
+<h3><a id="1absolute__margin_7"></a>1.absolute + 负margin</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;
+	*{  margin: 0;  padding: 0;
+	}  body{  position: relative;  height: 100vh;  /* 必须设置高度,这里我设置的高度是在当前窗口水平垂直居中 */  }  #div1{  position: absolute;  top:50%;  left: 50%;  height: 300px;  width: 300px;  margin-top: -150px;  /* 设置为高度的一半 */  margin-left: -150px;  /* 设置为宽度的一半 */  background-color: aqua;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="2_absolute__marginauto_35"></a>2. absolute + margin:auto</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;
+	*{  margin: 0;  padding: 0;
+	}  body{  position: relative;  height: 100vh;  }  #div1{  position: absolute;  top:0;  right: 0;  bottom: 0;  left: 0;  height: 300px;  width: 300px;  margin: auto;  background-color: aqua;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="3absolute__calc_64"></a>3.absolute + calc</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;
+	*{  margin: 0;  padding: 0;
+	}  body{  position: relative;  height: 100vh;  }  #div1{  position: absolute;  top:calc(50% - 150px);  /* 减去高度的一半 */  left: calc(50% - 150px); /* 减去宽度的一半 */  height: 300px;  width: 300px;  background-color: aqua;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="4absolute__translate_90"></a>4.absolute + translate</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;
+	*{  margin: 0;  padding: 0;
+	}  body{  position: relative;  height: 100vh;  }  #div1{  position: absolute;  top:50%;  left: 50%;  width: 300px;  height: 300px;  transform:translate(-50%,-50%);  background-color: aqua;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="5_flex__justifycontent__alignitems_118"></a>5. flex + justify-content + align-items</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;
+	*{  margin: 0;  padding: 0;
+	}  body{  display: flex;  height: 100vh;  justify-content: center;  align-items: center;  }  #div1{  width: 300px;  height: 300px;  background-color: aqua;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="6flex__margin_auto_143"></a>6.flex + margin auto</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;
+	*{  margin: 0;  padding: 0;
+	}  body{  display: flex;  height: 100vh;  }  #div1{  width: 300px;  height: 300px;  background-color: aqua;  margin: auto;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="7_grid_167"></a>7. 网格布局：grid</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;
+	*{  margin: 0;  padding: 0;
+	}  body{  display: grid;  height: 100vh;  }  #div1{  width: 300px;  height: 300px;  background-color: aqua;  justify-self: center;  align-self: center;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="8__lineheight_192"></a>8.行内块元素 + line-height</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;
+	*{  margin: 0;  padding: 0;  }  body{  height: 100vh;  line-height: 100vh;  text-align: center;  }  #div1{  width: 300px;  height: 300px;  background-color: aqua;  display: inline-block;  vertical-align: middle;  line-height: 300px;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;p&gt;666666&lt;/p&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="9__after__219"></a>9.行内块元素 + ::after 伪元素选择器</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;  * {  margin: 0;  padding: 0;  }  #father {  height: 800px;  text-align: center;  font-size: 0px;  border: 1px solid #55A532;  }  #div1 {  width: 300px;  height: 300px;  display: inline-block;  vertical-align: middle;  background-color: aqua;  }  #father::after {  content: &quot;&quot;;  display: inline-block;  height: 100%;  vertical-align: middle;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;father&quot;&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="10__csstable_257"></a>10.行内块元素 + css-table</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;  * {  margin: 0;  padding: 0;  }  body {  height: 100vh;  width: 100vw;  display: table-cell;  text-align: center;  vertical-align: middle;  }  #div1 {  width: 300px;  height: 300px;  display: inline-block;  background-color: aqua;  }  &lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="11___table_287"></a>11. 行内块元素 + table</h3> 
+<pre><code>	&lt;style type=&quot;text/css&quot;&gt;  * {  margin: 0;  padding: 0;  }  #box {  height: 100vh;  width: 100vw;  text-align: center;  }  #div1 {  width: 300px;  height: 300px;  display: inline-block;  background-color: aqua;  }
+	&lt;/style&gt;
+	&lt;body&gt;  &lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;  &lt;tr&gt;  &lt;td id=&quot;box&quot;&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;/div&gt;  &lt;/td&gt;  &lt;/tr&gt;  &lt;/table&gt;
+	&lt;/body&gt;
+</code></pre> 
+<h3><a id="12__writingmode_322"></a>12.行内块元素 + writing-mode</h3> 
+<pre><code>		* {  margin: 0;  padding: 0;  }  #div1 {  height: 100vh;  width: 100vw;  text-align: center;  writing-mode: vertical-lr;  text-align: center;  }  #div2{  display: inline-block;  width: 100%;  writing-mode: horizontal-tb;  text-align: center;  }  #div3 {  width: 300px;  height: 300px;  display: inline-block;  background-color: aqua;  margin: auto;  }  &lt;/style&gt;
+	&lt;body&gt;  &lt;div id=&quot;div1&quot;&gt;  &lt;div id=&quot;div2&quot;&gt;  &lt;div id=&quot;div3&quot;&gt;  &lt;/div&gt;  &lt;/div&gt;  &lt;/div&gt;
+	&lt;/body&gt;
+</code></pre>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"CSS的12中水平垂直居中方法\",\"description\":\"【代码】CSS的12中水平垂直居中方法。\",\"datePublished\":\"2022-07-18T20:05:59+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"css, css3, html\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/125858231\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","css",{"className":"tag tag--solid","children":"css"}],["$","span","css3",{"className":"tag tag--solid","children":"CSS"}],["$","span","html",{"className":"tag tag--solid","children":"html"}]]}],["$","h1",null,{"children":"CSS的12中水平垂直居中方法"}],["$","p",null,{"children":"【代码】CSS的12中水平垂直居中方法。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-07-18T20:05:59+08:00","children":"2022.07.18"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],8," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"886"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/125858231","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SWYQZKQeSXxQ06k_n6BlL"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/125832521","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"DOM节点类型"}]]}],["$","$L2",null,{"href":"/articles/125770774","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"JS基础--任务队列和事件循环"}]]}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null
