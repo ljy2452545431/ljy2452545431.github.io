@@ -3,7 +3,7 @@
       <channel>
         <title>刘家阳的技术博客</title>
         <link>http://localhost:3000</link>
-        <description>React、Vue、TypeScript、AI 应用与前端工程化实践。</description>
+        <description>AI Agent、RAG、工作流与前后端一体化工程实践。</description>
         <language>zh-CN</language>
         
         <item>
