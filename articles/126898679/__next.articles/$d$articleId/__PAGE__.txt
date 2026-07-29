@@ -2,7 +2,7 @@
 2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/01ugeyd0-meca.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
 6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/01ugeyd0-meca.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-3:T6535,<div>
+3:T648d,<div>
  <h4>文章目录</h4>
  <ul><li><a href="#1setup_3">1.setup</a></li><li><ul><li><a href="#setup_5">setup是什么</a></li><li><a href="#setup_10">setup执行的时机</a></li><li><a href="#setup_16">setup的返回值</a></li><li><a href="#setup_72">setup语法糖</a></li></ul>  </li><li><a href="#ref_113">ref函数</a></li><li><a href="#reactive_162">reactive函数</a></li><li><a href="#Vue3_189">Vue3响应式数据的实现原理</a></li><li><a href="#_211">计算属性</a></li><li><a href="#_248">监听属性</a></li><li><a href="#Vue3_321">Vue3中的生命周期</a></li><li><a href="#Teleport_346">Teleport</a></li><li><a href="#_401">属性</a></li><li><a href="#_456">自定义事件</a></li><li><a href="#_CSS_545">状态驱动的动态 CSS</a></li><li><a href="#_574">注册组件</a></li><li><a href="#Suspense_634">Suspense</a></li><li><a href="#isRef__toRef__toRefs__readonly_658">isRef toRef toRefs readonly</a></li></ul>
 </div>  <hr> 
@@ -21,12 +21,12 @@
  &lt;/div&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/b43388567ddc6588465d54d626c2a89b.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/b43388567ddc6588465d54d626c2a89b.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <p>若返回一个渲染函数，则可以自定义渲染内容</p> 
 <pre><code>&lt;script&gt;  import {h} from &#x27;vue&#x27;  export default{  setup() {  // 返回一个渲染函数  // h相当于document.CreateElement()  return () =&gt; { return h(&quot;h1&quot;, &quot;setup返回渲染函数&quot;) }  }  }
 &lt;/script&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/381c00e736b77bfdd9981a66c68ba271.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/381c00e736b77bfdd9981a66c68ba271.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <p>注意：<br> 尽量不要和Vue2.x配置混用<br> Vue2.x配置（data，methods，computed…）中可以访问setup中的属性，方法<br> 但在setup中不能访问到Vue2.x配置(data，methods，computed…)<br> 如有重名，setup优先<br> setup不能是一个async函数，因为返回值不再是return的对象，而是Promise，模板看不到return对象中的属性</p> 
 <h3><a id="setup_72"></a>setup语法糖</h3> 
 <p>给script标签直接添加setup属性就能使用setup了 &lt;script setup&gt;</p> 
@@ -36,7 +36,7 @@
 &lt;template&gt;  &lt;div&gt;  &lt;h2&gt;{{msg}}&lt;/h2&gt;  &lt;span&gt;{{obj.name}}&lt;/span&gt;  &lt;span&gt;{{obj.age}}&lt;/span&gt;&lt;br&gt;  &lt;span v-for=&quot;(item, index) in arr&quot; :key=&quot;index&quot;&gt;{{item}}&lt;/span&gt;&lt;br&gt;  &lt;button @click=&quot;fn&quot;&gt;点我&lt;/button&gt;  &lt;/div&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/0b0bcccf58994817564455196f3f3b67.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/0b0bcccf58994817564455196f3f3b67.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <p>这意味着与普通的 &lt;script&gt; 只在组件被首次引入的时候执行一次不同，&lt;script setup&gt; 中的代码会在每次组件实例被创建的时候执行</p> 
 <p><strong>引入组件将自动注册</strong></p> 
 <pre><code>&lt;script setup&gt;  import box1 from &quot;./components/box1.vue&quot;
@@ -44,7 +44,7 @@
 &lt;template&gt;  &lt;h1&gt;App组件中&lt;/h1&gt;  &lt;box1&gt;&lt;/box1&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/31c30230937f8ef1f5ced665651d13a7.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/31c30230937f8ef1f5ced665651d13a7.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="ref_113"></a>ref函数</h2> 
 <ul><li>作用：定义一个响应式的数据</li><li>语法：const xxx = ref(“value”)  <ul><li>创建一个包含响应式的数据的引用对象(reference对象)</li><li>js中操作数据：xxx.value</li><li>模板中读取数据不需要.value,直接&lt;div&gt;{{xxx}}&lt;/div&gt;</li></ul> </li><li>注意  <ul><li>接收的数据类型可以是基本数据类型也可以是引用数据类型</li><li>基本类型的数据：响应式依然是靠Object.defineProperty()的get和set完成的</li><li>对象类型的数据：内部“求助”了Vue3.0的一个新的函数------reactive函数</li></ul> </li></ul> 
 <p>ref设计原理:监听value的改变，劫持value属性的get和set<br> 因此ref一般用在基本数据,或者引用数据的嵌套层级不深的数据上<br> 嵌套层级深情况用reactive；</p> 
@@ -54,7 +54,7 @@
 &lt;template&gt;  &lt;button @click=&quot;fn&quot;&gt;点击count+1&lt;/button&gt;  &lt;button @click=&quot;fn2&quot;&gt;点击修改对象&lt;/button&gt;  &lt;button @click=&quot;fn3&quot;&gt;点击修改数组&lt;/button&gt;  &lt;h1&gt;{{count}}&lt;/h1&gt;  &lt;h1&gt;{{obj.name}}--{{obj.age}}&lt;/h1&gt;  &lt;span v-for=&quot;(item, index) in arr&quot; :key=&quot;index&quot;&gt;{{item}}&lt;/span&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/298cb45e43ac394afbd2d54e84f1071d.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/298cb45e43ac394afbd2d54e84f1071d.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="reactive_162"></a>reactive函数</h2> 
 <ul><li>作用：定义一个对象类型的响应式数据(基本数据类型别用它，用ref函数)</li><li>语法：const 代理一个对象 = reactive(被代理的对象) 接收一个对象（或数组），返回一个代理器对象（proxy对象）</li><li>reactive定义的响应式数据是“深层次的”</li><li>内部基于ES6的Proxy实现，通过代理对象内部的数据都是响应式的</li></ul> 
 <pre><code>&lt;script setup&gt;  //使用解构赋值引入reactive  import {reactive} from &quot;vue&quot;  //使用reactive  let obj=reactive({name:&quot;ljy&quot;,age:22, family:[{relation: &#x27;father&#x27;,age:52}, { relation: &#x27;mother&#x27;, age: 55 }]})  let fn=()=&gt;{  //直接用点语法，因为reactive使用的是Proxy代理了整个对象  obj.age++  obj.family[0].age++  obj.family[1].age++  }
@@ -62,7 +62,7 @@
 &lt;template&gt;  &lt;button @click=&quot;fn&quot;&gt;age+1&lt;/button&gt;  &lt;h1&gt;{{obj.name}}----{{obj.age}}&lt;/h1&gt;  &lt;h2 v-for=&quot;(item, index) in obj.family&quot; :key=&quot;index&quot;&gt;{{item.relation}}----{{item.age}}&lt;/h2&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/eb11fcdd32aa7a80e5a158a568bf0520.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/eb11fcdd32aa7a80e5a158a568bf0520.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="Vue3_189"></a>Vue3响应式数据的实现原理</h2> 
 <p>vue2.0的响应式</p> 
 <ul><li> <p>实现原理</p>  <ul><li> <p>对象类型：通过Object.definedProperty()对属性的读取、修改进行拦截（数据劫持）</p> </li><li> <p>数组类型：通过重写更新数据的一系列方法来实现拦截。（对数组的方法进行了包裹）</p> </li></ul> </li><li> <p>存在问题:</p>  <ul><li> <p>新增属性，删除属性都不会刷新界面</p> </li><li> <p>直接通过下标修改数组，界面不会自动更新</p> </li></ul> </li></ul> 
@@ -82,7 +82,7 @@
 &lt;template&gt;  &lt;button @click=&quot;fn2&quot;&gt;点击修改鱼香肉丝&lt;/button&gt;  &lt;div v-for=&quot;(item, index) in arr&quot; :key=&quot;index&quot;&gt;&lt;h2&gt;{{item.title}}--单价：{{item.price}}--数量:&lt;button @click=&quot;item.count--&quot;&gt;-&lt;/button&gt;{{item.count}}&lt;button @click=&quot;item.count++&quot;&gt;+&lt;/button&gt;&lt;/h2&gt;&lt;/div&gt;  &lt;h2&gt;总价:{{count}}&lt;/h2&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/fc3d800f164dd7d72bf447c2df851f58.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/fc3d800f164dd7d72bf447c2df851f58.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="_248"></a>监听属性</h2> 
 <ul><li>与vue2.x中的watch配置功能一致</li><li>注意  <ul><li>监视reactive定义的响应式数据时，oldvalue无法正确获取，强制开始了深度监视（deep的配置失效）</li><li>监视reactive定义的响应式数据的某一个值时：deep配置有效</li></ul> </li></ul> 
 <p>案例一：实现输入框的下拉菜单</p> 
@@ -105,7 +105,7 @@
 &lt;style scoped&gt;  input{  height: 20px;  border-radius: 10px;  }  .div2{  background-color: antiquewhite;  width: 200px;  }  p{  cursor: pointer;  }
 &lt;/style&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/423fddf4a347ffcdb3b1ce5cd192afe3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/423fddf4a347ffcdb3b1ce5cd192afe3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <p>案例二：实现秒表倒计时，当为零时结束</p> 
 <pre><code>&lt;script setup&gt;
 //实现秒表计时
@@ -119,7 +119,7 @@
 &lt;template&gt;  &lt;h2&gt;倒计时：{{time}}&lt;/h2&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/511157740a2d16ac21397fe0210e3001.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/511157740a2d16ac21397fe0210e3001.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="Vue3_321"></a>Vue3中的生命周期</h2> 
 <p>在Vue3.x中，新增了一个setup生命周期函数，setup执行的时机是在beforeCreate生命函数之前执行，因为在这个函数中不能通过this来获取实例的；同时为了命名的统一，将beforeDestory改名为beforeUnmount，destoryed改名为unmounted</p> 
 <p>在选项式中生命周期函数有</p> 
@@ -160,7 +160,7 @@ import {ref} from &quot;vue&quot;
 &lt;/style&gt;
 
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/a3bb0eeb58098458b344d1b7b65bf61c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/a3bb0eeb58098458b344d1b7b65bf61c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="_401"></a>属性</h2> 
 <p>vue3组件内部组合式API setup中取属性值</p> 
 <pre><code>&lt;script&gt;  export default{  props:[&quot;pro&quot;,&quot;count&quot;],  //跟vue2.0一样 使用props接收属性  setup(props){  let fn=()=&gt;{  console.log(props)  }  return {fn}  }  }
@@ -187,7 +187,7 @@ import {ref} from &quot;vue&quot;
  &lt;/div&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/f459a984349605731d98950bf5176f5c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/f459a984349605731d98950bf5176f5c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="_456"></a>自定义事件</h2> 
 <p>再setup函数中引入ctx,这个就是相当于this对象，ctx上有emit方法用来触发事件</p> 
 <pre><code>&lt;script&gt;  export default{  setup(props,ctx) {  let msg=&quot;Box2组件传递的数据&quot;  let fn=()=&gt;{  ctx.emit(&quot;event1&quot;,msg,2222)  }  return {fn}  }  }
@@ -226,7 +226,7 @@ import {defineEmits,defineProps} from &#x27;vue&#x27;  let emits=defineEmits([&#
 &lt;template&gt;  &lt;h1&gt;父组件box1内部&lt;/h1&gt;  &lt;h2&gt;V-model--父组件str的值---{{a}}--{{b}}--{{c}}&lt;/h2&gt;  &lt;box2 @event1=&quot;fn&quot;&gt;&lt;/box2&gt;  &lt;box3 @event2=&quot;fn&quot;&gt;&lt;/box3&gt;  &lt;box4 v-model:a=&quot;a&quot; v-model:b=&quot;b&quot; v-model:c=&quot;c&quot;&gt;&lt;/box4&gt;  &lt;p v-for=&quot;(item, index) in msg&quot; :key=&quot;index&quot;&gt;{{item}}&lt;/p&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/0bd8ecffb3def5fdac9a7067a643e8dd.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/0bd8ecffb3def5fdac9a7067a643e8dd.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="_CSS_545"></a>状态驱动的动态 CSS</h2> 
 <p>单文件组件的 <code>&lt;style&gt;</code> 标签可以通过 <code>v-bind</code> 这一 CSS 函数将 CSS 的值关联到动态的组件状态上</p> 
 <p>案例：点击随机切换字体颜色</p> 
@@ -240,7 +240,7 @@ import {ref} from &#x27;vue&#x27;  let color=ref(&quot;red&quot;)  let fn=()=&gt
 &lt;style scoped&gt;  h1{  color: v-bind(color);  }
 &lt;/style&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/039b593ef16b7a04d38d834f8aac493c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126898679/039b593ef16b7a04d38d834f8aac493c.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="_574"></a>注册组件</h2> 
 <p>1.选项式组件内部注册跟vue2一样</p> 
 <p>2.vue3组件内部组合式API setup语法糖中注册组件</p> 
@@ -298,7 +298,7 @@ app.mount(&#x27;#app&#x27;)//注意 一定要在app.mount之前注册全局组�
 &lt;template&gt;  &lt;h2&gt;&lt;span&gt;验证是否为响应式数据:{{fn()}}&lt;/span&gt;&lt;/h2&gt;  &lt;h2&gt;&lt;span&gt;验证只读数据:{{str2}}&lt;/span&gt;&lt;button @click=&quot;fn2&quot;&gt;点击修改str2&lt;/button&gt;&lt;/h2&gt;  &lt;h2&gt;&lt;span&gt;toRef验证:{{age}}---{{obj.age}}&lt;/span&gt;&lt;button @click=&quot;fn3&quot;&gt;点击age++&lt;/button&gt;&lt;/h2&gt;  &lt;h2&gt;&lt;span&gt;toRefs验证: name-age:{{name}}-{{count}}---obj:{{obj.name}}-{{obj.count}}&lt;/span&gt;&lt;button @click=&quot;fn4&quot;&gt;点击修改name,count++&lt;/button&gt;&lt;/h2&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/03dba2b9b73135b94654b7914b74ed12.gif" alt="在这里插入图片描述" loading="lazy" decoding="async"></p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue3-常用的Composition API（组合API）\",\"description\":\"script setup> 语法糖里面的代码会被编译成组件setup()函数的内容，不需要通过return暴露声明的变量、函数以及import引入的内容，即可在使用，并且不需要些export default{}这意味着与普通的  只在组件被首次引入的时候执行一次不同， 中的代码会在每次组件实例被创建的时候执行。setup不能是一个async函数，因为返回值不再是return的对象，而是Promise，模板看不到return对象中的属性。\",\"datePublished\":\"2022-09-18T14:06:16+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"javascript, vue.js, 前端\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126898679\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}]]}],["$","h1",null,{"children":"Vue3-常用的Composition API（组合API）"}],["$","p",null,{"children":"script setup> 语法糖里面的代码会被编译成组件setup()函数的内容，不需要通过return暴露声明的变量、函数以及import引入的内容，即可在使用，并且不需要些export default{}这意味着与普通的  只在组件被首次引入的时候执行一次不同， 中的代码会在每次组件实例被创建的时候执行。setup不能是一个async函数，因为返回值不再是return的对象，而是Promise，模板看不到return对象中的属性。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-18T14:06:16+08:00","children":"2022.09.18"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],25," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"2.3千"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126898679","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"pt57W6Tb2FpYwZ2Qg6tD2"}
+<p><img src="/images/articles/126898679/03dba2b9b73135b94654b7914b74ed12.gif" alt="在这里插入图片描述" loading="lazy" decoding="async"></p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue3-常用的Composition API（组合API）\",\"description\":\"script setup> 语法糖里面的代码会被编译成组件setup()函数的内容，不需要通过return暴露声明的变量、函数以及import引入的内容，即可在使用，并且不需要些export default{}这意味着与普通的  只在组件被首次引入的时候执行一次不同， 中的代码会在每次组件实例被创建的时候执行。setup不能是一个async函数，因为返回值不再是return的对象，而是Promise，模板看不到return对象中的属性。\",\"datePublished\":\"2022-09-18T14:06:16+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"javascript, vue.js, 前端\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126898679\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}]]}],["$","h1",null,{"children":"Vue3-常用的Composition API（组合API）"}],["$","p",null,{"children":"script setup> 语法糖里面的代码会被编译成组件setup()函数的内容，不需要通过return暴露声明的变量、函数以及import引入的内容，即可在使用，并且不需要些export default{}这意味着与普通的  只在组件被首次引入的时候执行一次不同， 中的代码会在每次组件实例被创建的时候执行。setup不能是一个async函数，因为返回值不再是return的对象，而是Promise，模板看不到return对象中的属性。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-18T14:06:16+08:00","children":"2022.09.18"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],25," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"2.3千"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126898679","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"bVsJNqFEAvdP6Sc2jRzYn"}
 4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/126898068","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue3-环境集成"}]]}],["$","$L2",null,{"href":"/articles/127013882","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"Vue3-公共数据配置&&插件配置&&网络配置&&路由配置&&数据仓库配置pinia"}]]}]]}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

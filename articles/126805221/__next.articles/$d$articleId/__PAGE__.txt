@@ -2,7 +2,7 @@
 2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/01ugeyd0-meca.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
 6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/01ugeyd0-meca.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-3:T52f4,<div>
+3:T5288,<div>
  <h4>文章目录</h4>
  <ul><li><a href="#_5">路由是什么</a></li><li><a href="#_12">如何引入路由</a></li><li><a href="#_50">如何使用路由</a></li><li><a href="#_95">跳转路由</a></li><li><a href="#query_108">query传参和动态路由传参</a></li><li><a href="#_144">路由嵌套</a></li><li><a href="#routerroutesroute_179">router、routes、route的区别</a></li><li><a href="#_186">跳转路由的其它方式</a></li><li><a href="#hashhistory_193">路由模式--hash&amp;history</a></li><li><a href="#_205">动态添加路由</a></li><li><a href="#_276">路由守卫</a></li></ul>
 </div>  <hr> 
@@ -66,7 +66,7 @@ component: () =&gt; import(&#x27;../views/login/index.vue&#x27;)
 	&lt;h1&gt;login&lt;/h1&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/835362c7263924b3863fd66a1b02de5b.gif" alt="请添加图片描述" loading="lazy" decoding="async"><br> 可以看到当我们输入对应网址就加载了相应组件</p> 
+<p><img src="/images/articles/126805221/835362c7263924b3863fd66a1b02de5b.gif" alt="请添加图片描述" loading="lazy" decoding="async"><br> 可以看到当我们输入对应网址就加载了相应组件</p> 
 <h2><a id="_95"></a>跳转路由</h2> 
 <p>使用router-link实现跳转:<br> 相当于a标签,给我们提供跳转到某个路由的功能,如果没有匹配到路由就会跳转失败:</p> 
 <pre><code>//再上面home文件加入跳转
@@ -75,7 +75,7 @@ component: () =&gt; import(&#x27;../views/login/index.vue&#x27;)
 	&lt;/div&gt;
 &lt;/template&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/74bfaa8a37749477e72dbbae71bf58bd.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126805221/74bfaa8a37749477e72dbbae71bf58bd.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="query_108"></a>query传参和动态路由传参</h2> 
 <p><strong>query传参：</strong><br> 第一种：使用router-link跳转传参</p> 
 <pre><code>//直接拼接到网址后面用?隔开
@@ -115,7 +115,7 @@ children:[{  //注册子组件  path:&#x27;box1&#x27;,  name:&#x27;box1&#x27;,  
 <pre><code>&lt;div id=&quot;&quot;&gt;  &lt;h1&gt;home界面&lt;/h1&gt;  &lt;router-view&gt;&lt;/router-view&gt;
 	&lt;/div&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/92d1713f716ad2d6fe494d3a3b9e5558.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126805221/92d1713f716ad2d6fe494d3a3b9e5558.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <p><strong>小结：</strong><br> 1.*代表所有匹配都通过<br> 2. redirect代表重定向<br> 3. 语法:一个路由对象的设计中包含: path(路由匹配的路径) component(匹配路径时对应渲染的组件) redirect(匹配路径时重新匹配另外的路径) children(子路由们的数组) name(路由的名字,方便直接通过名字来匹配路由)</p> 
 <h2><a id="routerroutesroute_179"></a>router、routes、route的区别</h2> 
 <p>1.router：路由器对象（new的路由器对象），包含一些操作路由的功能函数，来实现编程式导航。一般指的是在任何组件内访问路由。如：路由编程式导航的$router.push()</p> 
@@ -140,7 +140,7 @@ children:[{  //注册子组件  path:&#x27;box1&#x27;,  name:&#x27;box1&#x27;,  
 	}
 &lt;/script&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/10864c284e07f3b695d26e4b9f40dbc5.gif" alt="请添加图片描述" loading="lazy" decoding="async"><br> 添加子路由</p> 
+<p><img src="/images/articles/126805221/10864c284e07f3b695d26e4b9f40dbc5.gif" alt="请添加图片描述" loading="lazy" decoding="async"><br> 添加子路由</p> 
 <pre><code>&lt;template&gt;
 	&lt;div id=&quot;&quot;&gt;  &lt;h1&gt;home界面&lt;/h1&gt;  &lt;button @click=&quot;fn2&quot;&gt;进入Box1&lt;/button&gt;  &lt;button @click=&quot;fn&quot;&gt;点击添加Box1路由&lt;/button&gt;  &lt;router-view&gt;&lt;/router-view&gt;
 	&lt;/div&gt;
@@ -150,7 +150,7 @@ children:[{  //注册子组件  path:&#x27;box1&#x27;,  name:&#x27;box1&#x27;,  
 	}
 &lt;/script&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/46f07c27981d06d6430412c7b4f5e64d.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126805221/46f07c27981d06d6430412c7b4f5e64d.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <p><strong>为什么要动态添加路由?</strong><br> 为了解决静态路由所带来的问题，动态路由是当前用户拥有哪些访问的权限才添加对应的路由<br> 登录的时候，在路由前置守卫中通过 token 来获取该用户存在哪些权限，在依次添加</p> 
 <h2><a id="_276"></a>路由守卫</h2> 
 <p><strong>什么是路由守卫?</strong><br> 路由守卫就是路由跳转过程中的一些钩子函数 ，在路由跳转的时候，做一些判断或其它的操作。 类似于组件生命周期钩子函数 。</p> 
@@ -200,8 +200,8 @@ router.afterEach((to,from,next)=&gt;{  //因为滚动条是在body标签里的�
 	}
 &lt;/script&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/1dfb17b99577e82286304b66eb959f60.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/4273622750b49f758f65d1a57793b5c8.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126805221/1dfb17b99577e82286304b66eb959f60.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126805221/4273622750b49f758f65d1a57793b5c8.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <p>2.路由独享守卫<br> beforeEnter(to,from,next) 路由对象单个路由配置 ，单个路由进入前触发</p> 
 <pre><code>//router路由文件中
 //进入home的子组件Box1先登录
@@ -223,7 +223,7 @@ children:[{  path:&quot;Box1&quot;,  name:&#x27;box1&#x27;,  component:()=&gt;im
 	}
 &lt;/script&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/7065a17a8529a5bee369338155b8e39b.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126805221/7065a17a8529a5bee369338155b8e39b.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <p>3.组件路由守卫<br> beforeRouteEnter(to,from,next) 在组件生命周期beforeCreate阶段触发；使用场景：组件复用；路由跳转<br> beforeRouteUpdadte(to,from,next) 当前路由改变时触发；</p> 
 <pre><code>  beforeRouteUpdate(to, from, next) {  // 在当前路由改变，但是该组件被复用时调用  // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，  // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。  // 可以访问组件实例  },
 
@@ -250,12 +250,12 @@ children:[{  path:&quot;Box1&quot;,  name:&#x27;box1&#x27;,  component:()=&gt;im
 	}
 &lt;/script&gt;
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/4cd7045dfe71444f4a88bf9bf8de396c.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/126805221/4cd7045dfe71444f4a88bf9bf8de396c.gif" alt="请添加图片描述" loading="lazy" decoding="async"></p> 
 <p>4.参数<br> to： 即将要进入的目标路由对象<br> from： 即将要离开的路由对象<br> next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。</p> 
 <ul><li> <p>next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。</p> </li><li> <p>next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。</p> </li><li> <p>next(‘/’) 或者 next({ path: ‘/’ }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。</p> </li><li> <p>next(error): (2.4.0+) 如果传入 next 的参数是一个 Error 实例，则导航会被终止且该错误会被传递给 router.onError() 注册过的回调。</p> </li></ul> 
 <p><strong>4.完整的导航解析流程</strong><br> 1.触发进入其它路由<br> 2.调用要离开路由的组件守卫beforeRouteLeave<br> 3.调用全局的前置守卫beforeEach<br> 4.在重用的组件里调用 beforeRouteUpdate<br> 5.在路由配置里的单条路由调用 beforeEnter<br> 6.解析异步路由组件<br> 7.在将要进入的路由组件中调用beforeRouteEnter<br> 8.调用全局的解析守卫beforeResolve<br> 9.导航被确认<br> 10.调用全局的后置钩子afterEach<br> 11.触发 DOM 更新mounted<br> 12.执行beforeRouteEnter守卫中传给 next的回调函数</p> 
 <p>导航守卫执行顺序：beforeRouteLeave &lt; beforeEach &lt; beforeRouteUpdate &lt; beforeEnter &lt; beforeRouteEnter &lt; beforeResolve &lt; afterEach</p> 
-<p>出发路由，预备从当前组件离开，判断路由变化，判断组件是否重用，判断新路由初始化，判断组件初始化，路由与组件初始化完毕，路由组件重定向完毕</p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue-路由详解\",\"description\":\"abstract 是vue路由中的第三种模式，本身是用来在不支持浏览器API的环境中，充当fallback，而不论是hash还是history模式都会对浏览器上的url产生作用，本文要实现的功能就是在已存在的路由页面中内嵌其他的路由页面，而保持在浏览器当中依旧显示当前页面的路由path，这就利用到了abstract这种与浏览器分离的路由模式。\",\"datePublished\":\"2022-09-12T01:11:59+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"vue.js, 前端, javascript\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126805221\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}]]}],["$","h1",null,{"children":"Vue-路由详解"}],["$","p",null,{"children":"abstract 是vue路由中的第三种模式，本身是用来在不支持浏览器API的环境中，充当fallback，而不论是hash还是history模式都会对浏览器上的url产生作用，本文要实现的功能就是在已存在的路由页面中内嵌其他的路由页面，而保持在浏览器当中依旧显示当前页面的路由path，这就利用到了abstract这种与浏览器分离的路由模式。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-12T01:11:59+08:00","children":"2022.09.12"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],19," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"734"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126805221","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"pt57W6Tb2FpYwZ2Qg6tD2"}
+<p>出发路由，预备从当前组件离开，判断路由变化，判断组件是否重用，判断新路由初始化，判断组件初始化，路由与组件初始化完毕，路由组件重定向完毕</p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Vue-路由详解\",\"description\":\"abstract 是vue路由中的第三种模式，本身是用来在不支持浏览器API的环境中，充当fallback，而不论是hash还是history模式都会对浏览器上的url产生作用，本文要实现的功能就是在已存在的路由页面中内嵌其他的路由页面，而保持在浏览器当中依旧显示当前页面的路由path，这就利用到了abstract这种与浏览器分离的路由模式。\",\"datePublished\":\"2022-09-12T01:11:59+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"vue.js, 前端, javascript\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/126805221\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}],["$","span","前端",{"className":"tag tag--solid","children":"前端"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}]]}],["$","h1",null,{"children":"Vue-路由详解"}],["$","p",null,{"children":"abstract 是vue路由中的第三种模式，本身是用来在不支持浏览器API的环境中，充当fallback，而不论是hash还是history模式都会对浏览器上的url产生作用，本文要实现的功能就是在已存在的路由页面中内嵌其他的路由页面，而保持在浏览器当中依旧显示当前页面的路由path，这就利用到了abstract这种与浏览器分离的路由模式。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-09-12T01:11:59+08:00","children":"2022.09.12"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],19," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"734"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/126805221","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"bVsJNqFEAvdP6Sc2jRzYn"}
 4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/126790334","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue-动态组件、缓存组件、异步组件"}]]}],["$","$L2",null,{"href":"/articles/126860138","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"Vue-管理状态仓库Vuex"}]]}]]}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

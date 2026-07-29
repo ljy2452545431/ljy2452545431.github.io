@@ -2,7 +2,7 @@
 2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/01ugeyd0-meca.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
 6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/01ugeyd0-meca.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-3:T5d84,<div>
+3:T5d18,<div>
  <h4>文章目录</h4>
  <ul><li><a href="#react_3">react特点</a></li><li><ul><li><a href="#_4">优势</a></li><li><a href="#_40">劣势</a></li></ul>  </li><li><a href="#jsx_46">jsx</a></li><li><ul><li><a href="#_47">介绍</a></li><li><a href="#indexjs_73">入口文件index.js的理解</a></li><li><a href="#_87">使用样式</a></li><li><a href="#_98">注释</a></li><li><a href="#_106">条件渲染</a></li><li><a href="#_139">数组</a></li><li><a href="#_152">列表渲染</a></li></ul>  </li><li><a href="#_167">组件</a></li><li><ul><li><a href="#_172">定义单个组件</a></li><li><a href="#_204">使用组件</a></li><li><a href="#_213">定义复合组件</a></li></ul>  </li><li><a href="#Props_232">传值Props</a></li><li><ul><li><a href="#props__234">定义和使用props 传值</a></li><li><a href="#_293">多属性传值</a></li></ul>  </li><li><a href="#State_324">State</a></li><li><ul><li><a href="#State_327">如何定义State</a></li><li><a href="#setState_381">setState设置状态</a></li><li><a href="#State__Props__405">State 与 Props 区别</a></li><li><a href="#stateprops__421">state/props 实现父子组件通信</a></li></ul>  </li><li><a href="#Redux_493">Redux</a></li><li><ul><li><a href="#store_521">store的创建和使用</a></li><li><a href="#_564">数据的修改和订阅</a></li></ul>
  </li></ul>
@@ -36,7 +36,7 @@
 <p>React 推荐使用内联样式。React 会在指定元素数字后自动添加 <strong>px</strong> 。</p> 
 <pre><code>render() {  let mystyle={color:&#x27;red&#x27;,fontSize:33}  return (  &lt;div style={mystyle}&gt;我的样式&lt;/div&gt;  )  }
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/80ce3abbfec222403a8f6d45d29df4c3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/127267518/80ce3abbfec222403a8f6d45d29df4c3.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h3><a id="_98"></a>注释</h3> 
 <p>注释需要写在花括号中，需要注意的是：</p> 
 <ul><li>在标签内部的注释需要花括号</li><li>在标签外的的注释不能使用花括号</li></ul> 
@@ -44,20 +44,20 @@
 <p>在 JSX 内部不能使用 <strong>if else</strong> 语句，但可以使用 <strong>三元运算</strong> 表达式来替代。</p> 
 <pre><code>render() {  let i=0  return (  &lt;div&gt;  {i==1? &lt;h1&gt;正确&lt;/h1&gt;:&lt;h1&gt;错误&lt;/h1&gt;}  &lt;/div&gt;  )  }
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/da73bbd548c7e16fb3ae6fdf4c3c532e.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 可以在JSX外部使用if语句</p> 
+<p><img src="/images/articles/127267518/da73bbd548c7e16fb3ae6fdf4c3c532e.png" alt="在这里插入图片描述" loading="lazy" decoding="async"><br> 可以在JSX外部使用if语句</p> 
 <pre><code>render() {  let islogin=true  let Box=&#x27;&#x27;  if(islogin){  Box=&lt;h1&gt;已登录&lt;/h1&gt;  }else{  Box=&lt;h1&gt;未登录&lt;/h1&gt;  }  return (  &lt;div&gt;  {Box}  &lt;/div&gt;  )  }
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ae3a11455176414c7320c42c45d87c3d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/127267518/ae3a11455176414c7320c42c45d87c3d.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h3><a id="_139"></a>数组</h3> 
 <p>JSX 允许在模板中插入数组，数组会自动展开所有成员</p> 
 <pre><code>render() {  let arr=[1111,2222,3333,4444,5555]  return (  &lt;div&gt;  {arr}  &lt;/div&gt;  )  }
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5b7f1041a1ee87bacb4c2ed9998dbb41.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/127267518/5b7f1041a1ee87bacb4c2ed9998dbb41.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h3><a id="_152"></a>列表渲染</h3> 
 <p>通过数组的map函数<br> map函数的返回值是一个数组，数组里面的值为处理后的值</p> 
 <pre><code>render() {  let arr=[{title:&#x27;ljy&#x27;,age:22},{title:&#x27;jack&#x27;,age:30},{title:&#x27;marry&#x27;,age:25}]  return (  &lt;div&gt;  {arr.map(el=&gt;&lt;p&gt;{el.title}--{el.age}&lt;/p&gt;)}  &lt;/div&gt;  )  }
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/d9311cf3630fabb775a9d57eae57dd05.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/127267518/d9311cf3630fabb775a9d57eae57dd05.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="_167"></a>组件</h2> 
 <p>React.js 中一切皆组件，用 React.js 写的其实就是 React.js 组件。</p> 
 <p>我们在编写 React.js 组件的时候，一般都需要继承 React.js 的 <strong>Component</strong>（类定义）。一个组件类必须要实现一个 <strong>render 方法</strong>，这个 <strong>render 方法必须要返回一个 JSX 元素</strong>。但这里要注意的是，必须要用一个外层的 JSX 元素把所有内容包裹起来。返回并列多个 JSX 元素是不合法的。</p> 
@@ -93,7 +93,7 @@ import React, { Component } from &#x27;react&#x27;
 export default class Box4 extends Component {  render() {  return (  &lt;div&gt;  &lt;h1&gt;Box4组件中&lt;/h1&gt;  &lt;Box5&gt;&lt;/Box5&gt;  &lt;/div&gt;  )  }
 }
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/7a97aeb43df4ab1b94bcaed85d78cff4.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/127267518/7a97aeb43df4ab1b94bcaed85d78cff4.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="Props_232"></a>传值Props</h2> 
 <h3><a id="props__234"></a>定义和使用props 传值</h3> 
 <p>通过React<strong>类定义</strong>组件时：</p> 
@@ -102,7 +102,7 @@ export default class Box4 extends Component {  render() {  return (  &lt;div&gt;
 render() {  let a=&#x27;父组件Box4传递的数据&#x27;  return (  &lt;div&gt;  &lt;h1&gt;Box4组件中&lt;/h1&gt;  &lt;Box5 mypro={a}&gt;&lt;/Box5&gt;  //定义属性名绑定数据传递给子组件  &lt;/div&gt;  )  }  //子组件Box5中
  render() {  return (  &lt;div&gt;  &lt;h2&gt;Box5中-{this.props.mypro}&lt;/h2&gt;  //通过this.props.父组件传递的属性名 来接收  &lt;/div&gt;  )  }
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/54bec938d3925184a131eaacc65cae23.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/127267518/54bec938d3925184a131eaacc65cae23.png" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <p>通过React<strong>函数定义</strong> 组件时：</p> 
 <ul><li>在父组件render 方法中调用组件时使用<strong>key/value</strong> 的形式来指定属性。</li><li>在自定义子组件中通过函数接收参数<strong>props</strong>，<strong>props.key</strong>来获得组件属性的值，需要使用{}括起来</li></ul> 
 <pre><code>// 函数定义组件时，在组件内部使用属性值：props.属性名称
@@ -173,11 +173,11 @@ Children:
 export default class Box5 extends Component {  render() {  return (  &lt;div&gt;  &lt;h2&gt;Box5中---msg:{this.props.msg}----num:{this.props.num}&lt;/h2&gt;  &lt;button onClick={()=&gt;{this.props.change3(&#x27;子组件修改了msg&#x27;,&#x27;子组件修改了num&#x27;)}}&gt;点击更改父组件传递的数据&lt;/button&gt;  &lt;/div&gt;  )  }
 }
 </code></pre> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e3bc785951623d19b669dd78567dacf0.gif" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
+<p><img src="/images/articles/127267518/e3bc785951623d19b669dd78567dacf0.gif" alt="在这里插入图片描述" loading="lazy" decoding="async"></p> 
 <h2><a id="Redux_493"></a>Redux</h2> 
 <p>我们为什么需要状态管理器Redux？为了方便的组织和管理组件之间的数据。</p> 
 <p>Redux是什么？<br> Redux是一个流行的JavaScript框架，为应用程序提供一个可预测的状态容器。Redux基于简化版本的Flux框架，Flux是Facebook开发的一个框架。在标准的MVC框架中，数据可以在UI组件和存储之间双向流动，而Redux严格限制了数据只能在一个方向上流动。</p> 
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/58baa99db0f15ccb2be353b5f8641ff8.png" alt="请添加图片描述" loading="lazy" decoding="async"><br> Store：存储数据的公告区域；eg–图书管理员；</p> 
+<p><img src="/images/articles/127267518/58baa99db0f15ccb2be353b5f8641ff8.png" alt="请添加图片描述" loading="lazy" decoding="async"><br> Store：存储数据的公告区域；eg–图书管理员；</p> 
 <p>React Component：页面组件；eg–借书的用户；</p> 
 <p>Reducer：数据存放位置；eg–图书记录本；</p> 
 <p>Action Creators：动作；eg–结束的时候，跟图书管理员说的话；</p> 
@@ -221,7 +221,7 @@ import store from &quot;./store/index&quot;;
 changeValue() {  this.setState(store.getState())
 }
 </code></pre> 
-<p>subscribe函数可以<strong>监听Redux中state的变化</strong>，一旦Redux中的state发生了变化，render函数就会被调用，页面就会被重新渲染</p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"React-class类篇\",\"description\":\"全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。\",\"datePublished\":\"2022-10-12T17:50:10+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"react.js, javascript, vue.js\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/127267518\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","react.js",{"className":"tag tag--solid","children":"React"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}]]}],["$","h1",null,{"children":"React-class类篇"}],["$","p",null,{"children":"全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-10-12T17:50:10+08:00","children":"2022.10.12"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],20," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"605"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/127267518","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"pt57W6Tb2FpYwZ2Qg6tD2"}
+<p>subscribe函数可以<strong>监听Redux中state的变化</strong>，一旦Redux中的state发生了变化，render函数就会被调用，页面就会被重新渲染</p>  </div>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"React-class类篇\",\"description\":\"全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。\",\"datePublished\":\"2022-10-12T17:50:10+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"react.js, javascript, vue.js\",\"isBasedOn\":\"https://blog.csdn.net/qq_56973906/article/details/127267518\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","react.js",{"className":"tag tag--solid","children":"React"}],["$","span","javascript",{"className":"tag tag--solid","children":"JavaScript"}],["$","span","vue.js",{"className":"tag tag--solid","children":"Vue"}]]}],["$","h1",null,{"children":"React-class类篇"}],["$","p",null,{"children":"全称:， React 使用 JSX 来替代常规的 JavaScript。JSX 是一个看起来很像 XML 的 JavaScript 语法扩展。我们不需要一定使用 JSX，但它有以下优点：JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化。它是类型安全的，在编译过程中就能发现错误。使用 JSX 编写模板更加简单快速。作用: 用来创建react虚拟DOM(元素)对象;注意1: 它不是字符串, 也不是HTML/XML标签注意2: 它最终产生的就是一个JS对象。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2022-10-12T17:50:10+08:00","children":"2022.10.12"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],20," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"}],["$","circle",null,{"cx":"12","cy":"12","r":"2.5"}]]}],"605"," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"views"}]]]}],["$","$L2",null,{"href":"https://blog.csdn.net/qq_56973906/article/details/127267518","rel":"noreferrer","target":"_blank","children":[[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原文发布于"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Originally published on"}]]," ","CSDN",["$","svg",null,{"aria-hidden":true,"fill":"none","height":14,"viewBox":"0 0 24 24","width":14,"xmlns":"http://www.w3.org/2000/svg","children":[["$","path",null,{"d":"M14 5h5v5M19 5l-9 9"}],["$","path",null,{"d":"M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"}]]}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"bVsJNqFEAvdP6Sc2jRzYn"}
 4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/127013882","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"Vue3-公共数据配置&&插件配置&&网络配置&&路由配置&&数据仓库配置pinia"}]]}],["$","$L2",null,{"href":"/articles/127302893","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"下一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Next"}]]}],["$","strong",null,{"children":"React-到hook之前的过渡技术"}]]}]]}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null
