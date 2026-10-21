@@ -1,0 +1,59 @@
+1:"$Sreact.fragment"
+2:I[76431,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/0mcvc99e72uk3.js","/_next/static/chunks/25vmo8q6d6rem.js"],""]
+6:I[30384,["/_next/static/chunks/0wdfudby0quhf.js","/_next/static/chunks/0ihnwulsr8yoy.js","/_next/static/chunks/0mcvc99e72uk3.js","/_next/static/chunks/25vmo8q6d6rem.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T1f30,<p>在搭建漫剧工作台时，我让 AI 先去学习编导思维和剪辑思路。</p>
+<p>听起来是不是有点奇怪？搭一个工作台，为什么还要让 AI 学这些？</p>
+<p>因为我希望它理解，我们做这个工具，究竟是为了帮助人完成什么。漫剧每集可能很短，但故事怎样展开、人物为什么这样行动、镜头怎样衔接、哪里应该停下来，都需要认真考虑。</p>
+<p>所以，我希望它先理解创作，再和我一起搭工具。</p>
+<p>这个 AI 就是 Codex。我给它起了个名字，叫“小码”。对我来说，它像另一个可以随时讨论的“超级大脑”：我带着想法、需求和判断，它帮助我查资料、拆问题、整理思路，再一起把事情往前推进。</p>
+<figure><img src="/images/articles/working-and-learning-with-xiaoma/companionship.png" alt="我和小码一起做项目、一起学习的图文手记" width="1086" height="1448" loading="lazy" decoding="async"><figcaption>我和小码：把一个想法慢慢聊清楚，再一起做出来。</figcaption></figure>
+<h2>先一起学，再一起搭</h2>
+<p>我有一个想法，但未必能马上说清楚需要哪些功能、先做什么、后做什么。这时，就可以先和小码聊。把一件复杂的事情拆开，就容易理解了。</p>
+<p>用一个简单的故事举例：</p>
+<blockquote><p>一个人回到家，发现桌上放着一封没有署名的信。</p></blockquote>
+<p>只有这一句话时，我们还不知道它应该怎样变成画面。</p>
+<p>从编导的角度继续想，就会出现很多问题：这个人为什么紧张？观众应该先看到信，还是先看到他的表情？他拆信之前，要不要停顿一下？</p>
+<p>再从剪辑的角度看：进门这一段需要多长？什么时候切到信的特写？哪里留下安静，能让观众产生好奇？</p>
+<p>这是一个帮助理解的例子。同一个故事，往下追问几步，就开始有了可以执行的细节。</p>
+<p>这也是我让小码学习编导和剪辑思路的原因。我希望我们讨论漫剧工作台时，能一起想到创作者真正需要什么。</p>
+<figure><img src="/images/articles/working-and-learning-with-xiaoma/comic-workbench.png" alt="搭建漫剧工作台时一起研究编导和剪辑的图文手记" width="1086" height="1448" loading="lazy" decoding="async"><figcaption>从创作的问题出发，再讨论工具应该怎样搭。</figcaption></figure>
+<h2>自动化，就是让重复工作更省力</h2>
+<p>“自动化”听起来有点专业。我的理解很简单：把一件事里反复出现、步骤比较固定的部分整理好，让工具帮忙接着做。</p>
+<p>就像做饭前，把食材、厨具和顺序准备好。下一次再做，就能少一些来回寻找和重复准备。</p>
+<p>放到漫剧制作里，一个故事需要逐步整理成场景、镜头和后续制作任务。如果每一步都重新解释背景、复制材料、整理格式，会花不少精力。</p>
+<p>我想搭建的工作方式，就是让这些步骤更好地连接起来。前一步的结果，能成为后一步的起点；哪些内容已经确认，哪些还需要修改，也能看得清楚。</p>
+<p>这些是我整理自动化流程时关注的方向。每个环节需要逐步落地、检查和调整。故事是否吸引人、人物情绪是否合理、节奏是否舒服，仍然需要我参与判断。</p>
+<p><strong>我想省下重复操作的时间，把精力留给创作和选择。</strong></p>
+<h2>把有效的方法留下来</h2>
+<p>在这个过程中，我也开始理解 Skill 的作用。</p>
+<p>给没接触过的人解释，我会把它叫作“一份可以反复使用的工作说明书”。比如，我希望小码处理某类任务时，先了解背景，再参考资料，接着提出方案，最后检查结果。</p>
+<p>每次都重新说一遍，容易遗漏；把稳定的方法整理成 Skill，就有了共同参照。编导、剪辑方面研究过的思路，也可以逐步整理进去，帮助后面的项目。</p>
+<p>Figma 则可以理解成一张可以共同讨论的界面草图。</p>
+<p>工作台应该长什么样，常用操作放在哪里，一个第一次打开页面的人能不能看懂，这些问题可以放到设计稿上讨论。我说“这里不太顺手”时，对着具体页面，就更容易说明白：是按钮不好找，还是步骤太多？</p>
+<p>从想法，到设计，再到实际能操作的工具，每一步都有东西可以拿出来看、拿出来改。</p>
+<h2>项目往前走，我也在跟着学</h2>
+<p>让小码研究编导思维，也给了我一个更容易进入问题的入口。</p>
+<p>一个概念听不懂，我可以让它换个说法；解释太抽象，就让它举例；例子明白了，再回到工作台，看看能用在哪里。</p>
+<p>比如，“剪辑节奏”听起来有些抽象，但换成一句话就容易理解：为什么同样的内容，有的看着紧凑，有的却让人想划走？</p>
+<p>从这个问题出发，再去讨论镜头长短、信息出现的顺序、停顿和声音，就有了抓手。</p>
+<p>我不用假装自己已经懂了，也不用一次问出一个很专业的问题。可以从最朴素的疑问开始，一步一步往下走。</p>
+<p><strong>做项目提供问题，学习帮助解决问题，解决后的经验再进入下一次协作。</strong></p>
+<h2>默契，是一次次反馈练出来的</h2>
+<p>随着这样的交流越来越多，我也更清楚怎样交代需求，怎样及时指出偏差。</p>
+<p>我可以直接说：“这不是我想要的”“这里再简单一点”“先别急着做，帮我把原因讲清楚”。小码则依据当前对话中的背景、规则和反馈，调整结果。</p>
+<p>就像这篇文章。第一版写得比较完整，但我觉得还不够贴近自己，于是继续补充：要突出项目和自动化，也要写一起学习、一起进步。</p>
+<p>后来我又发现，术语还是有点多，所以再说明：要让小白也能看懂，要写进漫剧工作台，以及一起研究编导和剪辑的过程。配图出来后，我又提出要更自然、更像个人分享。</p>
+<p>我在表达中逐渐想清楚，小码也根据这些反馈逐渐靠近我要的内容。这种默契来自明确的目标、及时的纠正，以及被整理下来的方法。</p>
+<h2>你也可以从一件小事开始</h2>
+<p>如果朋友们想尝试，不必先学会所有 AI 术语。带着一件你真想做的事，先说清楚目标、现状，以及需要注意的地方，再请它帮忙拆解。</p>
+<blockquote><p>我想做个漫剧工作台，但还没想清楚从哪开始。你先帮我拆一拆，咱们一步步来。</p></blockquote>
+<p>这是一个可以参考的开场白。工作中要整理一份材料，生活中想安排一个学习计划，也可以这样开始。</p>
+<p>结果出来之后，继续告诉它哪里合适、哪里还要改。涉及事实和实际功能的部分，要查证、试用和检查。</p>
+<figure><img src="/images/articles/working-and-learning-with-xiaoma/getting-started.png" alt="从说明目标、拆解问题和持续反馈开始与 AI 协作" width="1086" height="1448" loading="lazy" decoding="async"><figcaption>不懂就问，不对就改，把好用的方法留下来。</figcaption></figure>
+<p>对我而言，“另一个超级大脑”是一种对协作体验的比喻。当我只有一个念头时，有一个随时可以展开讨论、帮助我多想几步的搭档。方向和重要取舍，仍然需要我来判断。</p>
+<p>以后，我还是会继续喊一句：“小码，我们把这个也搭起来。”然后带着之前留下的方法和经验，再一起往前走一步。</p>
+<p><small>本文根据我的项目经历与和 Codex 的对话整理，由我提供经历和反馈，AI 协助成文。文中三张配图为 AI 生成的示意画面，书桌和分镜草稿并非真实项目截图。</small></p>0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"我让 AI 先学编导，再和我一起搭漫剧工作台\",\"description\":\"我给 Codex 起名叫“小码”。从漫剧工作台到自动化，从编导和剪辑到 Skill、Figma，记录我们怎样一起学习，把想法一步步做出来。\",\"datePublished\":\"2026-10-21T11:00:00+08:00\",\"author\":{\"@type\":\"Person\",\"name\":\"刘家阳\"},\"keywords\":\"AI 协作, 自动化, 漫剧工作台, 学习方法, Codex\"}"},"type":"application/ld+json"}],["$","article",null,{"className":"article-page page-frame","children":[["$","$L2",null,{"className":"back-link","href":"/articles","children":[["$","span",null,{"aria-hidden":"true","children":"←"}],[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"返回文章归档"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Back to the archive"}]]]}],["$","header",null,{"className":"article-hero","children":[["$","div",null,{"className":"tag-list","children":[["$","span","AI 协作",{"className":"tag tag--solid","children":"AI 协作"}],["$","span","自动化",{"className":"tag tag--solid","children":"自动化"}],["$","span","漫剧工作台",{"className":"tag tag--solid","children":"漫剧工作台"}],["$","span","学习方法",{"className":"tag tag--solid","children":"学习方法"}],["$","span","Codex",{"className":"tag tag--solid","children":"Codex"}]]}],["$","h1",null,{"children":"我让 AI 先学编导，再和我一起搭漫剧工作台"}],["$","p",null,{"children":"我给 Codex 起名叫“小码”。从漫剧工作台到自动化，从编导和剪辑到 Skill、Figma，记录我们怎样一起学习，把想法一步步做出来。"}],["$","div",null,{"className":"article-hero__meta","children":[["$","time",null,{"dateTime":"2026-10-21T11:00:00+08:00","children":"2026.10.21"}],["$","span",null,{"children":[["$","svg",null,{"aria-hidden":true,"fill":"none","height":15,"viewBox":"0 0 24 24","width":15,"xmlns":"http://www.w3.org/2000/svg","children":[["$","circle",null,{"cx":"12","cy":"12","r":"9"}],["$","path",null,{"d":"M12 7v5l3 2"}]]}],8," ",[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"分钟阅读"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"min read"}]]]}],null,["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"原创"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Original"}]]}]]}]]}],["$","div",null,{"className":"article-prose","data-motion":"reveal","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"qQAfr-xWOTGqeZzIHzBu4"}
+4:["$","nav",null,{"aria-label":"相邻文章 / Adjacent articles","className":"article-pagination","data-motion":"reveal","children":[["$","$L2",null,{"href":"/articles/136038707","children":[["$","span",null,{"children":[["$","span",null,{"data-locale-copy":"zh","suppressHydrationWarning":true,"children":"上一篇"}],["$","span",null,{"data-locale-copy":"en","suppressHydrationWarning":true,"children":"Previous"}]]}],["$","strong",null,{"children":"html2Canvas截取百度地图问题整理及解决方案"}]]}],["$","span",null,{}]]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null
